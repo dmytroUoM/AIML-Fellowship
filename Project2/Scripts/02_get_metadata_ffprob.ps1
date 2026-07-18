@@ -11,4 +11,4 @@ if (!(Test-Path "..\Reports")) {
     -show_format `
     -show_streams `
     "..\origin\try.avi" |
-    Set-Content "..\Reports\02_avi_ffprobe.json"
+    Set-Content "..\Reports\02_avi_metadata_ffprobe.json"
