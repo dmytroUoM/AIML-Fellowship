@@ -1,0 +1,13 @@
+ Volume in drive M is Windows
+ Volume Serial Number is C817-8EEF
+
+ Directory of M:\AI_ML_Fellowship\Project2\Bin
+
+18/07/2026  07:00    <DIR>          .
+18/07/2026  06:32    <DIR>          ..
+17/07/2026  09:54       218,321,920 ffmpeg.exe
+17/07/2026  09:54       219,841,024 ffplay.exe
+17/07/2026  09:54       218,113,024 ffprobe.exe
+18/07/2026  07:00                 0 list_of_exe_files.txt
+               4 File(s)    656,275,968 bytes
+               2 Dir(s)  1,159,115,927,552 bytes free

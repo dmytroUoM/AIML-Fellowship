@@ -21,3 +21,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#Docs folder
+Project2/Docs/
+#Try.avi
+*.avi
+*.exe
