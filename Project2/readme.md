@@ -84,5 +84,19 @@ and push to Git Hub
 
 
 
+Step 11
+
+
+
+Install python3 and missing modules
+
+py -m pip install opencv-python numpy
+
+\-----------
+
+
+
+
+
 
 
