@@ -1,0 +1,92 @@
+Video
+ ↓
+Extract Frames
+ ↓
+Cropped
+ ↓
+Remove Numbering
+ ↓
+Cleaned
+ ↓
+Real-ESRGAN AI Upscaling
+ ↓
+Upscaled
+ ↓
+
+
+Project2/
+├── .venv-tomo/
+├── Frames/
+│   ├── Cropped/
+│   ├── Cleaned/
+│   ├── Masks/
+│   └── Improved_Real-ESRGAN/
+├── Scripts/
+│   ├── 06_remove_numbering_modified.py
+│   └── 07_improve_scientific_realesrgan.py
+└── .gitignore
+
+
+Real-ESRGAN is currently one of the most popular open-source AI upscalers for:
+
+Pixelated screenshots
+Game graphics
+Anime
+Photos
+Scientific images
+
+microscope, engineering, simulation, thermal, CFD, or scientific frames, recommend:
+Plain TextRealESRGAN_x4plus
+
+This is the workflow most likely to improve pixelated frames using AI rather than conventional image processing. If you have an NVIDIA GPU, Real-ESRGAN is usually the best balance of quality and speed.
+
+IMPORTANT!!!
+py -m venv .venv-tomo
+.venv-tomo\Scripts
+
+python -m pip install --upgrade pip
+
+CPU
+python -m pip install numpy==1.26.4
+python -m pip install opencv-python==4.10.0.84
+python -m pip install torch==2.1.2 torchvision==0.16.2
+pip install realesrgan basicsr facexlib gfpgan pillow numpy opencv-python
+python -m pip install --force-reinstall realesrgan basicsr facexlib gfpgan
+
+or 
+python -m pip install realesrgan basicsr facexlib gfpgan pillow numpy opencv-python
+
+python -c "import torch; print(torch.__version__)"
+
+GPU
+python -m pip install --upgrade pip
+
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install realesrgan basicsr facexlib gfpgan pillow numpy opencv-pytho
+python -c "import torch; print(torch.cuda.is_available())"
+
+.\.venv-tomo\Scripts\Activate.ps1
+deactivate
+
+
+Created one combined CPU/GPU NVIDIA Real-ESRGAN script because the code difference is small. It automatically uses an NVIDIA GPU if CUDA is available; otherwise, it falls back to CPU. I also added commented lines so you can force CPU or GPU if needed.
+
+Scientific tomography note set OUTSCALE = 2
+rather than full 4, because for scientific resistance-tomography frames, x2 is usually safer visually. Full AI upscaling can make images look better, but it may also invent artificial detail. Keep your original Frames/Cleaned images as the scientific source data, and use Improved_Real-ESRGAN mainly for presentation/visualisation unless validated.
+
+
+
+Project2/
+├── .venv-tomo/
+├── Frames/
+│   ├── Cropped/
+│   ├── Cleaned/
+│   ├── Masks/
+│   └── Improved_Real-ESRGAN/
+└── Scripts/
+    ├── 06_remove_numbering_modified.py
+    ├── 07_improve_scientific_realesrgan.py
+    └── RealESRGAN_x4plus.pth
+
+start 18/07/2026 18:40
+

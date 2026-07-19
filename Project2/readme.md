@@ -94,7 +94,15 @@ py -m pip install opencv-python numpy
 
 \-----------
 
+Step 12
 
+
+
+Creat and run python script to clean cropped images from orange numbering
+
+
+
+\---------------
 
 
 

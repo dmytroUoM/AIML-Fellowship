@@ -27,3 +27,21 @@ Project2/Docs/
 *.avi
 *.exe
 *.png
+
+# Virtual environments
+.venv-tomo/
+
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# AI model weights
+*.pth
