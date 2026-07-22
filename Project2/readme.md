@@ -23,8 +23,7 @@ Step 7
 Create/Run PowerShell script 02\_get\_metadata\_ffprob.ps1 to get metadata of an AVI file 
 \----------
 Step 8
-
-Create PowerShell script 03\_get\_avi\_metadata\_powershell.ps1 to get metadata of an AVI file
+Create/Run PowerShell script 03\_get\_avi\_metadata\_powershell.ps1 to get metadata of an AVI file
 \---------------
 Step 9
 
