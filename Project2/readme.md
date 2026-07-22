@@ -26,9 +26,7 @@ Step 8
 Create/Run PowerShell script 03\_get\_avi\_metadata\_powershell.ps1 to get metadata of an AVI file
 \---------------
 Step 9
-
-Create a PowerShell script to extract frames from a video and save them in the Frame -> Origin folder / actually 302 frames 
-
+Create/Run a PowerShell script to extract frames from a video and save them in the Frame -> Origin folder / actually 302 frames 
 04\_extract\_frames from\_avi.ps1
 \--------------
 
