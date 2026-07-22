@@ -1,1 +1,0 @@
-extracted and cropped frames from the original video
