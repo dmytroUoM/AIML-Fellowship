@@ -1,29 +1,26 @@
 Step 1
 Create the computer environment for project 2
+run 00_CleanFolders.ps1
 \--------------
 Step 2
-
-Export from  legacy software software the experement resoult as video avi file as only option available
+Export from  ATS p2+ V9 legacy software the experement resoult as ACTIVE WINDOW video avi file as only option available
+and save it as active.avi
 \------
 Step 3
 After reserch for avi video file processing 
 Download the ffmpeg package https://github.com/GyanD/codexffmpeg/releases/tag/2026-07-16-git-ceabc9b306
 \-----
 Step 4:
-
 for version and project managment  create  AIML\_Fellowship available only for role relayted team members
 \-----------
 Step 5 
-
 Create GitHub Repository and Kanban Board for online collaboration. In future collaboration team nembers should create issue for any steps or tasks related to the project 2.
 \------------
 Step 6
-
-Create PowerShell script 01\_get\_avi\_hash.ps1 to get the hash of an AVI file 
+Create/Run PowerShell script 01\_get\_avi\_hash.ps1 to get the hash of an AVI file 
 \--------
 Step 7
-
-Create PowerShell script 02\_get\_metadata\_ffprob.ps1 to get metadata of an AVI file 
+Create/Run PowerShell script 02\_get\_metadata\_ffprob.ps1 to get metadata of an AVI file 
 \----------
 Step 8
 
