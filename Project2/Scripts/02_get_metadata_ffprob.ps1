@@ -5,10 +5,10 @@ if (!(Test-Path "..\Reports")) {
 }
 
 # Run ffprobe and save JSON output
-& "..\bin\ffprobe.exe" `
+& "..\Bin\ffprobe.exe" `
     -v quiet `
     -print_format json `
     -show_format `
     -show_streams `
-    "..\origin\active.avi" |
+    "..\Video\active.avi" |
     Set-Content "..\Reports\02_avi_metadata_ffprobe.json"

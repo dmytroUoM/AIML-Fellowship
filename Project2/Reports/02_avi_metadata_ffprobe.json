@@ -19,10 +19,10 @@
             "time_base": "1/5",
             "start_pts": 0,
             "start_time": "0.000000",
-            "duration_ts": 245,
-            "duration": "49.000000",
-            "bit_rate": "6103335",
-            "nb_frames": "245",
+            "duration_ts": 129,
+            "duration": "25.800000",
+            "bit_rate": "6188537",
+            "nb_frames": "129",
             "disposition": {
                 "default": 0,
                 "dub": 0,
@@ -47,16 +47,16 @@
         }
     ],
     "format": {
-        "filename": "..\\origin\\active.avi",
+        "filename": "..\\Video\\active.avi",
         "nb_streams": 1,
         "nb_programs": 0,
         "nb_stream_groups": 0,
         "format_name": "avi",
         "format_long_name": "AVI (Audio Video Interleaved)",
         "start_time": "0.000000",
-        "duration": "49.000000",
-        "size": "37238784",
-        "bit_rate": "6079801",
+        "duration": "25.800000",
+        "size": "19808768",
+        "bit_rate": "6142253",
         "probe_score": 100
     }
 }

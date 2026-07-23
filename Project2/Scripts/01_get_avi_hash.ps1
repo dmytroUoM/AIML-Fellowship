@@ -5,5 +5,5 @@ if (!(Test-Path "..\Reports")) {
 }
 
 # Calculate SHA256 hash and save only the hash value
-(Get-FileHash "..\origin\active.avi" -Algorithm SHA256).Hash |
+(Get-FileHash "..\Video\active.avi" -Algorithm SHA256).Hash |
     Set-Content "..\Reports\01_avi_hash.txt"

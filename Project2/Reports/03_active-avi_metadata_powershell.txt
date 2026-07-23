@@ -1,11 +1,11 @@
 ﻿165: Filename = active.avi
-1: Size = 35.5 MB
+1: Size = 18.8 MB
 2: Item type = AVI Video File (VLC)
-3: Date modified = 22/07/2026 09:44
-4: Date created = 22/07/2026 13:23
-5: Date accessed = 22/07/2026 13:23
+3: Date modified = 22/07/2026 09:53
+4: Date created = 23/07/2026 14:29
+5: Date accessed = 23/07/2026 14:29
 9: Perceived type = Video
-27: Length = 00:00:49
+27: Length = 00:00:25
 29: Protected = No
 164: File extension = .avi
-198: Folder = Origin (C:\AI_ML_Fellowship\Project2)
+198: Folder = Video (C:\AI_ML_Fellowship\Project2)

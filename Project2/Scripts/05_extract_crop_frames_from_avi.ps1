@@ -1,11 +1,11 @@
 # Input AVI file
-$aviFile = Join-Path $PSScriptRoot "..\Origin\active.avi"
+$aviFile = Join-Path $PSScriptRoot "..\Video\active.avi"
 
 # Local FFmpeg executable
 $ffmpeg = Join-Path $PSScriptRoot "..\Bin\ffmpeg.exe"
 
-# Output folder: frames\origin
-$outputDir = Join-Path $PSScriptRoot "..\Frames\Cropped"
+# Output folder: Images\origin
+$outputDir = Join-Path $PSScriptRoot "..\Images\02_Frames"
 
 # Create output folder if it does not exist
 if (!(Test-Path $outputDir)) {

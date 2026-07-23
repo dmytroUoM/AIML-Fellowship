@@ -1,6 +1,6 @@
 # Paths relative to the script location
 
-$filePath   = Join-Path $PSScriptRoot "..\Origin\active.avi"
+$filePath   = Join-Path $PSScriptRoot "..\Video\active.avi"
 $outputFile = Join-Path $PSScriptRoot "..\Reports\03_active-avi_metadata_powershell.txt"
 
 $fullPath = (Resolve-Path $filePath).Path

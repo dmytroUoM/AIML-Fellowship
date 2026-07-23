@@ -1,6 +1,5 @@
 $folders = @(
-    "..\Frames",
-    "..\Origin",
+    "..\Images",
     "..\Reports"
 )
 
