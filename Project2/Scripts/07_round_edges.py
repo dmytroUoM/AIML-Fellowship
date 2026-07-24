@@ -6,8 +6,8 @@ For each opaque blob found in an image, this script fits a true circle
 jagged edge and the new perfect circle using the nearest neighbouring
 pixel's color, and renders the final circle edge with smooth anti-aliasing.
 
-Source folder : Frames/Transparent_Background
-Output folder : Frames/Rounded (created automatically if missing)
+Source folder : Images/04_Transparent
+Output folder : Images/05_Final_Rounded (created automatically if missing)
 
 Usage:
     python round_edges.py
@@ -24,7 +24,7 @@ from scipy import ndimage
 # Config
 # ----------------------------------------------------------------------
 SOURCE_DIR = Path("../Images/04_Transparent")
-OUTPUT_DIR = Path("../Images/05_Rounded")
+OUTPUT_DIR = Path("../Images/05_Final_Rounded")
 
 ALPHA_CUTOFF = 128   # alpha value above which a pixel is considered "opaque"
 SUPERSAMPLE = 4       # supersampling factor used for smooth (anti-aliased) circle edges
