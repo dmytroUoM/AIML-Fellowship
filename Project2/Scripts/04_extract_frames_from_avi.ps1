@@ -1,3 +1,4 @@
+# Extract origin frames from video
 # Input AVI file
 $aviFile = Join-Path $PSScriptRoot "..\Video\active.avi"
 
