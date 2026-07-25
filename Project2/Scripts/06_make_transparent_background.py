@@ -2,7 +2,7 @@
 Batch-remove white backgrounds from images and save with transparency.
 
 Source folder : Images/03_Cleaned
-Output folder : Images/Transparent_Background (created automatically if missing)
+Output folder : Images/04_Transparent (created automatically if missing)
 
 Usage:
     python make_transparent.py
@@ -24,7 +24,7 @@ THRESHOLD_FULL = 235   # pixels whiter than this -> fully transparent
 THRESHOLD_START = 180  # pixels start fading to transparent below this
 ERODE_SIZE = 3          # size of the min-filter used to clean edge fringe
 
-VALID_EXTENSIONS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
+VALID_EXTENSIONS = {".png"}
 
 
 def make_transparent(img: Image.Image) -> Image.Image:
