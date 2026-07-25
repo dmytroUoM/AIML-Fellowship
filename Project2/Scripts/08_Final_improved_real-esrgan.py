@@ -100,7 +100,7 @@ MODEL_SCALE = 4
 OUTSCALE = 2
 
 # Tiling reduces memory usage.
-# CPU recommendation: 128 or 256
+# CPU recommendation: 128 or 256 more number less tiles
 # GPU recommendation: 0 for no tiling, or 256/512 if GPU memory is limited
 TILE_CPU = 128
 TILE_GPU = 0
