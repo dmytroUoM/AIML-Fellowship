@@ -11,7 +11,7 @@ Output folder : Images/05_Final_Rounded (created automatically if missing)
 
 Usage:
     python round_edges.py
-    (run from the folder that contains the "Frames" directory,
+    (run from Script the folder, source dir is Images -> 04_Transparent
      or edit SOURCE_DIR / OUTPUT_DIR below to use absolute paths)
 """
 
