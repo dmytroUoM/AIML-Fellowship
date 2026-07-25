@@ -1,3 +1,4 @@
+# Extract frames from video and crop it crop=940:600:0:40
 # Input AVI file
 $aviFile = Join-Path $PSScriptRoot "..\Video\active.avi"
 
