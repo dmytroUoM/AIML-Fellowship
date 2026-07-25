@@ -1,4 +1,4 @@
-
+# Get the video file metadata by fforobe.exe
 # Create Reports folder if it doesn't exist
 if (!(Test-Path "..\Reports")) {
     New-Item -ItemType Directory -Path "..\Reports" | Out-Null
