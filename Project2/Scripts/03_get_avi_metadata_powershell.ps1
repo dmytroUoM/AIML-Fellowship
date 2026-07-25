@@ -1,4 +1,4 @@
-# Paths relative to the script location
+# Get the video file metadata used PowerShell
 
 $filePath   = Join-Path $PSScriptRoot "..\Video\active.avi"
 $outputFile = Join-Path $PSScriptRoot "..\Reports\03_active-avi_metadata_powershell.txt"
