@@ -21,9 +21,7 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
-#Docs folder
-Project2/Docs/
-#Try.avi
+#Exclude *.avi, *.exe, *.png
 *.avi
 *.exe
 *.png

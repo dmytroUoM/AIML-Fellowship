@@ -1,0 +1,14 @@
+﻿|-- Project2
+    |-- Bin
+    |-- Docs
+    |-- Images
+        |-- 01_Origin
+        |-- 02_Frames
+        |-- 03_Cleaned
+        |-- 03_Masks
+        |-- 04_Transparent
+        |-- 05_Final_Rounded
+        |-- 06_Final_Upscaled
+    |-- Reports
+    |-- Scripts
+    |-- Video
