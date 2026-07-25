@@ -1,4 +1,4 @@
-
+# Get the video file hash 
 # Create Reports folder if it doesn't exist
 if (!(Test-Path "..\Reports")) {
     New-Item -ItemType Directory -Path "..\Reports" | Out-Null
