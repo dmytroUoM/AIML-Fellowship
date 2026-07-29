@@ -1,0 +1,23 @@
+﻿[2026-07-29 21:29:15] [INFO] ============================================
+[2026-07-29 21:29:15] [INFO] Script started.
+[2026-07-29 21:29:15] [INFO] Script name: 03_get_metadata_powershell.ps1
+[2026-07-29 21:29:15] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-29 21:29:15] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-29 21:29:15] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-29 21:29:15] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 21:29:15] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-07-29 21:29:15] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-29 21:29:15] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\03_get_metadata_powershell.log
+[2026-07-29 21:29:15] [INFO] Resolved video path: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 21:29:15] [INFO] Video folder path: C:\AI_ML_Fellowship\Project2\Video
+[2026-07-29 21:29:15] [INFO] Video file name: active.avi
+[2026-07-29 21:29:15] [INFO] Video file found.
+[2026-07-29 21:29:15] [INFO] Video file size: 19808768 bytes
+[2026-07-29 21:29:15] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-29 21:29:15] [INFO] Creating Shell.Application COM object.
+[2026-07-29 21:29:15] [INFO] Extracting selected Windows metadata fields.
+[2026-07-29 21:29:15] [SUCCESS] Metadata extraction completed successfully.
+[2026-07-29 21:29:15] [INFO] Metadata entries saved: 1
+[2026-07-29 21:29:15] [INFO] Metadata report saved to: C:\AI_ML_Fellowship\Project2\Reports\03_active-avi_metadata_powershell.txt
+[2026-07-29 21:29:15] [SUCCESS] Script completed successfully.
+[2026-07-29 21:29:15] [INFO] ============================================
