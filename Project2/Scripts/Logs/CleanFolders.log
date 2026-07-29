@@ -1,0 +1,83 @@
+2026-07-29 15:32:07 [INFO] --------------------------------------------------
+2026-07-29 15:32:07 [INFO] Starting folder cleanup script.
+2026-07-29 15:32:07 [INFO] Script location: C:\AI_ML_Fellowship\Project2\Scripts
+2026-07-29 15:32:07 [WARNING] Running in WHATIF mode. No files will be deleted.
+2026-07-29 15:32:07 [INFO] Processing folder reference: ..\Images
+2026-07-29 15:32:07 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:32:07 [ERROR] Failed to clean folder '..\Images'. Error: The term ':IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-07-29 15:32:07 [INFO] Processing folder reference: ..\Reports
+2026-07-29 15:32:07 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:32:07 [ERROR] Failed to clean folder '..\Reports'. Error: The term ':IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-07-29 15:32:07 [INFO] Folder cleanup script completed.
+2026-07-29 15:32:07 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log
+2026-07-29 15:35:46 [INFO] --------------------------------------------------
+2026-07-29 15:35:46 [INFO] Starting folder cleanup script.
+2026-07-29 15:35:46 [INFO] Script location: C:\AI_ML_Fellowship\Project2\Scripts
+2026-07-29 15:35:46 [WARNING] Running in WHATIF mode. No files will be deleted.
+2026-07-29 15:35:46 [INFO] Processing folder reference: ..\Images
+2026-07-29 15:35:46 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:35:46 [ERROR] Failed to clean folder '..\Images'. Error: The term ':IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-07-29 15:35:46 [INFO] Processing folder reference: ..\Reports
+2026-07-29 15:35:46 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:35:46 [ERROR] Failed to clean folder '..\Reports'. Error: The term ':IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-07-29 15:35:46 [INFO] Folder cleanup script completed.
+2026-07-29 15:35:46 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log
+2026-07-29 15:43:59 [INFO] --------------------------------------------------
+2026-07-29 15:43:59 [INFO] Starting folder cleanup script.
+2026-07-29 15:43:59 [INFO] Script location: C:\AI_ML_Fellowship\Project2\Scripts
+2026-07-29 15:43:59 [WARNING] Running in WHATIF mode. No files will be deleted.
+2026-07-29 15:43:59 [INFO] Processing folder reference: ..\Images
+2026-07-29 15:43:59 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:43:59 [ERROR] Failed to clean folder '..\Images'. Error: The term 'IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-07-29 15:43:59 [INFO] Processing folder reference: ..\Reports
+2026-07-29 15:43:59 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:43:59 [ERROR] Failed to clean folder '..\Reports'. Error: The term 'IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2026-07-29 15:43:59 [INFO] Folder cleanup script completed.
+2026-07-29 15:43:59 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log
+2026-07-29 15:48:13 [INFO] --------------------------------------------------
+2026-07-29 15:48:13 [INFO] Starting folder cleanup script.
+2026-07-29 15:48:13 [INFO] Script location: C:\AI_ML_Fellowship\Project2\Scripts
+2026-07-29 15:48:13 [WARNING] Running in WHATIF mode. No files will be deleted.
+2026-07-29 15:48:13 [INFO] Processing folder reference: ..\Images
+2026-07-29 15:48:13 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:48:13 [INFO] Items found for deletion in C:\AI_ML_Fellowship\Project2\Images : 7
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\01_Origin
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\02_Frames
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\03_Cleaned
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\03_Masks
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\04_Transparent
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\05_Final_Rounded
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Images\06_Final_Upscaled
+2026-07-29 15:48:13 [WARNING] WHATIF: Cleanup simulated for folder: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:48:13 [INFO] Processing folder reference: ..\Reports
+2026-07-29 15:48:13 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:48:13 [INFO] Items found for deletion in C:\AI_ML_Fellowship\Project2\Reports : 3
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Reports\01_avi_hash.txt
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+2026-07-29 15:48:13 [WARNING] WHATIF: Would delete C:\AI_ML_Fellowship\Project2\Reports\03_active-avi_metadata_powershell.txt
+2026-07-29 15:48:13 [WARNING] WHATIF: Cleanup simulated for folder: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:48:13 [INFO] Folder cleanup script completed.
+2026-07-29 15:48:13 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log
+2026-07-29 15:53:58 [INFO] --------------------------------------------------
+2026-07-29 15:53:58 [INFO] Starting folder cleanup script.
+2026-07-29 15:53:58 [INFO] Script location: C:\AI_ML_Fellowship\Project2\Scripts
+2026-07-29 15:53:58 [INFO] Processing folder reference: ..\Images
+2026-07-29 15:53:58 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:53:58 [INFO] Items found for deletion in C:\AI_ML_Fellowship\Project2\Images : 7
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\03_Masks
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\04_Transparent
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\05_Final_Rounded
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\06_Final_Upscaled
+2026-07-29 15:53:58 [INFO] Successfully cleaned folder: C:\AI_ML_Fellowship\Project2\Images
+2026-07-29 15:53:58 [INFO] Processing folder reference: ..\Reports
+2026-07-29 15:53:58 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:53:58 [INFO] Items found for deletion in C:\AI_ML_Fellowship\Project2\Reports : 3
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Reports\01_avi_hash.txt
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+2026-07-29 15:53:58 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Reports\03_active-avi_metadata_powershell.txt
+2026-07-29 15:53:58 [INFO] Successfully cleaned folder: C:\AI_ML_Fellowship\Project2\Reports
+2026-07-29 15:53:58 [INFO] Folder cleanup script completed.
+2026-07-29 15:53:58 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log

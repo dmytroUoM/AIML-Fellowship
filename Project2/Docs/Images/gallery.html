@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Gallery</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card-bg: #171a21;
+    --border: #2a2e38;
+    --accent: #6ea8fe;
+    --text: #e6e8ec;
+    --muted: #9aa2af;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px 24px;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  .path {
+    color: var(--muted);
+    font-family: Consolas, Menlo, monospace;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    word-break: break-all;
+  }
+  .note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 28px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background:
+      linear-gradient(45deg, #1c2028 25%, transparent 25%) -10px 0/ 20px 20px,
+      linear-gradient(-45deg, #1c2028 25%, transparent 25%) -10px 0/ 20px 20px,
+      linear-gradient(45deg, transparent 75%, #1c2028 75%) -10px 0/ 20px 20px,
+      linear-gradient(-45deg, transparent 75%, #1c2028 75%) -10px 0/ 20px 20px,
+      #12141a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .thumb .missing {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 12px;
+    font-family: Consolas, Menlo, monospace;
+  }
+  .info {
+    padding: 12px 14px;
+    border-top: 1px solid var(--border);
+  }
+  .name {
+    font-family: Consolas, Menlo, monospace;
+    color: var(--accent);
+    font-size: 0.85rem;
+    word-break: break-all;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.78rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .count {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Image Gallery</h1>
+  <div class="path">C:\AI_ML_Fellowship\Project2\Docs\Images</div>
+  <div class="note">Place this HTML file in the same folder as the images (or edit the <code>src</code> paths) so they load correctly. If an image can't be found, a placeholder with the filename is shown instead.</div>
+  <div class="grid" id="grid"></div>
+  <div class="count" id="count"></div>
+</div>
+
+<script>
+  const files = [
+    { name: "01_origin_frame_0001.png",         time: "23/07/2026 14:32", size: "25,427" },
+    { name: "02_frames_frame_0001.png",         time: "23/07/2026 14:33", size: "22,315" },
+    { name: "03_cleaned_frame_0001.png",        time: "23/07/2026 14:42", size: "53,961" },
+    { name: "03_masks_frame_0001_mask.png",     time: "23/07/2026 14:42", size: "8,174" },
+    { name: "04_transparent_frame_0001.png",    time: "23/07/2026 14:57", size: "15,774" },
+    { name: "05_Final_Rounded_frame_0001.png",  time: "24/07/2026 15:37", size: "26,048" },
+    { name: "06_Final_Upscaled_frame_0001.png", time: "24/07/2026 15:45", size: "1,285,155" }
+  ];
+
+  const grid = document.getElementById("grid");
+
+  files.forEach(f => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const thumb = document.createElement("div");
+    thumb.className = "thumb";
+
+    const img = document.createElement("img");
+    img.src = f.name;
+    img.alt = f.name;
+    img.loading = "lazy";
+    img.onerror = () => {
+      thumb.innerHTML = `<div class="missing">Image not found:<br>${f.name}</div>`;
+    };
+    thumb.appendChild(img);
+
+    const info = document.createElement("div");
+    info.className = "info";
+    info.innerHTML = `
+      <span class="name">${f.name}</span>
+      <div class="meta"><span>${f.time}</span><span>${f.size} bytes</span></div>
+    `;
+
+    card.appendChild(thumb);
+    card.appendChild(info);
+    grid.appendChild(card);
+  });
+
+  document.getElementById("count").textContent = `${files.length} images`;
+</script>
+</body>
+</html>
