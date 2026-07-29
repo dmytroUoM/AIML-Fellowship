@@ -1,0 +1,63 @@
+﻿[2026-07-29 20:31:32] [INFO] ============================================
+[2026-07-29 20:31:32] [INFO] Script started.
+[2026-07-29 20:31:32] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-07-29 20:31:32] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-29 20:31:32] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-29 20:31:32] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-29 20:31:32] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Scripts\ffprobe.exe
+[2026-07-29 20:31:32] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 20:31:32] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-07-29 20:31:32] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-29 20:31:32] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-07-29 20:31:32] [ERROR] Script failed: ffprobe.exe not found. Expected location: C:\AI_ML_Fellowship\Project2\Scripts\ffprobe.exe
+[2026-07-29 20:31:32] [INFO] ============================================
+[2026-07-29 20:36:30] [INFO] ============================================
+[2026-07-29 20:36:30] [INFO] Script started.
+[2026-07-29 20:36:30] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-07-29 20:36:30] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-29 20:36:30] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-29 20:36:30] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-29 20:36:30] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Scripts\Bin\ffprobe.exe
+[2026-07-29 20:36:30] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 20:36:30] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-07-29 20:36:30] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-29 20:36:30] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-07-29 20:36:30] [ERROR] Script failed: ffprobe.exe not found. Expected location: C:\AI_ML_Fellowship\Project2\Scripts\Bin\ffprobe.exe
+[2026-07-29 20:36:30] [INFO] ============================================
+[2026-07-29 20:45:33] [INFO] ============================================
+[2026-07-29 20:45:33] [INFO] Script started.
+[2026-07-29 20:45:33] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-07-29 20:45:33] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-29 20:45:33] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-29 20:45:33] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-29 20:45:33] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Bin\ffprobe.exe
+[2026-07-29 20:45:33] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 20:45:33] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-07-29 20:45:33] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-29 20:45:33] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-07-29 20:45:33] [INFO] Video file found.
+[2026-07-29 20:45:33] [INFO] Video file size: 19808768 bytes
+[2026-07-29 20:45:33] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-29 20:45:33] [INFO] Running ffprobe metadata extraction...
+[2026-07-29 20:45:35] [ERROR] Script failed: The term ':IsNullOrWhiteSpace' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+[2026-07-29 20:45:35] [INFO] ============================================
+[2026-07-29 20:46:32] [INFO] ============================================
+[2026-07-29 20:46:32] [INFO] Script started.
+[2026-07-29 20:46:32] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-07-29 20:46:32] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-29 20:46:32] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-29 20:46:32] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-29 20:46:32] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Bin\ffprobe.exe
+[2026-07-29 20:46:32] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 20:46:32] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-07-29 20:46:32] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-29 20:46:32] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-07-29 20:46:32] [INFO] Video file found.
+[2026-07-29 20:46:32] [INFO] Video file size: 19808768 bytes
+[2026-07-29 20:46:32] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-29 20:46:32] [INFO] Running ffprobe metadata extraction...
+[2026-07-29 20:46:32] [SUCCESS] ffprobe output validated as JSON.
+[2026-07-29 20:46:32] [SUCCESS] Metadata extracted successfully.
+[2026-07-29 20:46:32] [INFO] Metadata saved to: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+[2026-07-29 20:46:32] [SUCCESS] Script completed successfully.
+[2026-07-29 20:46:32] [INFO] ============================================
