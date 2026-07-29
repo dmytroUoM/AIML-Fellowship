@@ -1,0 +1,11 @@
+[2026-07-29 16:25:28] [INFO] Script started.
+[2026-07-29 16:25:28] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-29 16:25:28] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-29 16:25:28] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-29 16:25:28] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-07-29 16:25:28] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-29 16:25:28] [INFO] Calculating SHA256 hash.
+[2026-07-29 16:25:28] [INFO] SHA256 hash calculated successfully.
+[2026-07-29 16:25:28] [INFO] Hash saved to: C:\AI_ML_Fellowship\Project2\Reports\01_avi_hash.txt
+[2026-07-29 16:25:28] [INFO] Hash value: 092B81A711B0A275D400EEFDFEB9DF314B9101F39AC68FC3A72615C9F3CEBDB7
+[2026-07-29 16:25:28] [INFO] Script completed successfully.
