@@ -1,0 +1,309 @@
+﻿[2026-07-30 05:33:18] [SUCCESS] Script completed successfully.
+[2026-07-30 05:33:18] [INFO] ============================================
+[2026-07-30 05:34:22] [INFO] ============================================
+[2026-07-30 05:34:22] [INFO] Script started.
+[2026-07-30 05:34:22] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 05:34:22] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 05:34:22] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 05:34:22] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 05:34:22] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 05:34:22] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 05:34:22] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 05:34:22] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 05:34:22] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 05:34:22] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 05:34:22] [INFO] Input video file found.
+[2026-07-30 05:34:22] [INFO] Video file size: 19808768 bytes
+[2026-07-30 05:34:22] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 05:34:22] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-07-30 05:34:22] [INFO] Existing frame files before extraction: 0
+[2026-07-30 05:34:22] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 05:34:23] [INFO] FFmpeg exit code: 0
+[2026-07-30 05:34:23] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-07-30 05:34:23] [INFO] Frames before extraction: 0
+[2026-07-30 05:34:23] [INFO] Frames after extraction: 129
+[2026-07-30 05:34:23] [INFO] New frames created during this run: 129
+[2026-07-30 05:34:23] [INFO] Total extracted frame files available: 129
+[2026-07-30 05:34:23] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 05:34:23] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-07-30 05:34:23] [SUCCESS] Script completed successfully.
+[2026-07-30 05:34:23] [INFO] ============================================
+[2026-07-30 08:11:25] [INFO] ============================================
+[2026-07-30 08:11:25] [INFO] Script started.
+[2026-07-30 08:11:25] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 08:11:25] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 08:11:25] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 08:11:25] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 08:11:25] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 08:11:25] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 08:11:25] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 08:11:25] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 08:11:25] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 08:11:25] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 08:11:25] [INFO] Input video file found.
+[2026-07-30 08:11:25] [INFO] Video file size: 19808768 bytes
+[2026-07-30 08:11:25] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 08:11:25] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-07-30 08:11:25] [INFO] Existing frame files before extraction: 129
+[2026-07-30 08:11:25] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 08:11:34] [INFO] FFmpeg exit code: 0
+[2026-07-30 08:11:34] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-07-30 08:11:34] [INFO] Frames before extraction: 129
+[2026-07-30 08:11:34] [INFO] Frames after extraction: 129
+[2026-07-30 08:11:34] [INFO] New frames created during this run: 0
+[2026-07-30 08:11:34] [INFO] Total extracted frame files available: 129
+[2026-07-30 08:11:34] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 08:11:34] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-07-30 08:11:35] [SUCCESS] Script completed successfully.
+[2026-07-30 08:11:35] [INFO] ============================================
+[2026-07-30 20:06:04] [INFO] ============================================
+[2026-07-30 20:06:04] [INFO] Script started.
+[2026-07-30 20:06:04] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 20:06:04] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 20:06:04] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 20:06:04] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 20:06:04] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 20:06:04] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 20:06:04] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 20:06:04] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned 
+[2026-07-30 20:06:04] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 20:06:04] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 20:06:04] [INFO] Input video file found.
+[2026-07-30 20:06:04] [INFO] Video file size: 19808768 bytes
+[2026-07-30 20:06:04] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 20:06:04] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned \frame_%04d.png
+[2026-07-30 20:06:04] [INFO] Existing frame files before extraction: 0
+[2026-07-30 20:06:04] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 20:06:06] [INFO] FFmpeg exit code: -2
+[2026-07-30 20:06:06] [ERROR] Script failed: FFmpeg failed with exit code -2. Details: ffmpeg.exe : ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg 
+developers
+At C:\AI_ML_Fellowship\Project2\Scripts\05_extract_crop_frames_from_avi.ps1:145 char:5
++     & $FfmpegExe `
++     ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ffmpeg version ...mpeg developers:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  built with gcc 16.1.0 (Rev2, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect 
+--enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp 
+--enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh 
+--enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread 
+--enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg 
+--enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode 
+--enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 
+--enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libsvtjpegxs 
+--enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi 
+--enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf 
+--enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl 
+--enable-nvdec --enable-nvenc --enable-vaapi --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio 
+--enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame 
+--enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc 
+--enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis 
+--enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr 
+--enable-chromaprint --enable-whisper
+  libavutil      61.  5.100 / 61.  5.100
+  libavcodec     63.  6.101 / 63.  6.101
+  libavformat    63.  5.100 / 63.  5.100
+  libavdevice    63.  2.100 / 63.  2.100
+  libavfilter    12.  3.101 / 12.  3.101
+  libswscale     10.  2.100 / 10.  2.100
+  libswresample   7.  2.100 /  7.  2.100
+Input #0, avi, from 'C:\AI_ML_Fellowship\Project2\Video\active.avi':
+  Duration: 00:00:25.80, start: 0.000000, bitrate: 6142 kb/s
+  Stream #0:0: Video: msvideo1 (CRAM / 0x4D415243), rgb555le, 940x736, 6188 kb/s, 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (msvideo1 (native) -> png (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to 'C:\AI_ML_Fellowship\Project2\Images\03_Cleaned \frame_%04d.png':
+  Metadata:
+    encoder         : Lavf63.5.100
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown, progressive), 940x600, q=2-31, 200 kb/s, 5 fps, 5 tbn
+    Metadata:
+      encoder         : Lavc63.6.101 png
+[image2 @ 00000241d124e040] Could not open file : C:\AI_ML_Fellowship\Project2\Images\03_Cleaned \frame_0001.png
+[vost#0:0/png @ 00000241d124f940] Error submitting a packet to the muxer: No such file or directory
+    Last message repeated 1 times
+[out#0/image2 @ 00000241d11d0780] Error muxing a packet
+[out#0/image2 @ 00000241d11d0780] Task finished with error code: -2 (No such file or directory)
+[out#0/image2 @ 00000241d11d0780] Terminating thread with return code -2 (No such file or directory)
+[out#0/image2 @ 00000241d11d0780] video:22KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing 
+overhead: unknown
+frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.20 bitrate=N/A speed=4.97x elapsed=0:00:00.04    
+Conversion failed!
+
+[2026-07-30 20:06:06] [INFO] ============================================
+[2026-07-30 20:08:39] [INFO] ============================================
+[2026-07-30 20:08:39] [INFO] Script started.
+[2026-07-30 20:08:39] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 20:08:39] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 20:08:39] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 20:08:39] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 20:08:39] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 20:08:39] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 20:08:39] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 20:08:39] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned 
+[2026-07-30 20:08:39] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 20:08:39] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 20:08:39] [INFO] Input video file found.
+[2026-07-30 20:08:39] [INFO] Video file size: 19808768 bytes
+[2026-07-30 20:08:39] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 20:08:39] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned \frame_%04d.png
+[2026-07-30 20:08:39] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 20:08:39] [INFO] FFmpeg exit code: -2
+[2026-07-30 20:08:39] [ERROR] Script failed: FFmpeg failed with exit code -2. Details: ffmpeg.exe : ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg 
+developers
+At C:\AI_ML_Fellowship\Project2\Scripts\05_extract_crop_frames_from_avi.ps1:141 char:5
++     & $FfmpegExe `
++     ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ffmpeg version ...mpeg developers:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  built with gcc 16.1.0 (Rev2, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect 
+--enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp 
+--enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh 
+--enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread 
+--enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg 
+--enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode 
+--enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 
+--enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libsvtjpegxs 
+--enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi 
+--enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf 
+--enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl 
+--enable-nvdec --enable-nvenc --enable-vaapi --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio 
+--enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame 
+--enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc 
+--enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis 
+--enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr 
+--enable-chromaprint --enable-whisper
+  libavutil      61.  5.100 / 61.  5.100
+  libavcodec     63.  6.101 / 63.  6.101
+  libavformat    63.  5.100 / 63.  5.100
+  libavdevice    63.  2.100 / 63.  2.100
+  libavfilter    12.  3.101 / 12.  3.101
+  libswscale     10.  2.100 / 10.  2.100
+  libswresample   7.  2.100 /  7.  2.100
+Input #0, avi, from 'C:\AI_ML_Fellowship\Project2\Video\active.avi':
+  Duration: 00:00:25.80, start: 0.000000, bitrate: 6142 kb/s
+  Stream #0:0: Video: msvideo1 (CRAM / 0x4D415243), rgb555le, 940x736, 6188 kb/s, 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (msvideo1 (native) -> png (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to 'C:\AI_ML_Fellowship\Project2\Images\03_Cleaned \frame_%04d.png':
+  Metadata:
+    encoder         : Lavf63.5.100
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown, progressive), 940x600, q=2-31, 200 kb/s, 5 fps, 5 tbn
+    Metadata:
+      encoder         : Lavc63.6.101 png
+[image2 @ 000002046c8de540] Could not open file : C:\AI_ML_Fellowship\Project2\Images\03_Cleaned \frame_0001.png
+[vost#0:0/png @ 000002046c8dfe80] Error submitting a packet to the muxer: No such file or directory
+    Last message repeated 1 times
+[out#0/image2 @ 000002046c85ee00] Error muxing a packet
+[out#0/image2 @ 000002046c85ee00] Task finished with error code: -2 (No such file or directory)
+[out#0/image2 @ 000002046c85ee00] Terminating thread with return code -2 (No such file or directory)
+[out#0/image2 @ 000002046c85ee00] video:22KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing 
+overhead: unknown
+frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.20 bitrate=N/A speed=7.05x elapsed=0:00:00.02    
+Conversion failed!
+
+[2026-07-30 20:08:39] [INFO] ============================================
+[2026-07-30 20:13:00] [INFO] ============================================
+[2026-07-30 20:13:00] [INFO] Script started.
+[2026-07-30 20:13:00] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 20:13:00] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 20:13:00] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 20:13:00] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 20:13:00] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 20:13:00] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 20:13:00] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 20:13:00] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned
+[2026-07-30 20:13:00] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 20:13:00] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 20:13:00] [INFO] Input video file found.
+[2026-07-30 20:13:00] [INFO] Video file size: 19808768 bytes
+[2026-07-30 20:13:00] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 20:13:00] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned\frame_%04d.png
+[2026-07-30 20:13:00] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 20:13:00] [INFO] FFmpeg exit code: 0
+[2026-07-30 20:13:00] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-07-30 20:13:00] [INFO] Frames after extraction: 129
+[2026-07-30 20:13:00] [INFO] New frames created during this run: 129
+[2026-07-30 20:13:00] [INFO] Total extracted frame files available: 129
+[2026-07-30 20:13:00] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned
+[2026-07-30 20:13:00] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-07-30 20:13:00] [SUCCESS] Script completed successfully.
+[2026-07-30 20:13:00] [INFO] ============================================
+[2026-07-30 20:27:31] [INFO] ============================================
+[2026-07-30 20:27:31] [INFO] Script started.
+[2026-07-30 20:27:31] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 20:27:31] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 20:27:31] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 20:27:31] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 20:27:31] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 20:27:31] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 20:27:31] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 20:27:31] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 20:27:31] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 20:27:31] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 20:27:31] [INFO] Input video file found.
+[2026-07-30 20:27:31] [INFO] Video file size: 19808768 bytes
+[2026-07-30 20:27:31] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 20:27:31] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-07-30 20:27:31] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 20:27:31] [INFO] FFmpeg exit code: 0
+[2026-07-30 20:27:32] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-07-30 20:27:32] [INFO] Frames after extraction: 129
+[2026-07-30 20:27:32] [INFO] New frames created during this run: 129
+[2026-07-30 20:27:32] [INFO] Total extracted frame files available: 129
+[2026-07-30 20:27:32] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 20:27:32] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-07-30 20:27:32] [SUCCESS] Script completed successfully.
+[2026-07-30 20:27:32] [INFO] ============================================
+[2026-07-30 20:31:14] [INFO] ============================================
+[2026-07-30 20:31:14] [INFO] Script started.
+[2026-07-30 20:31:14] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-30 20:31:14] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-30 20:31:14] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-30 20:31:14] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-30 20:31:14] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-30 20:31:14] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-30 20:31:14] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-30 20:31:14] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 20:31:14] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-30 20:31:14] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-30 20:31:14] [INFO] Input video file found.
+[2026-07-30 20:31:14] [INFO] Video file size: 19808768 bytes
+[2026-07-30 20:31:14] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-30 20:31:14] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-07-30 20:31:14] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-30 20:31:14] [INFO] FFmpeg exit code: 0
+[2026-07-30 20:31:14] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-07-30 20:31:14] [INFO] New frames created during this run: 129
+[2026-07-30 20:31:14] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-30 20:31:14] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-07-30 20:31:14] [SUCCESS] Script completed successfully.
+[2026-07-30 20:31:14] [INFO] ============================================
+[2026-07-31 10:12:25] [INFO] ============================================
+[2026-07-31 10:12:25] [INFO] Script started.
+[2026-07-31 10:12:25] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-07-31 10:12:25] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-31 10:12:25] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-31 10:12:25] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-07-31 10:12:25] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-07-31 10:12:25] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-07-31 10:12:25] [INFO] Crop filter: crop=940:600:0:40
+[2026-07-31 10:12:25] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 10:12:25] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-31 10:12:25] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-07-31 10:12:25] [INFO] Input video file found.
+[2026-07-31 10:12:25] [INFO] Video file size: 19808768 bytes
+[2026-07-31 10:12:25] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-07-31 10:12:25] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-07-31 10:12:25] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-07-31 10:12:25] [INFO] FFmpeg exit code: 0
+[2026-07-31 10:12:25] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-07-31 10:12:25] [INFO] New frames created during this run: 129
+[2026-07-31 10:12:25] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 10:12:25] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-07-31 10:12:25] [SUCCESS] Script completed successfully.
+[2026-07-31 10:12:25] [INFO] ============================================

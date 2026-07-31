@@ -1,0 +1,312 @@
+[2026-07-31 09:56:41] [INFO] ============================================
+[2026-07-31 09:56:41] [INFO] Script started.
+[2026-07-31 09:56:41] [INFO] Script name: 06_artifacts_removal_lama.py
+[2026-07-31 09:56:41] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-31 09:56:41] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-31 09:56:41] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 09:56:41] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 09:56:41] [INFO] Mask folder: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 09:56:41] [INFO] White threshold: 245
+[2026-07-31 09:56:41] [INFO] Protected mask sample size: 20
+[2026-07-31 09:56:41] [INFO] Protected mask vote fraction: 0.8
+[2026-07-31 09:56:41] [INFO] Minimum circle area: 5000px
+[2026-07-31 09:56:41] [INFO] Circle shrink: 0px
+[2026-07-31 09:56:41] [INFO] Artifact mask dilation: 3px
+[2026-07-31 09:56:41] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-31 09:56:41] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\06_artifacts_removal_lama.log
+[2026-07-31 09:56:41] [INFO] Found 9 PNG file(s) to process.
+[2026-07-31 09:56:41] [INFO] Loading cached protected region mask: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-07-31 09:56:43] [INFO] Inference device: cpu
+[2026-07-31 09:56:43] [INFO] Using local LaMa checkpoint: C:\AI_ML_Fellowship\Project2\Bin\big-lama.pt
+[2026-07-31 09:56:44] [INFO] LaMa model loaded successfully in 0.6s.
+[2026-07-31 09:56:48] [INFO] Processed: frame_0001.png (artifact detected: True, 4.62s)
+[2026-07-31 09:56:52] [INFO] Processed: frame_0002.png (artifact detected: True, 4.16s)
+[2026-07-31 09:56:56] [INFO] Processed: frame_0003.png (artifact detected: True, 4.01s)
+[2026-07-31 09:57:01] [INFO] Processed: frame_0004.png (artifact detected: True, 4.93s)
+[2026-07-31 09:57:07] [INFO] Processed: frame_0005.png (artifact detected: True, 5.81s)
+[2026-07-31 09:57:12] [INFO] Processed: frame_0006.png (artifact detected: True, 5.20s)
+[2026-07-31 09:57:18] [INFO] Processed: frame_0007.png (artifact detected: True, 5.55s)
+[2026-07-31 09:57:24] [INFO] Processed: frame_0008.png (artifact detected: True, 6.49s)
+[2026-07-31 09:57:30] [INFO] Processed: frame_0009.png (artifact detected: True, 6.09s)
+[2026-07-31 09:57:30] [INFO] Cleaned frames saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 09:57:30] [INFO] Mask files saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 09:57:30] [INFO] Frames with at least one artifact detection: 9/9
+[2026-07-31 09:57:30] [INFO] Total processing time: 46.9s (5.21s/frame average)
+[2026-07-31 09:57:30] [INFO] Script completed successfully.
+[2026-07-31 09:57:30] [INFO] ============================================
+[2026-07-31 09:58:35] [INFO] ============================================
+[2026-07-31 09:58:35] [INFO] Script started.
+[2026-07-31 09:58:35] [INFO] Script name: 06_artifacts_removal_lama.py
+[2026-07-31 09:58:35] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-31 09:58:35] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-31 09:58:35] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 09:58:35] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 09:58:35] [INFO] Mask folder: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 09:58:35] [INFO] White threshold: 245
+[2026-07-31 09:58:35] [INFO] Protected mask sample size: 20
+[2026-07-31 09:58:35] [INFO] Protected mask vote fraction: 0.8
+[2026-07-31 09:58:35] [INFO] Minimum circle area: 5000px
+[2026-07-31 09:58:35] [INFO] Circle shrink: 0px
+[2026-07-31 09:58:35] [INFO] Artifact mask dilation: 3px
+[2026-07-31 09:58:35] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-31 09:58:35] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\06_artifacts_removal_lama.log
+[2026-07-31 09:58:35] [INFO] Found 9 PNG file(s) to process.
+[2026-07-31 09:58:35] [INFO] Loading cached protected region mask: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-07-31 09:58:36] [INFO] Inference device: cpu
+[2026-07-31 09:58:36] [INFO] Using local LaMa checkpoint: C:\AI_ML_Fellowship\Project2\Bin\big-lama.pt
+[2026-07-31 09:58:37] [INFO] LaMa model loaded successfully in 0.5s.
+[2026-07-31 09:58:41] [INFO] Processed: frame_0001.png (artifact detected: True, 4.75s)
+[2026-07-31 09:58:46] [INFO] Processed: frame_0002.png (artifact detected: True, 4.52s)
+[2026-07-31 09:58:50] [INFO] Processed: frame_0003.png (artifact detected: True, 4.27s)
+[2026-07-31 09:58:55] [INFO] Processed: frame_0004.png (artifact detected: True, 5.05s)
+[2026-07-31 09:59:00] [INFO] Processed: frame_0005.png (artifact detected: True, 5.10s)
+[2026-07-31 09:59:05] [INFO] Processed: frame_0006.png (artifact detected: True, 5.05s)
+[2026-07-31 09:59:10] [INFO] Processed: frame_0007.png (artifact detected: True, 4.98s)
+[2026-07-31 09:59:15] [INFO] Processed: frame_0008.png (artifact detected: True, 5.04s)
+[2026-07-31 09:59:21] [INFO] Processed: frame_0009.png (artifact detected: True, 5.40s)
+[2026-07-31 09:59:21] [INFO] Cleaned frames saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 09:59:21] [INFO] Mask files saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 09:59:21] [INFO] Frames with at least one artifact detection: 9/9
+[2026-07-31 09:59:21] [INFO] Total processing time: 44.2s (4.91s/frame average)
+[2026-07-31 09:59:21] [INFO] Script completed successfully.
+[2026-07-31 09:59:21] [INFO] ============================================
+[2026-07-31 10:08:04] [INFO] ============================================
+[2026-07-31 10:08:04] [INFO] Script started.
+[2026-07-31 10:08:04] [INFO] Script name: 06_artifacts_removal_lama.py
+[2026-07-31 10:08:04] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-31 10:08:04] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-31 10:08:04] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 10:08:04] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 10:08:04] [INFO] Mask folder: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 10:08:04] [INFO] White threshold: 245
+[2026-07-31 10:08:04] [INFO] Protected mask sample size: 20
+[2026-07-31 10:08:04] [INFO] Protected mask vote fraction: 0.8
+[2026-07-31 10:08:04] [INFO] Minimum circle area: 5000px
+[2026-07-31 10:08:04] [INFO] Opening kernel: 1px
+[2026-07-31 10:08:04] [INFO] Radius outlier tolerance: 1.15x
+[2026-07-31 10:08:04] [INFO] Circle shrink: 0px
+[2026-07-31 10:08:04] [INFO] Artifact mask dilation: 3px
+[2026-07-31 10:08:04] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-31 10:08:04] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\06_artifacts_removal_lama.log
+[2026-07-31 10:08:04] [INFO] Found 9 PNG file(s) to process.
+[2026-07-31 10:08:04] [INFO] Loading cached protected region mask: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-07-31 10:08:06] [INFO] Inference device: cpu
+[2026-07-31 10:08:06] [INFO] Using local LaMa checkpoint: C:\AI_ML_Fellowship\Project2\Bin\big-lama.pt
+[2026-07-31 10:08:06] [INFO] LaMa model loaded successfully in 0.6s.
+[2026-07-31 10:08:11] [INFO] Processed: frame_0001.png (artifact detected: True, 4.84s)
+[2026-07-31 10:08:15] [INFO] Processed: frame_0002.png (artifact detected: True, 4.51s)
+[2026-07-31 10:08:20] [INFO] Processed: frame_0003.png (artifact detected: True, 4.20s)
+[2026-07-31 10:08:24] [INFO] Processed: frame_0004.png (artifact detected: True, 4.29s)
+[2026-07-31 10:08:28] [INFO] Processed: frame_0005.png (artifact detected: True, 4.31s)
+[2026-07-31 10:08:33] [INFO] Processed: frame_0006.png (artifact detected: True, 4.93s)
+[2026-07-31 10:08:39] [INFO] Processed: frame_0007.png (artifact detected: True, 5.35s)
+[2026-07-31 10:08:45] [INFO] Processed: frame_0008.png (artifact detected: True, 6.06s)
+[2026-07-31 10:08:52] [INFO] Processed: frame_0009.png (artifact detected: True, 6.92s)
+[2026-07-31 10:08:52] [INFO] Cleaned frames saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 10:08:52] [INFO] Mask files saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 10:08:52] [INFO] Frames with at least one artifact detection: 9/9
+[2026-07-31 10:08:52] [INFO] Total processing time: 45.4s (5.05s/frame average)
+[2026-07-31 10:08:52] [INFO] Script completed successfully.
+[2026-07-31 10:08:52] [INFO] ============================================
+[2026-07-31 10:09:26] [INFO] ============================================
+[2026-07-31 10:09:26] [INFO] Script started.
+[2026-07-31 10:09:26] [INFO] Script name: 06_artifacts_removal_lama.py
+[2026-07-31 10:09:26] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-31 10:09:26] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-31 10:09:26] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 10:09:26] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 10:09:26] [INFO] Mask folder: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 10:09:26] [INFO] White threshold: 245
+[2026-07-31 10:09:26] [INFO] Protected mask sample size: 20
+[2026-07-31 10:09:26] [INFO] Protected mask vote fraction: 0.8
+[2026-07-31 10:09:26] [INFO] Minimum circle area: 5000px
+[2026-07-31 10:09:26] [INFO] Opening kernel: 1px
+[2026-07-31 10:09:26] [INFO] Radius outlier tolerance: 1.15x
+[2026-07-31 10:09:26] [INFO] Circle shrink: 0px
+[2026-07-31 10:09:26] [INFO] Artifact mask dilation: 3px
+[2026-07-31 10:09:26] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-31 10:09:26] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\06_artifacts_removal_lama.log
+[2026-07-31 10:09:26] [INFO] Found 9 PNG file(s) to process.
+[2026-07-31 10:09:26] [INFO] Sampling 9 frame(s) to build protected plot-region mask: ['frame_0001.png', 'frame_0002.png', 'frame_0003.png', 'frame_0004.png', 'frame_0005.png', 'frame_0006.png', 'frame_0007.png', 'frame_0008.png', 'frame_0009.png']
+[2026-07-31 10:09:27] [INFO] Detected 8 plot circle(s) via connected components (min area threshold: 5000px).
+[2026-07-31 10:09:27] [INFO] Protected plot-region mask built: 226760/564000 px (40.2%) protected.
+[2026-07-31 10:09:27] [INFO] Protected region mask cached to: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-07-31 10:09:31] [INFO] Inference device: cpu
+[2026-07-31 10:09:31] [INFO] Using local LaMa checkpoint: C:\AI_ML_Fellowship\Project2\Bin\big-lama.pt
+[2026-07-31 10:09:32] [INFO] LaMa model loaded successfully in 0.7s.
+[2026-07-31 10:09:36] [INFO] Processed: frame_0001.png (artifact detected: True, 4.81s)
+[2026-07-31 10:09:41] [INFO] Processed: frame_0002.png (artifact detected: True, 4.49s)
+[2026-07-31 10:09:46] [INFO] Processed: frame_0003.png (artifact detected: True, 5.11s)
+[2026-07-31 10:09:52] [INFO] Processed: frame_0004.png (artifact detected: True, 6.32s)
+[2026-07-31 10:09:58] [INFO] Processed: frame_0005.png (artifact detected: True, 5.67s)
+[2026-07-31 10:10:04] [INFO] Processed: frame_0006.png (artifact detected: True, 5.75s)
+[2026-07-31 10:10:10] [INFO] Processed: frame_0007.png (artifact detected: True, 6.25s)
+[2026-07-31 10:10:16] [INFO] Processed: frame_0008.png (artifact detected: True, 5.48s)
+[2026-07-31 10:10:22] [INFO] Processed: frame_0009.png (artifact detected: True, 6.38s)
+[2026-07-31 10:10:22] [INFO] Cleaned frames saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 10:10:22] [INFO] Mask files saved: 9 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 10:10:22] [INFO] Frames with at least one artifact detection: 9/9
+[2026-07-31 10:10:22] [INFO] Total processing time: 50.3s (5.59s/frame average)
+[2026-07-31 10:10:22] [INFO] Script completed successfully.
+[2026-07-31 10:10:22] [INFO] ============================================
+[2026-07-31 10:13:03] [INFO] ============================================
+[2026-07-31 10:13:03] [INFO] Script started.
+[2026-07-31 10:13:03] [INFO] Script name: 06_artifacts_removal_lama.py
+[2026-07-31 10:13:03] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-07-31 10:13:03] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-07-31 10:13:03] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-07-31 10:13:03] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 10:13:03] [INFO] Mask folder: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 10:13:03] [INFO] White threshold: 245
+[2026-07-31 10:13:03] [INFO] Protected mask sample size: 20
+[2026-07-31 10:13:03] [INFO] Protected mask vote fraction: 0.8
+[2026-07-31 10:13:03] [INFO] Minimum circle area: 5000px
+[2026-07-31 10:13:03] [INFO] Opening kernel: 1px
+[2026-07-31 10:13:03] [INFO] Radius outlier tolerance: 1.15x
+[2026-07-31 10:13:03] [INFO] Circle shrink: 0px
+[2026-07-31 10:13:03] [INFO] Artifact mask dilation: 3px
+[2026-07-31 10:13:03] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-07-31 10:13:03] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\06_artifacts_removal_lama.log
+[2026-07-31 10:13:03] [INFO] Found 129 PNG file(s) to process.
+[2026-07-31 10:13:03] [INFO] Sampling 20 frame(s) to build protected plot-region mask: ['frame_0001.png', 'frame_0007.png', 'frame_0013.png', 'frame_0019.png', 'frame_0025.png', 'frame_0031.png', 'frame_0037.png', 'frame_0043.png', 'frame_0049.png', 'frame_0055.png', 'frame_0061.png', 'frame_0067.png', 'frame_0073.png', 'frame_0079.png', 'frame_0085.png', 'frame_0091.png', 'frame_0097.png', 'frame_0103.png', 'frame_0109.png', 'frame_0115.png']
+[2026-07-31 10:13:03] [INFO] Detected 8 plot circle(s) via connected components (min area threshold: 5000px).
+[2026-07-31 10:13:03] [INFO] Protected plot-region mask built: 226760/564000 px (40.2%) protected.
+[2026-07-31 10:13:03] [INFO] Protected region mask cached to: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-07-31 10:13:05] [INFO] Inference device: cpu
+[2026-07-31 10:13:05] [INFO] Using local LaMa checkpoint: C:\AI_ML_Fellowship\Project2\Bin\big-lama.pt
+[2026-07-31 10:13:06] [INFO] LaMa model loaded successfully in 0.6s.
+[2026-07-31 10:13:10] [INFO] Processed: frame_0001.png (artifact detected: True, 4.50s)
+[2026-07-31 10:13:14] [INFO] Processed: frame_0002.png (artifact detected: True, 4.22s)
+[2026-07-31 10:13:19] [INFO] Processed: frame_0003.png (artifact detected: True, 4.29s)
+[2026-07-31 10:13:23] [INFO] Processed: frame_0004.png (artifact detected: True, 4.34s)
+[2026-07-31 10:13:28] [INFO] Processed: frame_0005.png (artifact detected: True, 4.80s)
+[2026-07-31 10:13:33] [INFO] Processed: frame_0006.png (artifact detected: True, 4.87s)
+[2026-07-31 10:13:37] [INFO] Processed: frame_0007.png (artifact detected: True, 4.87s)
+[2026-07-31 10:13:42] [INFO] Processed: frame_0008.png (artifact detected: True, 4.90s)
+[2026-07-31 10:13:47] [INFO] Processed: frame_0009.png (artifact detected: True, 4.78s)
+[2026-07-31 10:13:52] [INFO] Processed: frame_0010.png (artifact detected: True, 4.78s)
+[2026-07-31 10:13:57] [INFO] Processed: frame_0011.png (artifact detected: True, 4.86s)
+[2026-07-31 10:14:02] [INFO] Processed: frame_0012.png (artifact detected: True, 4.91s)
+[2026-07-31 10:14:07] [INFO] Processed: frame_0013.png (artifact detected: True, 4.81s)
+[2026-07-31 10:14:11] [INFO] Processed: frame_0014.png (artifact detected: True, 4.72s)
+[2026-07-31 10:14:16] [INFO] Processed: frame_0015.png (artifact detected: True, 4.85s)
+[2026-07-31 10:14:21] [INFO] Processed: frame_0016.png (artifact detected: True, 4.74s)
+[2026-07-31 10:14:26] [INFO] Processed: frame_0017.png (artifact detected: True, 4.81s)
+[2026-07-31 10:14:31] [INFO] Processed: frame_0018.png (artifact detected: True, 5.02s)
+[2026-07-31 10:14:36] [INFO] Processed: frame_0019.png (artifact detected: True, 4.95s)
+[2026-07-31 10:14:41] [INFO] Processed: frame_0020.png (artifact detected: True, 4.95s)
+[2026-07-31 10:14:45] [INFO] Processed: frame_0021.png (artifact detected: True, 4.81s)
+[2026-07-31 10:14:50] [INFO] Processed: frame_0022.png (artifact detected: True, 4.73s)
+[2026-07-31 10:14:55] [INFO] Processed: frame_0023.png (artifact detected: True, 4.76s)
+[2026-07-31 10:15:00] [INFO] Processed: frame_0024.png (artifact detected: True, 4.83s)
+[2026-07-31 10:15:05] [INFO] Processed: frame_0025.png (artifact detected: True, 4.88s)
+[2026-07-31 10:15:09] [INFO] Processed: frame_0026.png (artifact detected: True, 4.74s)
+[2026-07-31 10:15:14] [INFO] Processed: frame_0027.png (artifact detected: True, 4.77s)
+[2026-07-31 10:15:19] [INFO] Processed: frame_0028.png (artifact detected: True, 4.78s)
+[2026-07-31 10:15:24] [INFO] Processed: frame_0029.png (artifact detected: True, 4.77s)
+[2026-07-31 10:15:28] [INFO] Processed: frame_0030.png (artifact detected: True, 4.74s)
+[2026-07-31 10:15:33] [INFO] Processed: frame_0031.png (artifact detected: True, 4.86s)
+[2026-07-31 10:15:38] [INFO] Processed: frame_0032.png (artifact detected: True, 4.92s)
+[2026-07-31 10:15:43] [INFO] Processed: frame_0033.png (artifact detected: True, 4.92s)
+[2026-07-31 10:15:48] [INFO] Processed: frame_0034.png (artifact detected: True, 4.81s)
+[2026-07-31 10:15:53] [INFO] Processed: frame_0035.png (artifact detected: True, 4.76s)
+[2026-07-31 10:15:57] [INFO] Processed: frame_0036.png (artifact detected: True, 4.77s)
+[2026-07-31 10:16:02] [INFO] Processed: frame_0037.png (artifact detected: True, 4.83s)
+[2026-07-31 10:16:07] [INFO] Processed: frame_0038.png (artifact detected: True, 4.81s)
+[2026-07-31 10:16:12] [INFO] Processed: frame_0039.png (artifact detected: True, 4.78s)
+[2026-07-31 10:16:17] [INFO] Processed: frame_0040.png (artifact detected: True, 4.78s)
+[2026-07-31 10:16:22] [INFO] Processed: frame_0041.png (artifact detected: True, 4.95s)
+[2026-07-31 10:16:26] [INFO] Processed: frame_0042.png (artifact detected: True, 4.72s)
+[2026-07-31 10:16:31] [INFO] Processed: frame_0043.png (artifact detected: True, 4.80s)
+[2026-07-31 10:16:36] [INFO] Processed: frame_0044.png (artifact detected: True, 4.74s)
+[2026-07-31 10:16:41] [INFO] Processed: frame_0045.png (artifact detected: True, 5.00s)
+[2026-07-31 10:16:46] [INFO] Processed: frame_0046.png (artifact detected: True, 4.85s)
+[2026-07-31 10:16:50] [INFO] Processed: frame_0047.png (artifact detected: True, 4.71s)
+[2026-07-31 10:16:55] [INFO] Processed: frame_0048.png (artifact detected: True, 4.71s)
+[2026-07-31 10:17:00] [INFO] Processed: frame_0049.png (artifact detected: True, 4.77s)
+[2026-07-31 10:17:05] [INFO] Processed: frame_0050.png (artifact detected: True, 4.82s)
+[2026-07-31 10:17:09] [INFO] Processed: frame_0051.png (artifact detected: True, 4.74s)
+[2026-07-31 10:17:14] [INFO] Processed: frame_0052.png (artifact detected: True, 4.74s)
+[2026-07-31 10:17:19] [INFO] Processed: frame_0053.png (artifact detected: True, 4.79s)
+[2026-07-31 10:17:24] [INFO] Processed: frame_0054.png (artifact detected: True, 4.93s)
+[2026-07-31 10:17:29] [INFO] Processed: frame_0055.png (artifact detected: True, 4.83s)
+[2026-07-31 10:17:33] [INFO] Processed: frame_0056.png (artifact detected: True, 4.70s)
+[2026-07-31 10:17:38] [INFO] Processed: frame_0057.png (artifact detected: True, 4.81s)
+[2026-07-31 10:17:43] [INFO] Processed: frame_0058.png (artifact detected: True, 5.01s)
+[2026-07-31 10:17:48] [INFO] Processed: frame_0059.png (artifact detected: True, 4.94s)
+[2026-07-31 10:17:53] [INFO] Processed: frame_0060.png (artifact detected: True, 5.05s)
+[2026-07-31 10:17:58] [INFO] Processed: frame_0061.png (artifact detected: True, 5.24s)
+[2026-07-31 10:18:03] [INFO] Processed: frame_0062.png (artifact detected: True, 5.01s)
+[2026-07-31 10:18:09] [INFO] Processed: frame_0063.png (artifact detected: True, 5.13s)
+[2026-07-31 10:18:14] [INFO] Processed: frame_0064.png (artifact detected: True, 5.00s)
+[2026-07-31 10:18:19] [INFO] Processed: frame_0065.png (artifact detected: True, 5.06s)
+[2026-07-31 10:18:24] [INFO] Processed: frame_0066.png (artifact detected: True, 5.02s)
+[2026-07-31 10:18:29] [INFO] Processed: frame_0067.png (artifact detected: True, 4.90s)
+[2026-07-31 10:18:34] [INFO] Processed: frame_0068.png (artifact detected: True, 4.99s)
+[2026-07-31 10:18:39] [INFO] Processed: frame_0069.png (artifact detected: True, 5.08s)
+[2026-07-31 10:18:44] [INFO] Processed: frame_0070.png (artifact detected: True, 5.35s)
+[2026-07-31 10:18:49] [INFO] Processed: frame_0071.png (artifact detected: True, 5.00s)
+[2026-07-31 10:18:54] [INFO] Processed: frame_0072.png (artifact detected: True, 5.06s)
+[2026-07-31 10:18:59] [INFO] Processed: frame_0073.png (artifact detected: True, 5.08s)
+[2026-07-31 10:19:04] [INFO] Processed: frame_0074.png (artifact detected: True, 5.32s)
+[2026-07-31 10:19:10] [INFO] Processed: frame_0075.png (artifact detected: True, 5.60s)
+[2026-07-31 10:19:15] [INFO] Processed: frame_0076.png (artifact detected: True, 5.05s)
+[2026-07-31 10:19:20] [INFO] Processed: frame_0077.png (artifact detected: True, 5.17s)
+[2026-07-31 10:19:25] [INFO] Processed: frame_0078.png (artifact detected: True, 5.04s)
+[2026-07-31 10:19:30] [INFO] Processed: frame_0079.png (artifact detected: True, 5.02s)
+[2026-07-31 10:19:35] [INFO] Processed: frame_0080.png (artifact detected: True, 5.12s)
+[2026-07-31 10:19:40] [INFO] Processed: frame_0081.png (artifact detected: True, 4.97s)
+[2026-07-31 10:19:46] [INFO] Processed: frame_0082.png (artifact detected: True, 5.28s)
+[2026-07-31 10:19:50] [INFO] Processed: frame_0083.png (artifact detected: True, 4.72s)
+[2026-07-31 10:19:56] [INFO] Processed: frame_0084.png (artifact detected: True, 5.06s)
+[2026-07-31 10:20:00] [INFO] Processed: frame_0085.png (artifact detected: True, 4.84s)
+[2026-07-31 10:20:05] [INFO] Processed: frame_0086.png (artifact detected: True, 4.95s)
+[2026-07-31 10:20:10] [INFO] Processed: frame_0087.png (artifact detected: True, 4.72s)
+[2026-07-31 10:20:15] [INFO] Processed: frame_0088.png (artifact detected: True, 4.86s)
+[2026-07-31 10:20:20] [INFO] Processed: frame_0089.png (artifact detected: True, 5.16s)
+[2026-07-31 10:20:25] [INFO] Processed: frame_0090.png (artifact detected: True, 5.32s)
+[2026-07-31 10:20:31] [INFO] Processed: frame_0091.png (artifact detected: True, 5.15s)
+[2026-07-31 10:20:36] [INFO] Processed: frame_0092.png (artifact detected: True, 5.31s)
+[2026-07-31 10:20:41] [INFO] Processed: frame_0093.png (artifact detected: True, 5.19s)
+[2026-07-31 10:20:47] [INFO] Processed: frame_0094.png (artifact detected: True, 5.98s)
+[2026-07-31 10:20:53] [INFO] Processed: frame_0095.png (artifact detected: True, 5.53s)
+[2026-07-31 10:20:58] [INFO] Processed: frame_0096.png (artifact detected: True, 5.84s)
+[2026-07-31 10:21:05] [INFO] Processed: frame_0097.png (artifact detected: True, 6.15s)
+[2026-07-31 10:21:10] [INFO] Processed: frame_0098.png (artifact detected: True, 5.76s)
+[2026-07-31 10:21:16] [INFO] Processed: frame_0099.png (artifact detected: True, 5.95s)
+[2026-07-31 10:21:22] [INFO] Processed: frame_0100.png (artifact detected: True, 5.49s)
+[2026-07-31 10:21:27] [INFO] Processed: frame_0101.png (artifact detected: True, 5.23s)
+[2026-07-31 10:21:32] [INFO] Processed: frame_0102.png (artifact detected: True, 5.17s)
+[2026-07-31 10:21:37] [INFO] Processed: frame_0103.png (artifact detected: True, 5.15s)
+[2026-07-31 10:21:43] [INFO] Processed: frame_0104.png (artifact detected: True, 5.45s)
+[2026-07-31 10:21:48] [INFO] Processed: frame_0105.png (artifact detected: True, 5.58s)
+[2026-07-31 10:21:53] [INFO] Processed: frame_0106.png (artifact detected: True, 5.14s)
+[2026-07-31 10:21:59] [INFO] Processed: frame_0107.png (artifact detected: True, 5.02s)
+[2026-07-31 10:22:04] [INFO] Processed: frame_0108.png (artifact detected: True, 5.07s)
+[2026-07-31 10:22:08] [INFO] Processed: frame_0109.png (artifact detected: True, 4.85s)
+[2026-07-31 10:22:13] [INFO] Processed: frame_0110.png (artifact detected: True, 4.99s)
+[2026-07-31 10:22:18] [INFO] Processed: frame_0111.png (artifact detected: True, 4.82s)
+[2026-07-31 10:22:23] [INFO] Processed: frame_0112.png (artifact detected: True, 4.83s)
+[2026-07-31 10:22:28] [INFO] Processed: frame_0113.png (artifact detected: True, 4.93s)
+[2026-07-31 10:22:33] [INFO] Processed: frame_0114.png (artifact detected: True, 4.75s)
+[2026-07-31 10:22:38] [INFO] Processed: frame_0115.png (artifact detected: True, 4.84s)
+[2026-07-31 10:22:42] [INFO] Processed: frame_0116.png (artifact detected: True, 4.79s)
+[2026-07-31 10:22:47] [INFO] Processed: frame_0117.png (artifact detected: True, 5.04s)
+[2026-07-31 10:22:52] [INFO] Processed: frame_0118.png (artifact detected: True, 4.75s)
+[2026-07-31 10:22:57] [INFO] Processed: frame_0119.png (artifact detected: True, 4.85s)
+[2026-07-31 10:23:02] [INFO] Processed: frame_0120.png (artifact detected: True, 4.95s)
+[2026-07-31 10:23:07] [INFO] Processed: frame_0121.png (artifact detected: True, 4.87s)
+[2026-07-31 10:23:12] [INFO] Processed: frame_0122.png (artifact detected: True, 4.69s)
+[2026-07-31 10:23:16] [INFO] Processed: frame_0123.png (artifact detected: True, 4.87s)
+[2026-07-31 10:23:21] [INFO] Processed: frame_0124.png (artifact detected: True, 4.76s)
+[2026-07-31 10:23:26] [INFO] Processed: frame_0125.png (artifact detected: True, 4.80s)
+[2026-07-31 10:23:31] [INFO] Processed: frame_0126.png (artifact detected: True, 4.82s)
+[2026-07-31 10:23:36] [INFO] Processed: frame_0127.png (artifact detected: True, 4.83s)
+[2026-07-31 10:23:40] [INFO] Processed: frame_0128.png (artifact detected: True, 4.82s)
+[2026-07-31 10:23:45] [INFO] Processed: frame_0129.png (artifact detected: True, 4.81s)
+[2026-07-31 10:23:45] [INFO] Cleaned frames saved: 129 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-07-31 10:23:45] [INFO] Mask files saved: 129 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-07-31 10:23:45] [INFO] Frames with at least one artifact detection: 129/129
+[2026-07-31 10:23:45] [INFO] Total processing time: 639.7s (4.96s/frame average)
+[2026-07-31 10:23:45] [INFO] Script completed successfully.
+[2026-07-31 10:23:45] [INFO] ============================================
