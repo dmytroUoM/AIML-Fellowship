@@ -21,10 +21,11 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
-#Exclude *.avi, *.exe, *.png
+#Exclude files
 *.avi
 *.exe
 *.png
+*.pt
 
 # Virtual environments
 .venv-tomo/
