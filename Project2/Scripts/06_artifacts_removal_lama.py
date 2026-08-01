@@ -79,27 +79,21 @@ parser.add_argument(
 )
 parser.add_argument(
     "--min-circle-area", type=int, default=5000,
-    help="Minimum connected-component pixel area to be treated as a plot circle rather than "
-         "text/numbering (default: 5000). Lower this if your circles are smaller than ~80px "
-         "radius; raise it if large text blobs are being mistaken for circles."
+    help="Minimum connected-component pixel area to be treated as real plot data rather than "
+         "text/numbering (default: 5000). Lower this if your data blobs are smaller than this; "
+         "raise it if large text blobs are being mistaken for data."
 )
 parser.add_argument(
     "--open-kernel-px", type=int, default=1,
     help="Morphological opening kernel radius applied before component detection, to sever thin "
-         "(often single-pixel, anti-aliasing-driven) accidental bridges between a circle and "
+         "(often single-pixel, anti-aliasing-driven) accidental bridges between the data region and "
          "nearby text before they get fused into one blob (default: 1, i.e. a 3x3 kernel)."
 )
 parser.add_argument(
-    "--radius-outlier-tolerance", type=float, default=1.15,
-    help="If a component's minimum-enclosing-circle radius exceeds its area-implied radius by "
-         "more than this factor, a stray outlier pixel is assumed to have dragged the fitted "
-         "circle too wide, and the area-implied (more conservative) radius is used instead "
-         "(default: 1.15)."
-)
-parser.add_argument(
-    "--circle-shrink-px", type=int, default=0,
-    help="Shrink each fitted protected circle's radius by this many pixels, in case the fitted "
-         "circle slightly overshoots the true plot edge (default: 0)."
+    "--mask-pad-px", type=int, default=0,
+    help="Dilate (positive) or erode (negative) the final protected region by this many pixels, "
+         "in case the true data boundary needs a small safety margin either direction "
+         "(default: 0, i.e. use the true jagged data shape exactly as detected)."
 )
 parser.add_argument(
     "--artifact-dilate-px", type=int, default=3,
@@ -179,23 +173,24 @@ def nonwhite_mask(img_bgr: np.ndarray, white_thresh: int) -> np.ndarray:
 
 def build_protected_region_mask(files, white_thresh: int, sample_size: int,
                                  vote_fraction: float, min_circle_area: int,
-                                 open_kernel_px: int, radius_outlier_tolerance: float,
-                                 circle_shrink_px: int) -> np.ndarray:
+                                 open_kernel_px: int, mask_pad_px: int) -> np.ndarray:
     """Sample frames evenly across the dataset, find pixels that are non-white
-    in most of them, then keep ONLY the large circular blobs (the plot
-    circles) and discard small blobs (numbers, labels, values, any overlay
-    text). Returns a mask of cleanly filled circular disks - the ROI is
-    strictly inside the circles, matching the manual example.
+    in most of them, then keep ONLY the large blobs (the real plot data) and
+    discard small blobs (numbers, labels, values, any overlay text).
 
-    Two safeguards protect against a single stray pixel distorting a circle:
-      1. Morphological opening severs thin (often 1px, anti-aliasing-driven)
-         accidental bridges between a circle and nearby text BEFORE labeling
-         connected components, so they don't get fused into one blob.
-      2. Each component's minimum-enclosing-circle radius is cross-checked
-         against its own pixel-area-implied radius. If the enclosing circle
-         is suspiciously larger (a classic symptom of one outlier pixel
-         dragging a convex-hull fit outward), the more conservative
-         area-implied radius is used instead.
+    IMPORTANT: the protected region is the TRUE pixel shape of each surviving
+    component, not a fitted circle. Real tomogram/plot data is often a coarse
+    grid with a jagged (staircase) boundary, not a perfectly smooth disk.
+    Fitting a smooth circle to it would either cut off real data pixels that
+    poke past the circle, or wrongly protect blank corner pixels the circle
+    covers but the real data doesn't - both are real defects, not cosmetic
+    ones, since the former silently deletes real data during inpainting.
+
+    A single safeguard remains against a single stray pixel distorting the
+    result: morphological opening severs thin (often 1px, anti-aliasing-
+    driven) accidental bridges between the data region and nearby text
+    BEFORE labeling connected components, so they don't get fused into one
+    blob in the first place.
     """
     n = len(files)
     sample_n = min(sample_size, n)
@@ -233,7 +228,7 @@ def build_protected_region_mask(files, white_thresh: int, sample_size: int,
     raw_mask = (vote_count >= threshold_votes).astype(np.uint8) * 255
 
     # Sever thin accidental bridges (e.g. a single anti-aliased pixel linking
-    # a circle to nearby text) before labeling connected components.
+    # the data region to nearby text) before labeling connected components.
     if open_kernel_px > 0:
         open_kernel = cv2.getStructuringElement(
             cv2.MORPH_ELLIPSE, (2 * open_kernel_px + 1, 2 * open_kernel_px + 1)
@@ -242,43 +237,37 @@ def build_protected_region_mask(files, white_thresh: int, sample_size: int,
 
     num_labels, labels = cv2.connectedComponents(raw_mask)
     protected = np.zeros(raw_mask.shape, dtype=np.uint8)
-    circles_found = 0
+    blobs_found = 0
 
     for i in range(1, num_labels):
-        component_mask = (labels == i).astype(np.uint8) * 255
-        area = int(cv2.countNonZero(component_mask))
+        component_mask = (labels == i)
+        area = int(np.count_nonzero(component_mask))
         if area < min_circle_area:
             continue
 
-        contours, _ = cv2.findContours(component_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        if not contours:
-            continue
-        largest = max(contours, key=cv2.contourArea)
-        (cx, cy), r_enclosing = cv2.minEnclosingCircle(largest)
+        # Use the TRUE pixel shape of this component directly - no circle
+        # fitting - so the jagged real data boundary is preserved exactly.
+        protected[component_mask] = 255
+        blobs_found += 1
 
-        r_area = float(np.sqrt(area / np.pi))
-        if r_enclosing > r_area * radius_outlier_tolerance:
-            radius = r_area
-            log(f"Component at ({cx:.0f},{cy:.0f}): enclosing radius {r_enclosing:.1f}px looked "
-                f"like an outlier vs area-implied radius {r_area:.1f}px - using area-implied radius.",
-                "WARNING")
+    if mask_pad_px != 0:
+        kernel = cv2.getStructuringElement(
+            cv2.MORPH_ELLIPSE, (2 * abs(mask_pad_px) + 1, 2 * abs(mask_pad_px) + 1)
+        )
+        if mask_pad_px > 0:
+            protected = cv2.dilate(protected, kernel)
         else:
-            radius = r_enclosing
-
-        radius = max(0.0, radius - circle_shrink_px)
-
-        cv2.circle(protected, (int(round(cx)), int(round(cy))), int(round(radius)), 255, -1)
-        circles_found += 1
+            protected = cv2.erode(protected, kernel)
 
     protected_px = int(np.count_nonzero(protected))
     total_px = protected.size
-    log(f"Detected {circles_found} plot circle(s) via connected components "
-        f"(min area threshold: {min_circle_area}px).")
+    log(f"Detected {blobs_found} plot data blob(s) via connected components "
+        f"(min area threshold: {min_circle_area}px), using their true jagged shape.")
     log(f"Protected plot-region mask built: {protected_px}/{total_px} px "
         f"({100.0 * protected_px / total_px:.1f}%) protected.")
 
-    if circles_found == 0:
-        log("No circles detected! Check --white-thresh and --min-circle-area, "
+    if blobs_found == 0:
+        log("No plot data blobs detected! Check --white-thresh and --min-circle-area, "
             "or inspect the cached mask file to debug.", "WARNING")
 
     return protected
@@ -299,8 +288,7 @@ def get_or_build_protected_mask(files) -> np.ndarray:
         vote_fraction=args.protect_vote_fraction,
         min_circle_area=args.min_circle_area,
         open_kernel_px=args.open_kernel_px,
-        radius_outlier_tolerance=args.radius_outlier_tolerance,
-        circle_shrink_px=args.circle_shrink_px
+        mask_pad_px=args.mask_pad_px
     )
     cv2.imwrite(str(PROTECTED_MASK_FILE), protected)
     log(f"Protected region mask cached to: {PROTECTED_MASK_FILE.resolve()}", "SUCCESS")
@@ -378,10 +366,9 @@ def main() -> int:
         log(f"White threshold: {args.white_thresh}")
         log(f"Protected mask sample size: {args.sample_size}")
         log(f"Protected mask vote fraction: {args.protect_vote_fraction}")
-        log(f"Minimum circle area: {args.min_circle_area}px")
+        log(f"Minimum data blob area: {args.min_circle_area}px")
         log(f"Opening kernel: {args.open_kernel_px}px")
-        log(f"Radius outlier tolerance: {args.radius_outlier_tolerance}x")
-        log(f"Circle shrink: {args.circle_shrink_px}px")
+        log(f"Mask padding: {args.mask_pad_px}px")
         log(f"Artifact mask dilation: {args.artifact_dilate_px}px")
 
         if ENABLE_LOGGING:
