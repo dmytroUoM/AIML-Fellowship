@@ -3,7 +3,9 @@
 # Project 2: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
 # Purpose:
 #   - Detect text/numbering artifacts of ANY color by protecting ONLY the
-#     circular plot regions.
+#     circular plot regions (fitted geometrically) and flagging every other
+#     non-white pixel as an artifact - including numbers, P-labels, values,
+#     and any newly-added colored debug text
 #   - Remove detected artifacts using LaMa (deep learning inpainting model)
 #   - Save cleaned frames to Images\03_Cleaned_lama folder
 #   - Save debug masks to Images\03_Masks_lama folder
@@ -28,10 +30,16 @@
 #      values, or any newly-added colored text - is treated as an artifact.
 #   7. Inpaint only the artifact mask using LaMa.
 #
+# Requirements:
+#   pip install opencv-python numpy pillow torch torchvision
+#   pip install simple-lama-inpainting --no-deps
+#   (see README for why --no-deps is recommended)
 #
 # Model:
 #   This script looks for the LaMa "big-lama.pt" checkpoint (~196 MB) at
-#   Bin\big-lama.pt 
+#   Bin\big-lama.pt beside the script, matching the Bin\ffmpeg.exe convention
+#   used in the .ps1 scripts. If not found there, it falls back to
+#   downloading it automatically to the torch hub cache.
 #   Source: https://github.com/enesmsahin/simple-lama-inpainting
 # ============================================
 
@@ -335,6 +343,15 @@ def remove_artifacts_lama(lama, input_path: str, output_path: str,
 
         result = lama(image_pil, mask_pil)
         cleaned = cv2.cvtColor(np.array(result), cv2.COLOR_RGB2BGR)
+
+        # LaMa internally pads the image up to a multiple of 8px before
+        # inference and does NOT crop back down afterward. If the original
+        # dimensions aren't already a multiple of 8 (e.g. 940 wide), the
+        # output would silently come back larger than the input. Crop back
+        # to the original size here so every cleaned frame stays pixel-for-
+        # pixel aligned with its source frame and mask.
+        if cleaned.shape[:2] != img.shape[:2]:
+            cleaned = cleaned[:img.shape[0], :img.shape[1]]
     else:
         # Nothing detected, no need to run inference
         cleaned = img
