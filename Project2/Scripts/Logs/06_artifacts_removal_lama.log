@@ -310,3 +310,164 @@
 [2026-07-31 10:23:45] [INFO] Total processing time: 639.7s (4.96s/frame average)
 [2026-07-31 10:23:45] [INFO] Script completed successfully.
 [2026-07-31 10:23:45] [INFO] ============================================
+[2026-08-01 10:53:12] [INFO] ============================================
+[2026-08-01 10:53:12] [INFO] Script started.
+[2026-08-01 10:53:12] [INFO] Script name: 06_artifacts_removal_lama.py
+[2026-08-01 10:53:12] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 10:53:12] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 10:53:12] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 10:53:12] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-08-01 10:53:12] [INFO] Mask folder: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-08-01 10:53:12] [INFO] White threshold: 245
+[2026-08-01 10:53:12] [INFO] Protected mask sample size: 20
+[2026-08-01 10:53:12] [INFO] Protected mask vote fraction: 0.8
+[2026-08-01 10:53:12] [INFO] Minimum circle area: 5000px
+[2026-08-01 10:53:12] [INFO] Opening kernel: 1px
+[2026-08-01 10:53:12] [INFO] Radius outlier tolerance: 1.15x
+[2026-08-01 10:53:12] [INFO] Circle shrink: 0px
+[2026-08-01 10:53:12] [INFO] Artifact mask dilation: 3px
+[2026-08-01 10:53:12] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 10:53:12] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\06_artifacts_removal_lama.log
+[2026-08-01 10:53:12] [INFO] Found 129 PNG file(s) to process.
+[2026-08-01 10:53:12] [INFO] Sampling 20 frame(s) to build protected plot-region mask: ['frame_0001.png', 'frame_0007.png', 'frame_0013.png', 'frame_0019.png', 'frame_0025.png', 'frame_0031.png', 'frame_0037.png', 'frame_0043.png', 'frame_0049.png', 'frame_0055.png', 'frame_0061.png', 'frame_0067.png', 'frame_0073.png', 'frame_0079.png', 'frame_0085.png', 'frame_0091.png', 'frame_0097.png', 'frame_0103.png', 'frame_0109.png', 'frame_0115.png']
+[2026-08-01 10:53:13] [INFO] Detected 8 plot circle(s) via connected components (min area threshold: 5000px).
+[2026-08-01 10:53:13] [INFO] Protected plot-region mask built: 226760/564000 px (40.2%) protected.
+[2026-08-01 10:53:13] [INFO] Protected region mask cached to: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-08-01 10:53:17] [INFO] Inference device: cpu
+[2026-08-01 10:53:17] [INFO] Using local LaMa checkpoint: C:\AI_ML_Fellowship\Project2\Bin\big-lama.pt
+[2026-08-01 10:53:18] [INFO] LaMa model loaded successfully in 0.8s.
+[2026-08-01 10:53:23] [INFO] Processed: frame_0001.png (artifact detected: True, 5.10s)
+[2026-08-01 10:53:28] [INFO] Processed: frame_0002.png (artifact detected: True, 4.44s)
+[2026-08-01 10:53:32] [INFO] Processed: frame_0003.png (artifact detected: True, 4.29s)
+[2026-08-01 10:53:38] [INFO] Processed: frame_0004.png (artifact detected: True, 6.11s)
+[2026-08-01 10:53:44] [INFO] Processed: frame_0005.png (artifact detected: True, 6.01s)
+[2026-08-01 10:53:49] [INFO] Processed: frame_0006.png (artifact detected: True, 5.10s)
+[2026-08-01 10:53:54] [INFO] Processed: frame_0007.png (artifact detected: True, 5.10s)
+[2026-08-01 10:54:00] [INFO] Processed: frame_0008.png (artifact detected: True, 5.47s)
+[2026-08-01 10:54:05] [INFO] Processed: frame_0009.png (artifact detected: True, 5.28s)
+[2026-08-01 10:54:12] [INFO] Processed: frame_0010.png (artifact detected: True, 6.58s)
+[2026-08-01 10:54:18] [INFO] Processed: frame_0011.png (artifact detected: True, 6.85s)
+[2026-08-01 10:54:24] [INFO] Processed: frame_0012.png (artifact detected: True, 5.16s)
+[2026-08-01 10:54:30] [INFO] Processed: frame_0013.png (artifact detected: True, 6.60s)
+[2026-08-01 10:54:37] [INFO] Processed: frame_0014.png (artifact detected: True, 6.34s)
+[2026-08-01 10:54:43] [INFO] Processed: frame_0015.png (artifact detected: True, 6.26s)
+[2026-08-01 10:54:49] [INFO] Processed: frame_0016.png (artifact detected: True, 6.17s)
+[2026-08-01 10:54:55] [INFO] Processed: frame_0017.png (artifact detected: True, 6.31s)
+[2026-08-01 10:55:01] [INFO] Processed: frame_0018.png (artifact detected: True, 6.23s)
+[2026-08-01 10:55:08] [INFO] Processed: frame_0019.png (artifact detected: True, 6.35s)
+[2026-08-01 10:55:14] [INFO] Processed: frame_0020.png (artifact detected: True, 6.40s)
+[2026-08-01 10:55:21] [INFO] Processed: frame_0021.png (artifact detected: True, 6.25s)
+[2026-08-01 10:55:27] [INFO] Processed: frame_0022.png (artifact detected: True, 6.49s)
+[2026-08-01 10:55:34] [INFO] Processed: frame_0023.png (artifact detected: True, 6.71s)
+[2026-08-01 10:55:40] [INFO] Processed: frame_0024.png (artifact detected: True, 6.78s)
+[2026-08-01 10:55:47] [INFO] Processed: frame_0025.png (artifact detected: True, 6.69s)
+[2026-08-01 10:55:54] [INFO] Processed: frame_0026.png (artifact detected: True, 6.94s)
+[2026-08-01 10:56:01] [INFO] Processed: frame_0027.png (artifact detected: True, 6.77s)
+[2026-08-01 10:56:08] [INFO] Processed: frame_0028.png (artifact detected: True, 6.89s)
+[2026-08-01 10:56:13] [INFO] Processed: frame_0029.png (artifact detected: True, 5.37s)
+[2026-08-01 10:56:19] [INFO] Processed: frame_0030.png (artifact detected: True, 5.52s)
+[2026-08-01 10:56:24] [INFO] Processed: frame_0031.png (artifact detected: True, 5.60s)
+[2026-08-01 10:56:30] [INFO] Processed: frame_0032.png (artifact detected: True, 5.30s)
+[2026-08-01 10:56:35] [INFO] Processed: frame_0033.png (artifact detected: True, 5.25s)
+[2026-08-01 10:56:40] [INFO] Processed: frame_0034.png (artifact detected: True, 5.28s)
+[2026-08-01 10:56:45] [INFO] Processed: frame_0035.png (artifact detected: True, 5.21s)
+[2026-08-01 10:56:51] [INFO] Processed: frame_0036.png (artifact detected: True, 5.32s)
+[2026-08-01 10:56:56] [INFO] Processed: frame_0037.png (artifact detected: True, 5.51s)
+[2026-08-01 10:57:01] [INFO] Processed: frame_0038.png (artifact detected: True, 5.15s)
+[2026-08-01 10:57:07] [INFO] Processed: frame_0039.png (artifact detected: True, 5.38s)
+[2026-08-01 10:57:12] [INFO] Processed: frame_0040.png (artifact detected: True, 5.02s)
+[2026-08-01 10:57:17] [INFO] Processed: frame_0041.png (artifact detected: True, 5.13s)
+[2026-08-01 10:57:22] [INFO] Processed: frame_0042.png (artifact detected: True, 5.12s)
+[2026-08-01 10:57:27] [INFO] Processed: frame_0043.png (artifact detected: True, 5.20s)
+[2026-08-01 10:57:32] [INFO] Processed: frame_0044.png (artifact detected: True, 5.23s)
+[2026-08-01 10:57:38] [INFO] Processed: frame_0045.png (artifact detected: True, 5.34s)
+[2026-08-01 10:57:43] [INFO] Processed: frame_0046.png (artifact detected: True, 5.20s)
+[2026-08-01 10:57:49] [INFO] Processed: frame_0047.png (artifact detected: True, 5.95s)
+[2026-08-01 10:57:55] [INFO] Processed: frame_0048.png (artifact detected: True, 6.28s)
+[2026-08-01 10:58:01] [INFO] Processed: frame_0049.png (artifact detected: True, 5.84s)
+[2026-08-01 10:58:07] [INFO] Processed: frame_0050.png (artifact detected: True, 6.02s)
+[2026-08-01 10:58:13] [INFO] Processed: frame_0051.png (artifact detected: True, 6.07s)
+[2026-08-01 10:58:19] [INFO] Processed: frame_0052.png (artifact detected: True, 5.78s)
+[2026-08-01 10:58:25] [INFO] Processed: frame_0053.png (artifact detected: True, 5.73s)
+[2026-08-01 10:58:30] [INFO] Processed: frame_0054.png (artifact detected: True, 5.75s)
+[2026-08-01 10:58:37] [INFO] Processed: frame_0055.png (artifact detected: True, 6.54s)
+[2026-08-01 10:58:44] [INFO] Processed: frame_0056.png (artifact detected: True, 7.50s)
+[2026-08-01 10:58:51] [INFO] Processed: frame_0057.png (artifact detected: True, 6.42s)
+[2026-08-01 10:58:58] [INFO] Processed: frame_0058.png (artifact detected: True, 7.14s)
+[2026-08-01 10:59:06] [INFO] Processed: frame_0059.png (artifact detected: True, 8.40s)
+[2026-08-01 10:59:13] [INFO] Processed: frame_0060.png (artifact detected: True, 6.91s)
+[2026-08-01 10:59:20] [INFO] Processed: frame_0061.png (artifact detected: True, 6.77s)
+[2026-08-01 10:59:27] [INFO] Processed: frame_0062.png (artifact detected: True, 6.49s)
+[2026-08-01 10:59:33] [INFO] Processed: frame_0063.png (artifact detected: True, 6.16s)
+[2026-08-01 10:59:39] [INFO] Processed: frame_0064.png (artifact detected: True, 6.44s)
+[2026-08-01 10:59:45] [INFO] Processed: frame_0065.png (artifact detected: True, 5.69s)
+[2026-08-01 10:59:51] [INFO] Processed: frame_0066.png (artifact detected: True, 6.07s)
+[2026-08-01 10:59:57] [INFO] Processed: frame_0067.png (artifact detected: True, 6.01s)
+[2026-08-01 11:00:03] [INFO] Processed: frame_0068.png (artifact detected: True, 6.38s)
+[2026-08-01 11:00:10] [INFO] Processed: frame_0069.png (artifact detected: True, 6.44s)
+[2026-08-01 11:00:16] [INFO] Processed: frame_0070.png (artifact detected: True, 6.03s)
+[2026-08-01 11:00:22] [INFO] Processed: frame_0071.png (artifact detected: True, 6.48s)
+[2026-08-01 11:00:29] [INFO] Processed: frame_0072.png (artifact detected: True, 6.36s)
+[2026-08-01 11:00:35] [INFO] Processed: frame_0073.png (artifact detected: True, 5.95s)
+[2026-08-01 11:00:41] [INFO] Processed: frame_0074.png (artifact detected: True, 6.78s)
+[2026-08-01 11:00:47] [INFO] Processed: frame_0075.png (artifact detected: True, 5.99s)
+[2026-08-01 11:00:53] [INFO] Processed: frame_0076.png (artifact detected: True, 5.83s)
+[2026-08-01 11:00:59] [INFO] Processed: frame_0077.png (artifact detected: True, 5.75s)
+[2026-08-01 11:01:05] [INFO] Processed: frame_0078.png (artifact detected: True, 5.72s)
+[2026-08-01 11:01:10] [INFO] Processed: frame_0079.png (artifact detected: True, 5.88s)
+[2026-08-01 11:01:16] [INFO] Processed: frame_0080.png (artifact detected: True, 5.88s)
+[2026-08-01 11:01:22] [INFO] Processed: frame_0081.png (artifact detected: True, 5.93s)
+[2026-08-01 11:01:28] [INFO] Processed: frame_0082.png (artifact detected: True, 5.87s)
+[2026-08-01 11:01:35] [INFO] Processed: frame_0083.png (artifact detected: True, 7.26s)
+[2026-08-01 11:01:42] [INFO] Processed: frame_0084.png (artifact detected: True, 6.07s)
+[2026-08-01 11:01:47] [INFO] Processed: frame_0085.png (artifact detected: True, 5.91s)
+[2026-08-01 11:01:54] [INFO] Processed: frame_0086.png (artifact detected: True, 6.56s)
+[2026-08-01 11:02:00] [INFO] Processed: frame_0087.png (artifact detected: True, 6.23s)
+[2026-08-01 11:02:07] [INFO] Processed: frame_0088.png (artifact detected: True, 6.68s)
+[2026-08-01 11:02:14] [INFO] Processed: frame_0089.png (artifact detected: True, 7.34s)
+[2026-08-01 11:02:21] [INFO] Processed: frame_0090.png (artifact detected: True, 6.67s)
+[2026-08-01 11:02:28] [INFO] Processed: frame_0091.png (artifact detected: True, 6.59s)
+[2026-08-01 11:02:34] [INFO] Processed: frame_0092.png (artifact detected: True, 6.65s)
+[2026-08-01 11:02:41] [INFO] Processed: frame_0093.png (artifact detected: True, 6.81s)
+[2026-08-01 11:02:48] [INFO] Processed: frame_0094.png (artifact detected: True, 6.54s)
+[2026-08-01 11:02:54] [INFO] Processed: frame_0095.png (artifact detected: True, 6.88s)
+[2026-08-01 11:03:01] [INFO] Processed: frame_0096.png (artifact detected: True, 6.60s)
+[2026-08-01 11:03:08] [INFO] Processed: frame_0097.png (artifact detected: True, 6.82s)
+[2026-08-01 11:03:15] [INFO] Processed: frame_0098.png (artifact detected: True, 6.75s)
+[2026-08-01 11:03:21] [INFO] Processed: frame_0099.png (artifact detected: True, 6.68s)
+[2026-08-01 11:03:28] [INFO] Processed: frame_0100.png (artifact detected: True, 6.55s)
+[2026-08-01 11:03:35] [INFO] Processed: frame_0101.png (artifact detected: True, 6.78s)
+[2026-08-01 11:03:41] [INFO] Processed: frame_0102.png (artifact detected: True, 6.72s)
+[2026-08-01 11:03:48] [INFO] Processed: frame_0103.png (artifact detected: True, 6.43s)
+[2026-08-01 11:03:55] [INFO] Processed: frame_0104.png (artifact detected: True, 7.59s)
+[2026-08-01 11:04:02] [INFO] Processed: frame_0105.png (artifact detected: True, 6.89s)
+[2026-08-01 11:04:09] [INFO] Processed: frame_0106.png (artifact detected: True, 7.08s)
+[2026-08-01 11:04:16] [INFO] Processed: frame_0107.png (artifact detected: True, 6.82s)
+[2026-08-01 11:04:23] [INFO] Processed: frame_0108.png (artifact detected: True, 6.43s)
+[2026-08-01 11:04:29] [INFO] Processed: frame_0109.png (artifact detected: True, 6.33s)
+[2026-08-01 11:04:35] [INFO] Processed: frame_0110.png (artifact detected: True, 6.37s)
+[2026-08-01 11:04:42] [INFO] Processed: frame_0111.png (artifact detected: True, 6.52s)
+[2026-08-01 11:04:49] [INFO] Processed: frame_0112.png (artifact detected: True, 7.03s)
+[2026-08-01 11:04:57] [INFO] Processed: frame_0113.png (artifact detected: True, 8.09s)
+[2026-08-01 11:05:06] [INFO] Processed: frame_0114.png (artifact detected: True, 8.64s)
+[2026-08-01 11:05:12] [INFO] Processed: frame_0115.png (artifact detected: True, 6.85s)
+[2026-08-01 11:05:19] [INFO] Processed: frame_0116.png (artifact detected: True, 6.86s)
+[2026-08-01 11:05:27] [INFO] Processed: frame_0117.png (artifact detected: True, 7.53s)
+[2026-08-01 11:05:33] [INFO] Processed: frame_0118.png (artifact detected: True, 6.27s)
+[2026-08-01 11:05:39] [INFO] Processed: frame_0119.png (artifact detected: True, 5.68s)
+[2026-08-01 11:05:45] [INFO] Processed: frame_0120.png (artifact detected: True, 5.84s)
+[2026-08-01 11:05:51] [INFO] Processed: frame_0121.png (artifact detected: True, 6.18s)
+[2026-08-01 11:05:57] [INFO] Processed: frame_0122.png (artifact detected: True, 6.03s)
+[2026-08-01 11:06:03] [INFO] Processed: frame_0123.png (artifact detected: True, 5.90s)
+[2026-08-01 11:06:09] [INFO] Processed: frame_0124.png (artifact detected: True, 5.86s)
+[2026-08-01 11:06:15] [INFO] Processed: frame_0125.png (artifact detected: True, 6.47s)
+[2026-08-01 11:06:21] [INFO] Processed: frame_0126.png (artifact detected: True, 6.03s)
+[2026-08-01 11:06:27] [INFO] Processed: frame_0127.png (artifact detected: True, 6.16s)
+[2026-08-01 11:06:33] [INFO] Processed: frame_0128.png (artifact detected: True, 6.23s)
+[2026-08-01 11:06:41] [INFO] Processed: frame_0129.png (artifact detected: True, 7.34s)
+[2026-08-01 11:06:41] [INFO] Cleaned frames saved: 129 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-08-01 11:06:41] [INFO] Mask files saved: 129 file(s) to C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+[2026-08-01 11:06:41] [INFO] Frames with at least one artifact detection: 129/129
+[2026-08-01 11:06:41] [INFO] Total processing time: 802.6s (6.22s/frame average)
+[2026-08-01 11:06:41] [INFO] Script completed successfully.
+[2026-08-01 11:06:41] [INFO] ============================================

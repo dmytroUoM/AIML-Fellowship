@@ -1,0 +1,18 @@
+[2026-08-01 11:10:14] [INFO] ============================================
+[2026-08-01 11:10:14] [INFO] Script started.
+[2026-08-01 11:10:14] [INFO] Script name: 07_prepare_training_split.py
+[2026-08-01 11:10:14] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 11:10:14] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 11:10:14] [INFO] Input images folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-08-01 11:10:14] [INFO] Ground-truth mask source: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-08-01 11:10:14] [INFO] Output dataset folder: C:\AI_ML_Fellowship\Project2\Images\04_Dataset
+[2026-08-01 11:10:14] [INFO] Requested training count: 50
+[2026-08-01 11:10:14] [INFO] Random seed: 42
+[2026-08-01 11:10:14] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 11:10:14] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\07_prepare_training_split.log
+[2026-08-01 11:10:14] [INFO] Found 129 cleaned frame(s) in C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama.
+[2026-08-01 11:10:14] [INFO] Split: 50 frame(s) -> train, 79 frame(s) -> rest (val).
+[2026-08-01 11:10:17] [INFO] Train set written: 50 image/mask pair(s) to C:\AI_ML_Fellowship\Project2\Images\04_Dataset\train\images and C:\AI_ML_Fellowship\Project2\Images\04_Dataset\train\masks
+[2026-08-01 11:10:17] [INFO] Val (rest) set written: 79 image/mask pair(s) to C:\AI_ML_Fellowship\Project2\Images\04_Dataset\val\images and C:\AI_ML_Fellowship\Project2\Images\04_Dataset\val\masks
+[2026-08-01 11:10:17] [INFO] Script completed successfully.
+[2026-08-01 11:10:17] [INFO] ============================================
