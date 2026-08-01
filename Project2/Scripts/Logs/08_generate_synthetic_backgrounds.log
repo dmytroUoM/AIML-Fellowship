@@ -1,0 +1,25 @@
+[2026-08-01 11:16:33] [INFO] ============================================
+[2026-08-01 11:16:33] [INFO] Script started.
+[2026-08-01 11:16:33] [INFO] Script name: 08_generate_synthetic_backgrounds.py
+[2026-08-01 11:16:33] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 11:16:33] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 11:16:33] [INFO] Input images folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-08-01 11:16:33] [INFO] Ground-truth mask source: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-08-01 11:16:33] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds
+[2026-08-01 11:16:33] [INFO] Variants per image: 3
+[2026-08-01 11:16:33] [INFO] Random seed: 42
+[2026-08-01 11:16:33] [INFO] Output format: plain 8-bit 3-channel PNG (no alpha), for legacy tool compatibility.
+[2026-08-01 11:16:33] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 11:16:33] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\08_generate_synthetic_backgrounds.log
+[2026-08-01 11:16:33] [INFO] Found 129 real cleaned frame(s) in C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama.
+[2026-08-01 11:16:33] [INFO] Will generate 3 variant(s) per frame -> 387 total synthetic-background image(s).
+[2026-08-01 11:16:33] [INFO] Progress: 1/129 source frames processed.
+[2026-08-01 11:16:36] [INFO] Progress: 26/129 source frames processed.
+[2026-08-01 11:16:38] [INFO] Progress: 51/129 source frames processed.
+[2026-08-01 11:16:41] [INFO] Progress: 76/129 source frames processed.
+[2026-08-01 11:16:44] [INFO] Progress: 101/129 source frames processed.
+[2026-08-01 11:16:47] [INFO] Progress: 126/129 source frames processed.
+[2026-08-01 11:16:47] [INFO] Synthetic images generated: 387/387 to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\images
+[2026-08-01 11:16:47] [INFO] Matching masks written to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\masks
+[2026-08-01 11:16:47] [INFO] Script completed successfully.
+[2026-08-01 11:16:47] [INFO] ============================================
