@@ -56,15 +56,28 @@ parser.add_argument(
     help="Subfolder under Images\\ containing the cleaned frames to split (default: 03_Cleaned_lama)."
 )
 parser.add_argument(
-    "--mask-source", type=str, default="03_Masks_lama/_protected_region_mask.png",
-    help="Path (relative to Images\\) to the ground-truth mask to pair with every frame "
-         "(default: 03_Masks_lama/_protected_region_mask.png)."
+    "--mask-source", type=str, default=None,
+    help="Path (relative to Images\\) to a SINGLE ground-truth mask file, reused for every "
+         "frame - use this for real cleaned frames sharing one fixed circle mask "
+         "(e.g. 03_Masks_lama/_protected_region_mask.png). Mutually exclusive with --masks-folder."
+)
+parser.add_argument(
+    "--masks-folder", type=str, default=None,
+    help="Subfolder under Images\\ containing ONE mask PER image, matched by filename - use "
+         "this for output from 08_generate_synthetic_backgrounds.py, which already writes a "
+         "per-image mask (e.g. 05_Synthetic_Backgrounds/masks). Mutually exclusive with --mask-source."
 )
 parser.add_argument(
     "--output-folder", type=str, default="04_Dataset",
     help="Subfolder under Images\\ to write the train/val split into (default: 04_Dataset)."
 )
 args = parser.parse_args()
+
+if args.mask_source and args.masks_folder:
+    parser.error("--mask-source and --masks-folder are mutually exclusive; use only one.")
+if not args.mask_source and not args.masks_folder:
+    # Preserve original default behavior: one shared mask for all real frames.
+    args.mask_source = "03_Masks_lama/_protected_region_mask.png"
 
 ENABLE_LOGGING = not args.no_log
 
@@ -77,7 +90,8 @@ LOG_FILE = LOGS_DIR / "07_prepare_training_split.log"
 
 IMAGES_ROOT = SCRIPT_DIR / ".." / "Images"
 INPUT_FOLDER = IMAGES_ROOT / args.input_images_folder
-MASK_SOURCE_FILE = IMAGES_ROOT / args.mask_source
+MASK_SOURCE_FILE = IMAGES_ROOT / args.mask_source if args.mask_source else None
+MASKS_FOLDER = IMAGES_ROOT / args.masks_folder if args.masks_folder else None
 OUTPUT_ROOT = IMAGES_ROOT / args.output_folder
 
 TRAIN_IMAGES_DIR = OUTPUT_ROOT / "train" / "images"
@@ -130,7 +144,10 @@ def main() -> int:
         log("Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks")
         log(f"Script folder: {SCRIPT_DIR}")
         log(f"Input images folder: {INPUT_FOLDER.resolve()}")
-        log(f"Ground-truth mask source: {MASK_SOURCE_FILE.resolve()}")
+        if MASK_SOURCE_FILE:
+            log(f"Ground-truth mask mode: single shared file -> {MASK_SOURCE_FILE.resolve()}")
+        else:
+            log(f"Ground-truth mask mode: per-image folder -> {MASKS_FOLDER.resolve()}")
         log(f"Output dataset folder: {OUTPUT_ROOT.resolve()}")
         log(f"Requested training count: {args.train_count}")
         log(f"Random seed: {args.seed}")
@@ -145,17 +162,22 @@ def main() -> int:
         if not INPUT_FOLDER.is_dir():
             raise FileNotFoundError(f"Input images folder not found: {INPUT_FOLDER.resolve()}")
 
-        # Check ground-truth mask exists
-        if not MASK_SOURCE_FILE.is_file():
-            raise FileNotFoundError(
-                f"Ground-truth mask not found: {MASK_SOURCE_FILE.resolve()}. "
-                f"Run 06_artifacts_removal_lama.py first so this mask gets created."
-            )
-
-        # Verify the mask actually opens as an image before using it for every pair
-        mask_check = cv2.imread(str(MASK_SOURCE_FILE), cv2.IMREAD_GRAYSCALE)
-        if mask_check is None:
-            raise RuntimeError(f"Ground-truth mask could not be read as an image: {MASK_SOURCE_FILE.resolve()}")
+        # Validate whichever mask mode is active
+        if MASK_SOURCE_FILE:
+            if not MASK_SOURCE_FILE.is_file():
+                raise FileNotFoundError(
+                    f"Ground-truth mask not found: {MASK_SOURCE_FILE.resolve()}. "
+                    f"Run 06_artifacts_removal_lama.py first so this mask gets created."
+                )
+            mask_check = cv2.imread(str(MASK_SOURCE_FILE), cv2.IMREAD_GRAYSCALE)
+            if mask_check is None:
+                raise RuntimeError(f"Ground-truth mask could not be read as an image: {MASK_SOURCE_FILE.resolve()}")
+        else:
+            if not MASKS_FOLDER.is_dir():
+                raise FileNotFoundError(
+                    f"Masks folder not found: {MASKS_FOLDER.resolve()}. "
+                    f"Run 08_generate_synthetic_backgrounds.py first so per-image masks get created."
+                )
 
         # Collect all cleaned frames
         extensions = {'.png'}
@@ -197,9 +219,16 @@ def main() -> int:
             for f in file_list:
                 try:
                     shutil.copy2(f, images_dir / f.name)
-                    # Ground-truth mask is the same for every frame (fixed circle
-                    # geometry), so it's copied once per frame under a matching name.
-                    shutil.copy2(MASK_SOURCE_FILE, masks_dir / f.name)
+                    if MASK_SOURCE_FILE:
+                        # Ground-truth mask is the same for every frame (fixed circle
+                        # geometry), so it's copied once per frame under a matching name.
+                        shutil.copy2(MASK_SOURCE_FILE, masks_dir / f.name)
+                    else:
+                        # Per-image mask, matched by filename (from 08_generate_synthetic_backgrounds.py)
+                        source_mask = MASKS_FOLDER / f.name
+                        if not source_mask.is_file():
+                            raise FileNotFoundError(f"No matching mask found for {f.name} in {MASKS_FOLDER}")
+                        shutil.copy2(source_mask, masks_dir / f.name)
                     copied += 1
                 except Exception as file_err:
                     failed += 1
