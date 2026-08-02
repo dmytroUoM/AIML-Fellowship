@@ -23,3 +23,53 @@
 [2026-08-01 11:16:47] [INFO] Matching masks written to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\masks
 [2026-08-01 11:16:47] [INFO] Script completed successfully.
 [2026-08-01 11:16:47] [INFO] ============================================
+[2026-08-01 11:26:11] [INFO] ============================================
+[2026-08-01 11:26:11] [INFO] Script started.
+[2026-08-01 11:26:11] [INFO] Script name: 08_generate_synthetic_backgrounds.py
+[2026-08-01 11:26:11] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 11:26:11] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 11:26:11] [INFO] Input images folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-08-01 11:26:11] [INFO] Ground-truth mask source: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-08-01 11:26:11] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds
+[2026-08-01 11:26:11] [INFO] Variants per image: 3
+[2026-08-01 11:26:11] [INFO] Random seed: 42
+[2026-08-01 11:26:11] [INFO] Output format: plain 8-bit 3-channel PNG (no alpha), for legacy tool compatibility.
+[2026-08-01 11:26:11] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 11:26:11] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\08_generate_synthetic_backgrounds.log
+[2026-08-01 11:26:11] [INFO] Found 129 real cleaned frame(s) in C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama.
+[2026-08-01 11:26:11] [INFO] Will generate 3 variant(s) per frame -> 387 total synthetic-background image(s).
+[2026-08-01 11:26:11] [INFO] Progress: 1/129 source frames processed.
+[2026-08-01 11:26:14] [INFO] Progress: 26/129 source frames processed.
+[2026-08-01 11:26:16] [INFO] Progress: 51/129 source frames processed.
+[2026-08-01 11:26:19] [INFO] Progress: 76/129 source frames processed.
+[2026-08-01 11:26:22] [INFO] Progress: 101/129 source frames processed.
+[2026-08-01 11:26:24] [INFO] Progress: 126/129 source frames processed.
+[2026-08-01 11:26:25] [INFO] Synthetic images generated: 387/387 to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\images
+[2026-08-01 11:26:25] [INFO] Matching masks written to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\masks
+[2026-08-01 11:26:25] [INFO] Script completed successfully.
+[2026-08-01 11:26:25] [INFO] ============================================
+[2026-08-01 14:27:58] [INFO] ============================================
+[2026-08-01 14:27:58] [INFO] Script started.
+[2026-08-01 14:27:58] [INFO] Script name: 08_generate_synthetic_backgrounds.py
+[2026-08-01 14:27:58] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 14:27:58] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 14:27:58] [INFO] Input images folder: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+[2026-08-01 14:27:58] [INFO] Ground-truth mask source: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama\_protected_region_mask.png
+[2026-08-01 14:27:58] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds
+[2026-08-01 14:27:58] [INFO] Variants per image: 3
+[2026-08-01 14:27:58] [INFO] Random seed: 42
+[2026-08-01 14:27:58] [INFO] Output format: plain 8-bit 3-channel PNG (no alpha), for legacy tool compatibility.
+[2026-08-01 14:27:58] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 14:27:58] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\08_generate_synthetic_backgrounds.log
+[2026-08-01 14:27:58] [INFO] Found 129 real cleaned frame(s) in C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama.
+[2026-08-01 14:27:58] [INFO] Will generate 3 variant(s) per frame -> 387 total synthetic-background image(s).
+[2026-08-01 14:27:58] [INFO] Progress: 1/129 source frames processed.
+[2026-08-01 14:28:01] [INFO] Progress: 26/129 source frames processed.
+[2026-08-01 14:28:05] [INFO] Progress: 51/129 source frames processed.
+[2026-08-01 14:28:09] [INFO] Progress: 76/129 source frames processed.
+[2026-08-01 14:28:12] [INFO] Progress: 101/129 source frames processed.
+[2026-08-01 14:28:16] [INFO] Progress: 126/129 source frames processed.
+[2026-08-01 14:28:16] [INFO] Synthetic images generated: 387/387 to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\images
+[2026-08-01 14:28:16] [INFO] Matching masks written to C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\masks
+[2026-08-01 14:28:16] [INFO] Script completed successfully.
+[2026-08-01 14:28:16] [INFO] ============================================

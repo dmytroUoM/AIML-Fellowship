@@ -1,0 +1,2398 @@
+[2026-08-01 13:40:12] [INFO] ============================================
+[2026-08-01 13:40:12] [INFO] Script started.
+[2026-08-01 13:40:12] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 13:40:12] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 13:40:12] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 13:40:12] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 13:40:12] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 13:40:12] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 13:40:12] [INFO] Threshold: 0.5
+[2026-08-01 13:40:12] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 13:40:12] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 13:40:12] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 13:40:12] [INFO] Inference device: cpu
+[2026-08-01 13:40:12] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 13:40:12] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 13:40:13] [INFO] Processed: frame_0001.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0002.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0003.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0004.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0005.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0006.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0007.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0008.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0009.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0010.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0011.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0012.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0013.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0014.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0015.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0016.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0017.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0018.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0019.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0020.png
+[2026-08-01 13:40:13] [INFO] Processed: frame_0021.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0022.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0023.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0024.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0025.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0026.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0027.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0028.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0029.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0030.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0031.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0032.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0033.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0034.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0035.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0036.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0037.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0038.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0039.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0040.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0041.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0042.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0043.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0044.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0045.png
+[2026-08-01 13:40:14] [INFO] Processed: frame_0046.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0047.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0048.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0049.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0050.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0051.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0052.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0053.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0054.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0055.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0056.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0057.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0058.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0059.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0060.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0061.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0062.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0063.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0064.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0065.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0066.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0067.png
+[2026-08-01 13:40:15] [INFO] Processed: frame_0068.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0069.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0070.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0071.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0072.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0073.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0074.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0075.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0076.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0077.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0078.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0079.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0080.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0081.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0082.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0083.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0084.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0085.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0086.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0087.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0088.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0089.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0090.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0091.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0092.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0093.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0094.png
+[2026-08-01 13:40:16] [INFO] Processed: frame_0095.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0096.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0097.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0098.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0099.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0100.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0101.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0102.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0103.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0104.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0105.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0106.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0107.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0108.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0109.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0110.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0111.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0112.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0113.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0114.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0115.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0116.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0117.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0118.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0119.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0120.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0121.png
+[2026-08-01 13:40:17] [INFO] Processed: frame_0122.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0123.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0124.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0125.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0126.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0127.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0128.png
+[2026-08-01 13:40:18] [INFO] Processed: frame_0129.png
+[2026-08-01 13:40:18] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 13:40:18] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 13:40:18] [INFO] Total inference time: 5.2s (0.041s/frame average)
+[2026-08-01 13:40:18] [INFO] Script completed successfully.
+[2026-08-01 13:40:18] [INFO] ============================================
+[2026-08-01 15:00:13] [INFO] ============================================
+[2026-08-01 15:00:13] [INFO] Script started.
+[2026-08-01 15:00:13] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:00:13] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:00:13] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:00:13] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:00:13] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:00:13] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:00:13] [INFO] Threshold: 0.5
+[2026-08-01 15:00:13] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:00:13] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:00:13] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:00:13] [INFO] Inference device: cpu
+[2026-08-01 15:00:13] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:00:13] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:00:14] [INFO] Processed: frame_0001.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0002.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0003.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0004.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0005.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0006.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0007.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0008.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0009.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0010.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0011.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0012.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0013.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0014.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0015.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0016.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0017.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0018.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0019.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0020.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0021.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0022.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0023.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0024.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0025.png
+[2026-08-01 15:00:14] [INFO] Processed: frame_0026.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0027.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0028.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0029.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0030.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0031.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0032.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0033.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0034.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0035.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0036.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0037.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0038.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0039.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0040.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0041.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0042.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0043.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0044.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0045.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0046.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0047.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0048.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0049.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0050.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0051.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0052.png
+[2026-08-01 15:00:15] [INFO] Processed: frame_0053.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0054.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0055.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0056.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0057.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0058.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0059.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0060.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0061.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0062.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0063.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0064.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0065.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0066.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0067.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0068.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0069.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0070.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0071.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0072.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0073.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0074.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0075.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0076.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0077.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0078.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0079.png
+[2026-08-01 15:00:16] [INFO] Processed: frame_0080.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0081.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0082.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0083.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0084.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0085.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0086.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0087.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0088.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0089.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0090.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0091.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0092.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0093.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0094.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0095.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0096.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0097.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0098.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0099.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0100.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0101.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0102.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0103.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0104.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0105.png
+[2026-08-01 15:00:17] [INFO] Processed: frame_0106.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0107.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0108.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0109.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0110.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0111.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0112.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0113.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0114.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0115.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0116.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0117.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0118.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0119.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0120.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0121.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0122.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0123.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0124.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0125.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0126.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0127.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0128.png
+[2026-08-01 15:00:18] [INFO] Processed: frame_0129.png
+[2026-08-01 15:00:18] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:00:18] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:00:18] [INFO] Total inference time: 4.9s (0.038s/frame average)
+[2026-08-01 15:00:18] [INFO] Script completed successfully.
+[2026-08-01 15:00:18] [INFO] ============================================
+[2026-08-01 15:08:19] [INFO] ============================================
+[2026-08-01 15:08:19] [INFO] Script started.
+[2026-08-01 15:08:19] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:08:19] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:08:19] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:08:19] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:08:19] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:08:19] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:08:19] [INFO] Threshold: 3.0
+[2026-08-01 15:08:19] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:08:19] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:08:19] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:08:19] [INFO] Inference device: cpu
+[2026-08-01 15:08:19] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:08:19] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:08:20] [INFO] Processed: frame_0001.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0002.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0003.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0004.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0005.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0006.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0007.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0008.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0009.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0010.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0011.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0012.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0013.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0014.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0015.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0016.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0017.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0018.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0019.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0020.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0021.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0022.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0023.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0024.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0025.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0026.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0027.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0028.png
+[2026-08-01 15:08:20] [INFO] Processed: frame_0029.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0030.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0031.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0032.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0033.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0034.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0035.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0036.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0037.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0038.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0039.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0040.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0041.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0042.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0043.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0044.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0045.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0046.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0047.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0048.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0049.png
+[2026-08-01 15:08:21] [INFO] Processed: frame_0050.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0051.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0052.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0053.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0054.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0055.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0056.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0057.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0058.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0059.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0060.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0061.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0062.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0063.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0064.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0065.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0066.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0067.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0068.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0069.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0070.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0071.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0072.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0073.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0074.png
+[2026-08-01 15:08:22] [INFO] Processed: frame_0075.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0076.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0077.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0078.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0079.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0080.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0081.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0082.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0083.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0084.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0085.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0086.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0087.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0088.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0089.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0090.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0091.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0092.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0093.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0094.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0095.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0096.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0097.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0098.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0099.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0100.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0101.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0102.png
+[2026-08-01 15:08:23] [INFO] Processed: frame_0103.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0104.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0105.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0106.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0107.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0108.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0109.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0110.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0111.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0112.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0113.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0114.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0115.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0116.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0117.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0118.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0119.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0120.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0121.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0122.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0123.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0124.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0125.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0126.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0127.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0128.png
+[2026-08-01 15:08:24] [INFO] Processed: frame_0129.png
+[2026-08-01 15:08:24] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:08:24] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:08:24] [INFO] Total inference time: 4.9s (0.038s/frame average)
+[2026-08-01 15:08:24] [INFO] Script completed successfully.
+[2026-08-01 15:08:24] [INFO] ============================================
+[2026-08-01 15:08:49] [INFO] ============================================
+[2026-08-01 15:08:49] [INFO] Script started.
+[2026-08-01 15:08:49] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:08:49] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:08:49] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:08:49] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:08:49] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:08:49] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:08:49] [INFO] Threshold: 0.1
+[2026-08-01 15:08:49] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:08:49] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:08:49] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:08:49] [INFO] Inference device: cpu
+[2026-08-01 15:08:49] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:08:49] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:08:49] [INFO] Processed: frame_0001.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0002.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0003.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0004.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0005.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0006.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0007.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0008.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0009.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0010.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0011.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0012.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0013.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0014.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0015.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0016.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0017.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0018.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0019.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0020.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0021.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0022.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0023.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0024.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0025.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0026.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0027.png
+[2026-08-01 15:08:50] [INFO] Processed: frame_0028.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0029.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0030.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0031.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0032.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0033.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0034.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0035.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0036.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0037.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0038.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0039.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0040.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0041.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0042.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0043.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0044.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0045.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0046.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0047.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0048.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0049.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0050.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0051.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0052.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0053.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0054.png
+[2026-08-01 15:08:51] [INFO] Processed: frame_0055.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0056.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0057.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0058.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0059.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0060.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0061.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0062.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0063.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0064.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0065.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0066.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0067.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0068.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0069.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0070.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0071.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0072.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0073.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0074.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0075.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0076.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0077.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0078.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0079.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0080.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0081.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0082.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0083.png
+[2026-08-01 15:08:52] [INFO] Processed: frame_0084.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0085.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0086.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0087.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0088.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0089.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0090.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0091.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0092.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0093.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0094.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0095.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0096.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0097.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0098.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0099.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0100.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0101.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0102.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0103.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0104.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0105.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0106.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0107.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0108.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0109.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0110.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0111.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0112.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0113.png
+[2026-08-01 15:08:53] [INFO] Processed: frame_0114.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0115.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0116.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0117.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0118.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0119.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0120.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0121.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0122.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0123.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0124.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0125.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0126.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0127.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0128.png
+[2026-08-01 15:08:54] [INFO] Processed: frame_0129.png
+[2026-08-01 15:08:54] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:08:54] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:08:54] [INFO] Total inference time: 4.6s (0.036s/frame average)
+[2026-08-01 15:08:54] [INFO] Script completed successfully.
+[2026-08-01 15:08:54] [INFO] ============================================
+[2026-08-01 15:09:54] [INFO] ============================================
+[2026-08-01 15:09:54] [INFO] Script started.
+[2026-08-01 15:09:54] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:09:54] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:09:54] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:09:54] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:09:54] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:09:54] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:09:54] [INFO] Threshold: 0.001
+[2026-08-01 15:09:54] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:09:54] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:09:54] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:09:54] [INFO] Inference device: cpu
+[2026-08-01 15:09:54] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:09:54] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:09:54] [INFO] Processed: frame_0001.png
+[2026-08-01 15:09:54] [INFO] Processed: frame_0002.png
+[2026-08-01 15:09:54] [INFO] Processed: frame_0003.png
+[2026-08-01 15:09:54] [INFO] Processed: frame_0004.png
+[2026-08-01 15:09:54] [INFO] Processed: frame_0005.png
+[2026-08-01 15:09:54] [INFO] Processed: frame_0006.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0007.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0008.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0009.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0010.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0011.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0012.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0013.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0014.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0015.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0016.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0017.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0018.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0019.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0020.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0021.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0022.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0023.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0024.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0025.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0026.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0027.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0028.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0029.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0030.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0031.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0032.png
+[2026-08-01 15:09:55] [INFO] Processed: frame_0033.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0034.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0035.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0036.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0037.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0038.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0039.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0040.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0041.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0042.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0043.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0044.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0045.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0046.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0047.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0048.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0049.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0050.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0051.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0052.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0053.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0054.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0055.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0056.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0057.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0058.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0059.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0060.png
+[2026-08-01 15:09:56] [INFO] Processed: frame_0061.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0062.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0063.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0064.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0065.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0066.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0067.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0068.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0069.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0070.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0071.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0072.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0073.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0074.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0075.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0076.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0077.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0078.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0079.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0080.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0081.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0082.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0083.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0084.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0085.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0086.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0087.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0088.png
+[2026-08-01 15:09:57] [INFO] Processed: frame_0089.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0090.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0091.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0092.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0093.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0094.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0095.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0096.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0097.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0098.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0099.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0100.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0101.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0102.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0103.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0104.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0105.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0106.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0107.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0108.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0109.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0110.png
+[2026-08-01 15:09:58] [INFO] Processed: frame_0111.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0112.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0113.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0114.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0115.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0116.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0117.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0118.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0119.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0120.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0121.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0122.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0123.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0124.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0125.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0126.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0127.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0128.png
+[2026-08-01 15:09:59] [INFO] Processed: frame_0129.png
+[2026-08-01 15:09:59] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:09:59] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:09:59] [INFO] Total inference time: 5.0s (0.039s/frame average)
+[2026-08-01 15:09:59] [INFO] Script completed successfully.
+[2026-08-01 15:09:59] [INFO] ============================================
+[2026-08-01 15:10:43] [INFO] ============================================
+[2026-08-01 15:10:43] [INFO] Script started.
+[2026-08-01 15:10:43] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:10:43] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:10:43] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:10:43] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:10:43] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:10:43] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:10:43] [INFO] Threshold: 1.0
+[2026-08-01 15:10:43] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:10:43] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:10:43] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:10:43] [INFO] Inference device: cpu
+[2026-08-01 15:10:43] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:10:43] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:10:43] [INFO] Processed: frame_0001.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0002.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0003.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0004.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0005.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0006.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0007.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0008.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0009.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0010.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0011.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0012.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0013.png
+[2026-08-01 15:10:43] [INFO] Processed: frame_0014.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0015.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0016.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0017.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0018.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0019.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0020.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0021.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0022.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0023.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0024.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0025.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0026.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0027.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0028.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0029.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0030.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0031.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0032.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0033.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0034.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0035.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0036.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0037.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0038.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0039.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0040.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0041.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0042.png
+[2026-08-01 15:10:44] [INFO] Processed: frame_0043.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0044.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0045.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0046.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0047.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0048.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0049.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0050.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0051.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0052.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0053.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0054.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0055.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0056.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0057.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0058.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0059.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0060.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0061.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0062.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0063.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0064.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0065.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0066.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0067.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0068.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0069.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0070.png
+[2026-08-01 15:10:45] [INFO] Processed: frame_0071.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0072.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0073.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0074.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0075.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0076.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0077.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0078.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0079.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0080.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0081.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0082.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0083.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0084.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0085.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0086.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0087.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0088.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0089.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0090.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0091.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0092.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0093.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0094.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0095.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0096.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0097.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0098.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0099.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0100.png
+[2026-08-01 15:10:46] [INFO] Processed: frame_0101.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0102.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0103.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0104.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0105.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0106.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0107.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0108.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0109.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0110.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0111.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0112.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0113.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0114.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0115.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0116.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0117.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0118.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0119.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0120.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0121.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0122.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0123.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0124.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0125.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0126.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0127.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0128.png
+[2026-08-01 15:10:47] [INFO] Processed: frame_0129.png
+[2026-08-01 15:10:47] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:10:47] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:10:47] [INFO] Total inference time: 4.4s (0.034s/frame average)
+[2026-08-01 15:10:47] [INFO] Script completed successfully.
+[2026-08-01 15:10:47] [INFO] ============================================
+[2026-08-01 15:11:15] [INFO] ============================================
+[2026-08-01 15:11:15] [INFO] Script started.
+[2026-08-01 15:11:15] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:11:15] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:11:15] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:11:15] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:11:15] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:11:15] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:11:15] [INFO] Threshold: 0.3
+[2026-08-01 15:11:15] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:11:15] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:11:15] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:11:15] [INFO] Inference device: cpu
+[2026-08-01 15:11:15] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:11:15] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:11:15] [INFO] Processed: frame_0001.png
+[2026-08-01 15:11:15] [INFO] Processed: frame_0002.png
+[2026-08-01 15:11:15] [INFO] Processed: frame_0003.png
+[2026-08-01 15:11:15] [INFO] Processed: frame_0004.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0005.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0006.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0007.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0008.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0009.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0010.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0011.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0012.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0013.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0014.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0015.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0016.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0017.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0018.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0019.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0020.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0021.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0022.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0023.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0024.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0025.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0026.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0027.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0028.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0029.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0030.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0031.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0032.png
+[2026-08-01 15:11:16] [INFO] Processed: frame_0033.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0034.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0035.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0036.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0037.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0038.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0039.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0040.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0041.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0042.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0043.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0044.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0045.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0046.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0047.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0048.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0049.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0050.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0051.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0052.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0053.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0054.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0055.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0056.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0057.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0058.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0059.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0060.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0061.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0062.png
+[2026-08-01 15:11:17] [INFO] Processed: frame_0063.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0064.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0065.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0066.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0067.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0068.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0069.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0070.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0071.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0072.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0073.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0074.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0075.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0076.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0077.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0078.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0079.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0080.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0081.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0082.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0083.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0084.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0085.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0086.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0087.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0088.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0089.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0090.png
+[2026-08-01 15:11:18] [INFO] Processed: frame_0091.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0092.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0093.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0094.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0095.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0096.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0097.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0098.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0099.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0100.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0101.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0102.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0103.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0104.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0105.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0106.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0107.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0108.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0109.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0110.png
+[2026-08-01 15:11:19] [INFO] Processed: frame_0111.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0112.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0113.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0114.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0115.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0116.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0117.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0118.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0119.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0120.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0121.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0122.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0123.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0124.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0125.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0126.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0127.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0128.png
+[2026-08-01 15:11:20] [INFO] Processed: frame_0129.png
+[2026-08-01 15:11:20] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:11:20] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:11:20] [INFO] Total inference time: 5.0s (0.038s/frame average)
+[2026-08-01 15:11:20] [INFO] Script completed successfully.
+[2026-08-01 15:11:20] [INFO] ============================================
+[2026-08-01 15:12:28] [INFO] ============================================
+[2026-08-01 15:12:28] [INFO] Script started.
+[2026-08-01 15:12:28] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:12:28] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:12:28] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:12:28] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:12:28] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-01 15:12:28] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:12:28] [INFO] Threshold: 0.05
+[2026-08-01 15:12:28] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:12:28] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:12:28] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:12:28] [INFO] Inference device: cpu
+[2026-08-01 15:12:28] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:12:28] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:12:28] [INFO] Processed: frame_0001.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0002.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0003.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0004.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0005.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0006.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0007.png
+[2026-08-01 15:12:28] [INFO] Processed: frame_0008.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0009.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0010.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0011.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0012.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0013.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0014.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0015.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0016.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0017.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0018.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0019.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0020.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0021.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0022.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0023.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0024.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0025.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0026.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0027.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0028.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0029.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0030.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0031.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0032.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0033.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0034.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0035.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0036.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0037.png
+[2026-08-01 15:12:29] [INFO] Processed: frame_0038.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0039.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0040.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0041.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0042.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0043.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0044.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0045.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0046.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0047.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0048.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0049.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0050.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0051.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0052.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0053.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0054.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0055.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0056.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0057.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0058.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0059.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0060.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0061.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0062.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0063.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0064.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0065.png
+[2026-08-01 15:12:30] [INFO] Processed: frame_0066.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0067.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0068.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0069.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0070.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0071.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0072.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0073.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0074.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0075.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0076.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0077.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0078.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0079.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0080.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0081.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0082.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0083.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0084.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0085.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0086.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0087.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0088.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0089.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0090.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0091.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0092.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0093.png
+[2026-08-01 15:12:31] [INFO] Processed: frame_0094.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0095.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0096.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0097.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0098.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0099.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0100.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0101.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0102.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0103.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0104.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0105.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0106.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0107.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0108.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0109.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0110.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0111.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0112.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0113.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0114.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0115.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0116.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0117.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0118.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0119.png
+[2026-08-01 15:12:32] [INFO] Processed: frame_0120.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0121.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0122.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0123.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0124.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0125.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0126.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0127.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0128.png
+[2026-08-01 15:12:33] [INFO] Processed: frame_0129.png
+[2026-08-01 15:12:33] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:12:33] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:12:33] [INFO] Total inference time: 4.7s (0.036s/frame average)
+[2026-08-01 15:12:33] [INFO] Script completed successfully.
+[2026-08-01 15:12:33] [INFO] ============================================
+[2026-08-01 15:16:24] [INFO] ============================================
+[2026-08-01 15:16:24] [INFO] Script started.
+[2026-08-01 15:16:24] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:16:24] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:16:24] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:16:24] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:16:24] [INFO] Input folder: C:\AI_ML_Fellowship\Images\01_Origin
+[2026-08-01 15:16:24] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:16:24] [INFO] Threshold: 0.5
+[2026-08-01 15:16:24] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:16:24] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:16:24] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:16:24] [ERROR] Script failed: Input folder not found: C:\AI_ML_Fellowship\Images\01_Origin
+[2026-08-01 15:16:24] [INFO] ============================================
+[2026-08-01 15:16:47] [INFO] ============================================
+[2026-08-01 15:16:47] [INFO] Script started.
+[2026-08-01 15:16:47] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:16:47] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:16:47] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:16:47] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:16:47] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:16:47] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:16:47] [INFO] Threshold: 0.5
+[2026-08-01 15:16:47] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:16:47] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:16:47] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:16:47] [INFO] Inference device: cpu
+[2026-08-01 15:16:47] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:16:47] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:16:47] [INFO] Processed: frame_0001.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0002.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0003.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0004.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0005.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0006.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0007.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0008.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0009.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0010.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0011.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0012.png
+[2026-08-01 15:16:47] [INFO] Processed: frame_0013.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0014.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0015.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0016.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0017.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0018.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0019.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0020.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0021.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0022.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0023.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0024.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0025.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0026.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0027.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0028.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0029.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0030.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0031.png
+[2026-08-01 15:16:48] [INFO] Processed: frame_0032.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0033.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0034.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0035.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0036.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0037.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0038.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0039.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0040.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0041.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0042.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0043.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0044.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0045.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0046.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0047.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0048.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0049.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0050.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0051.png
+[2026-08-01 15:16:49] [INFO] Processed: frame_0052.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0053.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0054.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0055.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0056.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0057.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0058.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0059.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0060.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0061.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0062.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0063.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0064.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0065.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0066.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0067.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0068.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0069.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0070.png
+[2026-08-01 15:16:50] [INFO] Processed: frame_0071.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0072.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0073.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0074.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0075.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0076.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0077.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0078.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0079.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0080.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0081.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0082.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0083.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0084.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0085.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0086.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0087.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0088.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0089.png
+[2026-08-01 15:16:51] [INFO] Processed: frame_0090.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0091.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0092.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0093.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0094.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0095.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0096.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0097.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0098.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0099.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0100.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0101.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0102.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0103.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0104.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0105.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0106.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0107.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0108.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0109.png
+[2026-08-01 15:16:52] [INFO] Processed: frame_0110.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0111.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0112.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0113.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0114.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0115.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0116.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0117.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0118.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0119.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0120.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0121.png
+[2026-08-01 15:16:53] [INFO] Processed: frame_0122.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0123.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0124.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0125.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0126.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0127.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0128.png
+[2026-08-01 15:16:54] [INFO] Processed: frame_0129.png
+[2026-08-01 15:16:54] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:16:54] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:16:54] [INFO] Total inference time: 7.1s (0.055s/frame average)
+[2026-08-01 15:16:54] [INFO] Script completed successfully.
+[2026-08-01 15:16:54] [INFO] ============================================
+[2026-08-01 15:18:49] [INFO] ============================================
+[2026-08-01 15:18:49] [INFO] Script started.
+[2026-08-01 15:18:49] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:18:49] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:18:49] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:18:49] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:18:49] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:18:49] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:18:49] [INFO] Threshold: 0.7
+[2026-08-01 15:18:49] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:18:49] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:18:49] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:18:49] [INFO] Inference device: cpu
+[2026-08-01 15:18:49] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:18:49] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:18:49] [INFO] Processed: frame_0001.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0002.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0003.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0004.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0005.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0006.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0007.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0008.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0009.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0010.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0011.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0012.png
+[2026-08-01 15:18:49] [INFO] Processed: frame_0013.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0014.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0015.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0016.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0017.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0018.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0019.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0020.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0021.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0022.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0023.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0024.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0025.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0026.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0027.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0028.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0029.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0030.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0031.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0032.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0033.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0034.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0035.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0036.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0037.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0038.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0039.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0040.png
+[2026-08-01 15:18:50] [INFO] Processed: frame_0041.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0042.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0043.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0044.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0045.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0046.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0047.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0048.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0049.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0050.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0051.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0052.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0053.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0054.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0055.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0056.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0057.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0058.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0059.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0060.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0061.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0062.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0063.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0064.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0065.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0066.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0067.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0068.png
+[2026-08-01 15:18:51] [INFO] Processed: frame_0069.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0070.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0071.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0072.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0073.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0074.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0075.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0076.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0077.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0078.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0079.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0080.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0081.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0082.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0083.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0084.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0085.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0086.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0087.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0088.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0089.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0090.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0091.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0092.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0093.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0094.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0095.png
+[2026-08-01 15:18:52] [INFO] Processed: frame_0096.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0097.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0098.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0099.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0100.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0101.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0102.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0103.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0104.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0105.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0106.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0107.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0108.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0109.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0110.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0111.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0112.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0113.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0114.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0115.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0116.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0117.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0118.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0119.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0120.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0121.png
+[2026-08-01 15:18:53] [INFO] Processed: frame_0122.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0123.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0124.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0125.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0126.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0127.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0128.png
+[2026-08-01 15:18:54] [INFO] Processed: frame_0129.png
+[2026-08-01 15:18:54] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:18:54] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:18:54] [INFO] Total inference time: 4.8s (0.037s/frame average)
+[2026-08-01 15:18:54] [INFO] Script completed successfully.
+[2026-08-01 15:18:54] [INFO] ============================================
+[2026-08-01 15:19:24] [INFO] ============================================
+[2026-08-01 15:19:24] [INFO] Script started.
+[2026-08-01 15:19:24] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:19:24] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:19:24] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:19:24] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:19:24] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:19:24] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:19:24] [INFO] Threshold: 0.8
+[2026-08-01 15:19:24] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:19:24] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:19:24] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:19:24] [INFO] Inference device: cpu
+[2026-08-01 15:19:24] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:19:24] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:19:24] [INFO] Processed: frame_0001.png
+[2026-08-01 15:19:24] [INFO] Processed: frame_0002.png
+[2026-08-01 15:19:24] [INFO] Processed: frame_0003.png
+[2026-08-01 15:19:24] [INFO] Processed: frame_0004.png
+[2026-08-01 15:19:24] [INFO] Processed: frame_0005.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0006.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0007.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0008.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0009.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0010.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0011.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0012.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0013.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0014.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0015.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0016.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0017.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0018.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0019.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0020.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0021.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0022.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0023.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0024.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0025.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0026.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0027.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0028.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0029.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0030.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0031.png
+[2026-08-01 15:19:25] [INFO] Processed: frame_0032.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0033.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0034.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0035.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0036.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0037.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0038.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0039.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0040.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0041.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0042.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0043.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0044.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0045.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0046.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0047.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0048.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0049.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0050.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0051.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0052.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0053.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0054.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0055.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0056.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0057.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0058.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0059.png
+[2026-08-01 15:19:26] [INFO] Processed: frame_0060.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0061.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0062.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0063.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0064.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0065.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0066.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0067.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0068.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0069.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0070.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0071.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0072.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0073.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0074.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0075.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0076.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0077.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0078.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0079.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0080.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0081.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0082.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0083.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0084.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0085.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0086.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0087.png
+[2026-08-01 15:19:27] [INFO] Processed: frame_0088.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0089.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0090.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0091.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0092.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0093.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0094.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0095.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0096.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0097.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0098.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0099.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0100.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0101.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0102.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0103.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0104.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0105.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0106.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0107.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0108.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0109.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0110.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0111.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0112.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0113.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0114.png
+[2026-08-01 15:19:28] [INFO] Processed: frame_0115.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0116.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0117.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0118.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0119.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0120.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0121.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0122.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0123.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0124.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0125.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0126.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0127.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0128.png
+[2026-08-01 15:19:29] [INFO] Processed: frame_0129.png
+[2026-08-01 15:19:29] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:19:29] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:19:29] [INFO] Total inference time: 4.7s (0.036s/frame average)
+[2026-08-01 15:19:29] [INFO] Script completed successfully.
+[2026-08-01 15:19:29] [INFO] ============================================
+[2026-08-01 15:19:47] [INFO] ============================================
+[2026-08-01 15:19:47] [INFO] Script started.
+[2026-08-01 15:19:47] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:19:47] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:19:47] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:19:47] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:19:47] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:19:47] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:19:47] [INFO] Threshold: 0.9
+[2026-08-01 15:19:47] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:19:47] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:19:47] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:19:47] [INFO] Inference device: cpu
+[2026-08-01 15:19:47] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:19:47] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:19:47] [INFO] Processed: frame_0001.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0002.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0003.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0004.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0005.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0006.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0007.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0008.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0009.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0010.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0011.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0012.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0013.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0014.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0015.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0016.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0017.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0018.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0019.png
+[2026-08-01 15:19:47] [INFO] Processed: frame_0020.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0021.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0022.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0023.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0024.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0025.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0026.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0027.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0028.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0029.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0030.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0031.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0032.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0033.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0034.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0035.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0036.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0037.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0038.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0039.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0040.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0041.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0042.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0043.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0044.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0045.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0046.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0047.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0048.png
+[2026-08-01 15:19:48] [INFO] Processed: frame_0049.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0050.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0051.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0052.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0053.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0054.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0055.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0056.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0057.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0058.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0059.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0060.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0061.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0062.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0063.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0064.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0065.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0066.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0067.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0068.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0069.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0070.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0071.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0072.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0073.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0074.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0075.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0076.png
+[2026-08-01 15:19:49] [INFO] Processed: frame_0077.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0078.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0079.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0080.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0081.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0082.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0083.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0084.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0085.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0086.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0087.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0088.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0089.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0090.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0091.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0092.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0093.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0094.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0095.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0096.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0097.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0098.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0099.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0100.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0101.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0102.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0103.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0104.png
+[2026-08-01 15:19:50] [INFO] Processed: frame_0105.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0106.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0107.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0108.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0109.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0110.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0111.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0112.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0113.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0114.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0115.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0116.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0117.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0118.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0119.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0120.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0121.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0122.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0123.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0124.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0125.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0126.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0127.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0128.png
+[2026-08-01 15:19:51] [INFO] Processed: frame_0129.png
+[2026-08-01 15:19:51] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:19:51] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:19:51] [INFO] Total inference time: 4.6s (0.036s/frame average)
+[2026-08-01 15:19:51] [INFO] Script completed successfully.
+[2026-08-01 15:19:51] [INFO] ============================================
+[2026-08-01 15:20:13] [INFO] ============================================
+[2026-08-01 15:20:13] [INFO] Script started.
+[2026-08-01 15:20:13] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:20:13] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:20:13] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:20:13] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:20:13] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:20:13] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:20:13] [INFO] Threshold: 1.0
+[2026-08-01 15:20:13] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:20:13] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:20:13] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:20:13] [INFO] Inference device: cpu
+[2026-08-01 15:20:13] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:20:13] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:20:13] [INFO] Processed: frame_0001.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0002.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0003.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0004.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0005.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0006.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0007.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0008.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0009.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0010.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0011.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0012.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0013.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0014.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0015.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0016.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0017.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0018.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0019.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0020.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0021.png
+[2026-08-01 15:20:13] [INFO] Processed: frame_0022.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0023.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0024.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0025.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0026.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0027.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0028.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0029.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0030.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0031.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0032.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0033.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0034.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0035.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0036.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0037.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0038.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0039.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0040.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0041.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0042.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0043.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0044.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0045.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0046.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0047.png
+[2026-08-01 15:20:14] [INFO] Processed: frame_0048.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0049.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0050.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0051.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0052.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0053.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0054.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0055.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0056.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0057.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0058.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0059.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0060.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0061.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0062.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0063.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0064.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0065.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0066.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0067.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0068.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0069.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0070.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0071.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0072.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0073.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0074.png
+[2026-08-01 15:20:15] [INFO] Processed: frame_0075.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0076.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0077.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0078.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0079.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0080.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0081.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0082.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0083.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0084.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0085.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0086.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0087.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0088.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0089.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0090.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0091.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0092.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0093.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0094.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0095.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0096.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0097.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0098.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0099.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0100.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0101.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0102.png
+[2026-08-01 15:20:16] [INFO] Processed: frame_0103.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0104.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0105.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0106.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0107.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0108.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0109.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0110.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0111.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0112.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0113.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0114.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0115.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0116.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0117.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0118.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0119.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0120.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0121.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0122.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0123.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0124.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0125.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0126.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0127.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0128.png
+[2026-08-01 15:20:17] [INFO] Processed: frame_0129.png
+[2026-08-01 15:20:17] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:20:17] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:20:17] [INFO] Total inference time: 4.9s (0.038s/frame average)
+[2026-08-01 15:20:17] [INFO] Script completed successfully.
+[2026-08-01 15:20:17] [INFO] ============================================
+[2026-08-01 15:20:42] [INFO] ============================================
+[2026-08-01 15:20:42] [INFO] Script started.
+[2026-08-01 15:20:42] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:20:42] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:20:42] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:20:42] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:20:42] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:20:42] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:20:42] [INFO] Threshold: 0.95
+[2026-08-01 15:20:42] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:20:42] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:20:42] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:20:42] [INFO] Inference device: cpu
+[2026-08-01 15:20:42] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:20:42] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:20:42] [INFO] Processed: frame_0001.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0002.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0003.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0004.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0005.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0006.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0007.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0008.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0009.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0010.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0011.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0012.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0013.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0014.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0015.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0016.png
+[2026-08-01 15:20:42] [INFO] Processed: frame_0017.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0018.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0019.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0020.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0021.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0022.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0023.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0024.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0025.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0026.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0027.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0028.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0029.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0030.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0031.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0032.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0033.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0034.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0035.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0036.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0037.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0038.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0039.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0040.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0041.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0042.png
+[2026-08-01 15:20:43] [INFO] Processed: frame_0043.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0044.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0045.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0046.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0047.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0048.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0049.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0050.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0051.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0052.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0053.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0054.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0055.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0056.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0057.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0058.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0059.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0060.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0061.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0062.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0063.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0064.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0065.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0066.png
+[2026-08-01 15:20:44] [INFO] Processed: frame_0067.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0068.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0069.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0070.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0071.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0072.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0073.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0074.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0075.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0076.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0077.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0078.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0079.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0080.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0081.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0082.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0083.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0084.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0085.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0086.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0087.png
+[2026-08-01 15:20:45] [INFO] Processed: frame_0088.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0089.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0090.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0091.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0092.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0093.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0094.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0095.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0096.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0097.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0098.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0099.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0100.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0101.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0102.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0103.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0104.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0105.png
+[2026-08-01 15:20:46] [INFO] Processed: frame_0106.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0107.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0108.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0109.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0110.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0111.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0112.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0113.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0114.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0115.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0116.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0117.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0118.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0119.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0120.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0121.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0122.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0123.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0124.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0125.png
+[2026-08-01 15:20:47] [INFO] Processed: frame_0126.png
+[2026-08-01 15:20:48] [INFO] Processed: frame_0127.png
+[2026-08-01 15:20:48] [INFO] Processed: frame_0128.png
+[2026-08-01 15:20:48] [INFO] Processed: frame_0129.png
+[2026-08-01 15:20:48] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:20:48] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:20:48] [INFO] Total inference time: 5.8s (0.045s/frame average)
+[2026-08-01 15:20:48] [INFO] Script completed successfully.
+[2026-08-01 15:20:48] [INFO] ============================================
+[2026-08-01 15:28:54] [INFO] ============================================
+[2026-08-01 15:28:54] [INFO] Script started.
+[2026-08-01 15:28:54] [INFO] Script name: 09_run_trained_model.py
+[2026-08-01 15:28:54] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-01 15:28:54] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-01 15:28:54] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:28:54] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-01 15:28:54] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-01 15:28:54] [INFO] Threshold: 0.95
+[2026-08-01 15:28:54] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-01 15:28:54] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-01 15:28:54] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-01 15:28:54] [INFO] Inference device: cpu
+[2026-08-01 15:28:54] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-01 15:28:54] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-01 15:28:54] [INFO] Processed: frame_0001.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0002.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0003.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0004.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0005.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0006.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0007.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0008.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0009.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0010.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0011.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0012.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0013.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0014.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0015.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0016.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0017.png
+[2026-08-01 15:28:54] [INFO] Processed: frame_0018.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0019.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0020.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0021.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0022.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0023.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0024.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0025.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0026.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0027.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0028.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0029.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0030.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0031.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0032.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0033.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0034.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0035.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0036.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0037.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0038.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0039.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0040.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0041.png
+[2026-08-01 15:28:55] [INFO] Processed: frame_0042.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0043.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0044.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0045.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0046.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0047.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0048.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0049.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0050.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0051.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0052.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0053.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0054.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0055.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0056.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0057.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0058.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0059.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0060.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0061.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0062.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0063.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0064.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0065.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0066.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0067.png
+[2026-08-01 15:28:56] [INFO] Processed: frame_0068.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0069.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0070.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0071.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0072.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0073.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0074.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0075.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0076.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0077.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0078.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0079.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0080.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0081.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0082.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0083.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0084.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0085.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0086.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0087.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0088.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0089.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0090.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0091.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0092.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0093.png
+[2026-08-01 15:28:57] [INFO] Processed: frame_0094.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0095.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0096.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0097.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0098.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0099.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0100.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0101.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0102.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0103.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0104.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0105.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0106.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0107.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0108.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0109.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0110.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0111.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0112.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0113.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0114.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0115.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0116.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0117.png
+[2026-08-01 15:28:58] [INFO] Processed: frame_0118.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0119.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0120.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0121.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0122.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0123.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0124.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0125.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0126.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0127.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0128.png
+[2026-08-01 15:28:59] [INFO] Processed: frame_0129.png
+[2026-08-01 15:28:59] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-01 15:28:59] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-01 15:28:59] [INFO] Total inference time: 5.3s (0.041s/frame average)
+[2026-08-01 15:28:59] [INFO] Script completed successfully.
+[2026-08-01 15:28:59] [INFO] ============================================
+[2026-08-02 17:23:41] [INFO] ============================================
+[2026-08-02 17:23:41] [INFO] Script started.
+[2026-08-02 17:23:41] [INFO] Script name: 09_run_trained_model.py
+[2026-08-02 17:23:41] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-02 17:23:41] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-02 17:23:41] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-02 17:23:41] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-02 17:23:41] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+[2026-08-02 17:23:41] [INFO] Threshold: 0.95
+[2026-08-02 17:23:41] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-02 17:23:41] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-02 17:23:41] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_run_trained_model.log
+[2026-08-02 17:23:41] [INFO] Inference device: cpu
+[2026-08-02 17:23:41] [INFO] Model loaded successfully from C:\AI_ML_Fellowship\Project2\Scripts\results\run_model.pt
+[2026-08-02 17:23:41] [INFO] Found 129 PNG file(s) to run inference on.
+[2026-08-02 17:23:41] [INFO] Processed: frame_0001.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0002.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0003.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0004.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0005.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0006.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0007.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0008.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0009.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0010.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0011.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0012.png
+[2026-08-02 17:23:41] [INFO] Processed: frame_0013.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0014.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0015.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0016.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0017.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0018.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0019.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0020.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0021.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0022.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0023.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0024.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0025.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0026.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0027.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0028.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0029.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0030.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0031.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0032.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0033.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0034.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0035.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0036.png
+[2026-08-02 17:23:42] [INFO] Processed: frame_0037.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0038.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0039.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0040.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0041.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0042.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0043.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0044.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0045.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0046.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0047.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0048.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0049.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0050.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0051.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0052.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0053.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0054.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0055.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0056.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0057.png
+[2026-08-02 17:23:43] [INFO] Processed: frame_0058.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0059.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0060.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0061.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0062.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0063.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0064.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0065.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0066.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0067.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0068.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0069.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0070.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0071.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0072.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0073.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0074.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0075.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0076.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0077.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0078.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0079.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0080.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0081.png
+[2026-08-02 17:23:44] [INFO] Processed: frame_0082.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0083.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0084.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0085.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0086.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0087.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0088.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0089.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0090.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0091.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0092.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0093.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0094.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0095.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0096.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0097.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0098.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0099.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0100.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0101.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0102.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0103.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0104.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0105.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0106.png
+[2026-08-02 17:23:45] [INFO] Processed: frame_0107.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0108.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0109.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0110.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0111.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0112.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0113.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0114.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0115.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0116.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0117.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0118.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0119.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0120.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0121.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0122.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0123.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0124.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0125.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0126.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0127.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0128.png
+[2026-08-02 17:23:46] [INFO] Processed: frame_0129.png
+[2026-08-02 17:23:46] [INFO] Inference output saved: 129 image(s) to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\images
+[2026-08-02 17:23:46] [INFO] Predicted masks saved to C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output\masks
+[2026-08-02 17:23:46] [INFO] Total inference time: 5.5s (0.043s/frame average)
+[2026-08-02 17:23:46] [INFO] Script completed successfully.
+[2026-08-02 17:23:46] [INFO] ============================================

@@ -1,5 +1,5 @@
 # ============================================
-# Script: 07_prepare_training_split.py
+# Script: aiml_08_prepare_training_split.py
 # Project 2: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
 # Purpose:
 #   - Take the artifact-cleaned frames from Images\03_Cleaned_lama
@@ -86,7 +86,7 @@ ENABLE_LOGGING = not args.no_log
 # ----------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 LOGS_DIR = SCRIPT_DIR / "Logs"
-LOG_FILE = LOGS_DIR / "07_prepare_training_split.log"
+LOG_FILE = LOGS_DIR / "aiml_08_prepare_training_split.log"
 
 IMAGES_ROOT = SCRIPT_DIR / ".." / "Images"
 INPUT_FOLDER = IMAGES_ROOT / args.input_images_folder

@@ -1,5 +1,5 @@
 # ============================================
-# Script: 06_artifacts_removal_lama.py
+# Script: aiml_06_artifacts_removal_lama.py
 # Project 2: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
 # Purpose:
 #   - Detect text/numbering artifacts of ANY color by protecting ONLY the
@@ -116,7 +116,7 @@ ENABLE_LOGGING = not args.no_log
 # ----------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 LOGS_DIR = SCRIPT_DIR / "Logs"
-LOG_FILE = LOGS_DIR / "06_artifacts_removal_lama.log"
+LOG_FILE = LOGS_DIR / "aiml_06_artifacts_removal_lama.log"
 
 INPUT_FOLDER = SCRIPT_DIR / ".." / "Images" / "02_Frames"
 OUTPUT_FOLDER = SCRIPT_DIR / ".." / "Images" / "03_Cleaned_lama"

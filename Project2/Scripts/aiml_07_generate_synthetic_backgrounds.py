@@ -1,5 +1,5 @@
 # ============================================
-# Script: 08_generate_synthetic_backgrounds.py
+# Script: aiml_08_generate_synthetic_backgrounds.py
 # Project 2: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
 # Purpose:
 #   - Take EVERY real, artifact-cleaned frame found in Images\03_Cleaned_lama
@@ -81,7 +81,7 @@ ENABLE_LOGGING = not args.no_log
 # ----------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 LOGS_DIR = SCRIPT_DIR / "Logs"
-LOG_FILE = LOGS_DIR / "08_generate_synthetic_backgrounds.log"
+LOG_FILE = LOGS_DIR / "aiml_08_generate_synthetic_backgrounds.log"
 
 IMAGES_ROOT = SCRIPT_DIR / ".." / "Images"
 INPUT_FOLDER = IMAGES_ROOT / args.input_images_folder

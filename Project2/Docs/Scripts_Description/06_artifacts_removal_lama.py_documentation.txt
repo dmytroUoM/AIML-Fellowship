@@ -1,10 +1,10 @@
-# Script Documentation: 06_artifacts_removal_lama.py
+# Script Documentation: aiml_06_artifacts_removal_lama.py
 
 ## Overview
 
 | Field | Value |
 |---------|---------|
-| **Script Name** | `06_artifacts_removal_lama.py` |
+| **Script Name** | `aiml_06_artifacts_removal_lama.py` |
 | **Language** | Python |
 | **Project** | Project 2: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks |
 | **Category** | Image Cleaning / AI-Assisted Preprocessing / Automation |
@@ -16,13 +16,13 @@
 ## Categories
 
 1. **AI/ML-Assisted Image Cleanup**  
-   Removes text and numbering artifacts from plot frames using a deep learning inpainting model (LaMa).
+   Removes text and numbering artefacts from plot frames using a deep learning inpainting model (LaMa).
 
 2. **Data Preparation / Quality Control**  
    Produces clean frames suitable as input for downstream super-resolution and volumetric reconstruction models.
 
 3. **Automation / Scripting**  
-   Fully automated and parameterized (white threshold, circle detection, dilation, device), requiring no interactive input.
+   Fully automated and parameterised (white threshold, circle detection, dilation, device), requiring no interactive input.
 
 4. **Logging & Reporting**  
    Writes a structured, timestamped log file and per-frame debug masks, with validation and error handling included.
@@ -42,7 +42,7 @@ The script removes unwanted overlay artifacts (numbers, labels, values, and stra
 5. Caches the detected protected region mask to disk for reuse.
 6. Detects any non-white pixels outside the protected plot circles as artifacts, regardless of colour.
 7. Loads the LaMa inpainting model from a local checkpoint or downloads it automatically if missing.
-8. Uses the model to remove detected artifacts on a frame-by-frame basis.
+8. Uses the model to remove detected artefacts on a frame-by-frame basis.
 9. Saves:
    - Cleaned frames to `Images\03_Cleaned_lama`
    - Debug masks to `Images\03_Masks_lama`
@@ -57,7 +57,7 @@ The script removes unwanted overlay artifacts (numbers, labels, values, and stra
 11. Continues processing even if individual frames fail.
 12. Generates a final processing summary containing:
     - Total frames processed
-    - Frames with artifact detections
+    - Frames with artefact detections
     - Failed frames
     - Processing times
 
