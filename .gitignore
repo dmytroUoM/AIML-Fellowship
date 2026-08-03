@@ -44,3 +44,6 @@ __pycache__/
 
 # AI model weights
 *.pth
+
+# log files
+*.log
