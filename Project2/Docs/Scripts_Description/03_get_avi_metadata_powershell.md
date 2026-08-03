@@ -1,4 +1,4 @@
-# Script Description and Assessment: `03_get_metadata_powershell.ps1`
+# Script Description and Assessment: 03_get_metadata_powershell.ps1
 
 ## 1. Script Identification
 

@@ -1,4 +1,4 @@
-# Script Documentation: 07_make_transparent_background_py_documentation.txt
+# Script Description: 07_make_transparent_background_py_documentation.txt
 
 ## Overview
 

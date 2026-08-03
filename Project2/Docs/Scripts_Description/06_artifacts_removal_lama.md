@@ -1,4 +1,4 @@
-# Script Documentation: aiml_06_artifacts_removal_lama.py
+# Script Description: aiml_06_artifacts_removal_lama.py
 
 ## Overview
 

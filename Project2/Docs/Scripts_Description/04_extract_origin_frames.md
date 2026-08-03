@@ -1,4 +1,4 @@
-# Script Documentation: 04_extract_origin_frames.ps1
+# Script Description: 04_extract_origin_frames.ps1
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Script Documentation: 02_get_metadata_ffprobe.ps1
+# Script Description: 02_get_metadata_ffprobe.ps1
 
 ## Overview
 

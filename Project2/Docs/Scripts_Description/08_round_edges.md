@@ -1,4 +1,4 @@
-# Script Documentation: 08_round_edges.py
+# Script Description: 08_round_edges.py
 
 ## Overview
 

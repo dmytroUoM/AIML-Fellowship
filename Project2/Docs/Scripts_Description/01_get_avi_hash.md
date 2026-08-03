@@ -1,4 +1,4 @@
-# Script Documentation: 01_Get_Avi_SHA256_Hash.ps1
+# Script Description: 01_Get_Avi_SHA256_Hash.ps1
 
 ## Overview
 

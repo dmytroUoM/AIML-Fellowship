@@ -1,4 +1,4 @@
-# Script Documentation: 05_extract_crop_frames_from_avi.ps1
+# Script Description: 05_extract_crop_frames_from_avi.ps1
 
 ## Overview
 

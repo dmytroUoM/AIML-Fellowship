@@ -1,4 +1,4 @@
-# Script Documentation: `00_CleanFolders.ps1`
+# Script Description: 00_CleanFolders.ps1
 
 ## Script Purpose
 This PowerShell script safely deletes all files and subfolders inside a predefined, approved list of output directories (`..\Images` and `..\Reports`), while preserving the top-level folders themselves. It is designed to reset "scratch" or "output" folders to an empty state before a new pipeline run, without risking accidental deletion of unintended locations. All actions are written to a persistent log file, and a `-WhatIfMode` switch allows a dry-run preview of what would be deleted before any destructive action is taken.
