@@ -61,3 +61,63 @@
 [2026-07-29 20:46:32] [INFO] Metadata saved to: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
 [2026-07-29 20:46:32] [SUCCESS] Script completed successfully.
 [2026-07-29 20:46:32] [INFO] ============================================
+[2026-08-04 09:09:24] [INFO] ============================================
+[2026-08-04 09:09:24] [INFO] Script started.
+[2026-08-04 09:09:24] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-08-04 09:09:24] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-04 09:09:24] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-04 09:09:24] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-04 09:09:24] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Bin\ffprobe.exe
+[2026-08-04 09:09:24] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-04 09:09:24] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-08-04 09:09:24] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-04 09:09:24] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-08-04 09:09:24] [INFO] Video file found.
+[2026-08-04 09:09:24] [INFO] Video file size: 19808768 bytes
+[2026-08-04 09:09:24] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-08-04 09:09:24] [INFO] Running ffprobe metadata extraction...
+[2026-08-04 09:09:31] [SUCCESS] ffprobe output validated as JSON.
+[2026-08-04 09:09:31] [SUCCESS] Metadata extracted successfully.
+[2026-08-04 09:09:31] [INFO] Metadata saved to: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+[2026-08-04 09:09:31] [SUCCESS] Script completed successfully.
+[2026-08-04 09:09:31] [INFO] ============================================
+[2026-08-04 09:19:19] [INFO] ============================================
+[2026-08-04 09:19:19] [INFO] Script started.
+[2026-08-04 09:19:19] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-08-04 09:19:19] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-04 09:19:19] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-04 09:19:19] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-04 09:19:19] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Bin\ffprobe.exe
+[2026-08-04 09:19:19] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-04 09:19:19] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-08-04 09:19:19] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-04 09:19:19] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-08-04 09:19:19] [INFO] Video file found.
+[2026-08-04 09:19:19] [INFO] Video file size: 19808768 bytes
+[2026-08-04 09:19:19] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-08-04 09:19:19] [INFO] Running ffprobe metadata extraction...
+[2026-08-04 09:19:19] [SUCCESS] ffprobe output validated as JSON.
+[2026-08-04 09:19:19] [SUCCESS] Metadata extracted successfully.
+[2026-08-04 09:19:19] [INFO] Metadata saved to: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+[2026-08-04 09:19:19] [SUCCESS] Script completed successfully.
+[2026-08-04 09:19:19] [INFO] ============================================
+[2026-08-04 09:22:36] [INFO] ============================================
+[2026-08-04 09:22:36] [INFO] Script started.
+[2026-08-04 09:22:36] [INFO] Script name: 02_get_metadata_ffprobe.ps1
+[2026-08-04 09:22:36] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-04 09:22:36] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-04 09:22:36] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-04 09:22:36] [INFO] ffprobe path: C:\AI_ML_Fellowship\Project2\Bin\ffprobe.exe
+[2026-08-04 09:22:36] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-04 09:22:36] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-08-04 09:22:36] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-04 09:22:36] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\02_get_metadata_ffprobe.log
+[2026-08-04 09:22:36] [INFO] Video file found.
+[2026-08-04 09:22:36] [INFO] Video file size: 19808768 bytes
+[2026-08-04 09:22:36] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-08-04 09:22:36] [INFO] Running ffprobe metadata extraction...
+[2026-08-04 09:22:37] [SUCCESS] ffprobe output validated as JSON.
+[2026-08-04 09:22:37] [SUCCESS] Metadata extracted successfully.
+[2026-08-04 09:22:37] [INFO] Metadata saved to: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+[2026-08-04 09:22:37] [SUCCESS] Script completed successfully.
+[2026-08-04 09:22:37] [INFO] ============================================

@@ -1,14 +1,35 @@
 ﻿|-- Project2
     |-- Bin
     |-- Docs
+        |-- Images
+        |-- Scripts_Description
     |-- Images
+        |-- 00_Output
         |-- 01_Origin
         |-- 02_Frames
         |-- 03_Cleaned
+        |-- 03_Cleaned_lama
         |-- 03_Masks
+        |-- 03_Masks_lama
+        |-- 04_Dataset
+            |-- train
+                |-- images
+                |-- masks
+            |-- val
+                |-- images
+                |-- masks
         |-- 04_Transparent
         |-- 05_Final_Rounded
+        |-- 05_Synthetic_Backgrounds
+            |-- images
+            |-- masks
         |-- 06_Final_Upscaled
+        |-- 06_Inference_Output
+            |-- images
+            |-- masks
+        |-- 06_Smoothed_Gradients
     |-- Reports
     |-- Scripts
+        |-- Logs
+        |-- results
     |-- Video

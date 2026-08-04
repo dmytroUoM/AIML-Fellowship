@@ -124,6 +124,17 @@ try {
 
     Write-Log "Starting frame extraction using ffmpeg."
 
+    # FFmpeg writes normal version/progress info to stderr even on success.
+    # PowerShell treats stderr lines from native commands as error-stream
+    # records, and with $ErrorActionPreference = "Stop" the very first such
+    # line (ffmpeg's version banner) would otherwise abort the script as if
+    # it were a real failure - before $LASTEXITCODE is ever even checked.
+    # Temporarily relax ErrorActionPreference so stderr is simply redirected
+    # to the file as intended, then restore it and rely on $LASTEXITCODE
+    # (checked below) to detect real failures.
+    $PreviousErrorActionPreference = $ErrorActionPreference
+    $ErrorActionPreference = "Continue"
+
     # Extract frames from video
     & $FfmpegExe `
         -y `
@@ -132,6 +143,9 @@ try {
         2> $FfmpegErrorFile
 
     $ExitCode = $LASTEXITCODE
+    $ErrorActionPreference = $PreviousErrorActionPreference
+
+    Write-Log "FFmpeg exit code: $ExitCode"
 
     # Check ffmpeg exit code
     if ($ExitCode -ne 0) {
@@ -152,13 +166,21 @@ try {
     Write-Log "Total PNG frames currently in output folder: $ExtractedFrames"
     Write-Log "Approximate new frames created during this run: $NewFrames"
     Write-Log "Frames extracted to: $OutputDir"
-    Write-Log "Script completed successfully." "SUCCESS"
-    Write-Log "============================================"
 
-    # Remove temporary ffmpeg error file if it exists
+    # Optional FFmpeg diagnostic note (matches 05's pattern: capture but
+    # don't treat as an error when exit code was 0)
     if (Test-Path -Path $FfmpegErrorFile) {
+        $FfmpegErrorText = Get-Content -Path $FfmpegErrorFile -Raw
+
+        if (-not [string]::IsNullOrWhiteSpace($FfmpegErrorText)) {
+            Write-Log "FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0."
+        }
+
         Remove-Item -Path $FfmpegErrorFile -Force
     }
+
+    Write-Log "Script completed successfully." "SUCCESS"
+    Write-Log "============================================"
 }
 catch {
     Write-Log "Script failed: $($_.Exception.Message)" "ERROR"

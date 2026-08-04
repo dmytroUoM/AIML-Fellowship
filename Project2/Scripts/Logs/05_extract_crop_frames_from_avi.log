@@ -307,3 +307,75 @@ Conversion failed!
 [2026-07-31 10:12:25] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
 [2026-07-31 10:12:25] [SUCCESS] Script completed successfully.
 [2026-07-31 10:12:25] [INFO] ============================================
+[2026-08-04 09:11:26] [INFO] ============================================
+[2026-08-04 09:11:26] [INFO] Script started.
+[2026-08-04 09:11:26] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-08-04 09:11:26] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-04 09:11:26] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-04 09:11:26] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-04 09:11:26] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-04 09:11:26] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-08-04 09:11:26] [INFO] Crop filter: crop=940:600:0:40
+[2026-08-04 09:11:26] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-04 09:11:26] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-04 09:11:26] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-08-04 09:11:26] [INFO] Input video file found.
+[2026-08-04 09:11:26] [INFO] Video file size: 19808768 bytes
+[2026-08-04 09:11:26] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-08-04 09:11:26] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-08-04 09:11:26] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-08-04 09:11:27] [INFO] FFmpeg exit code: 0
+[2026-08-04 09:11:27] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-08-04 09:11:27] [INFO] New frames created during this run: 129
+[2026-08-04 09:11:27] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-04 09:11:27] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-08-04 09:11:27] [SUCCESS] Script completed successfully.
+[2026-08-04 09:11:27] [INFO] ============================================
+[2026-08-04 09:19:25] [INFO] ============================================
+[2026-08-04 09:19:25] [INFO] Script started.
+[2026-08-04 09:19:25] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-08-04 09:19:25] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-04 09:19:25] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-04 09:19:25] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-04 09:19:26] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-04 09:19:26] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-08-04 09:19:26] [INFO] Crop filter: crop=940:600:0:40
+[2026-08-04 09:19:26] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-04 09:19:26] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-04 09:19:26] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-08-04 09:19:26] [INFO] Input video file found.
+[2026-08-04 09:19:26] [INFO] Video file size: 19808768 bytes
+[2026-08-04 09:19:26] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-08-04 09:19:26] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-08-04 09:19:26] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-08-04 09:19:26] [INFO] FFmpeg exit code: 0
+[2026-08-04 09:19:26] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-08-04 09:19:26] [INFO] New frames created during this run: 129
+[2026-08-04 09:19:26] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-04 09:19:26] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-08-04 09:19:26] [SUCCESS] Script completed successfully.
+[2026-08-04 09:19:26] [INFO] ============================================
+[2026-08-04 09:22:40] [INFO] ============================================
+[2026-08-04 09:22:40] [INFO] Script started.
+[2026-08-04 09:22:40] [INFO] Script name: 05_extract_crop_frames_from_avi.ps1
+[2026-08-04 09:22:40] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-04 09:22:40] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-04 09:22:40] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-04 09:22:40] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-04 09:22:40] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-08-04 09:22:40] [INFO] Crop filter: crop=940:600:0:40
+[2026-08-04 09:22:40] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-04 09:22:40] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-04 09:22:40] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\05_extract_crop_frames_from_avi.log
+[2026-08-04 09:22:40] [INFO] Input video file found.
+[2026-08-04 09:22:40] [INFO] Video file size: 19808768 bytes
+[2026-08-04 09:22:40] [INFO] Video last modified: 07/22/2026 09:53:19
+[2026-08-04 09:22:40] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\02_Frames\frame_%04d.png
+[2026-08-04 09:22:40] [INFO] Starting cropped frame extraction using FFmpeg.
+[2026-08-04 09:22:41] [INFO] FFmpeg exit code: 0
+[2026-08-04 09:22:41] [SUCCESS] Cropped frame extraction completed successfully.
+[2026-08-04 09:22:41] [INFO] New frames created during this run: 129
+[2026-08-04 09:22:41] [SUCCESS] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-04 09:22:41] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-08-04 09:22:41] [SUCCESS] Script completed successfully.
+[2026-08-04 09:22:41] [INFO] ============================================
