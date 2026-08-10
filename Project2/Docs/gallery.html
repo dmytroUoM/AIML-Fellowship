@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Variation Gallery</title>
+<style>
+  :root{
+    --bg:#12141a; --panel:#1b1e27; --border:#2a2e3a; --text:#e8e9ee;
+    --muted:#9aa0b0; --accent:#6ea8ff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); padding:24px 32px 60px;
+  }
+  h1{font-size:20px; font-weight:600; margin:0 0 4px;}
+  p.sub{color:var(--muted); font-size:13px; margin:0 0 20px;}
+
+  .controls{
+    display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    background:var(--panel); border:1px solid var(--border); border-radius:10px;
+    padding:14px 16px; margin-bottom:24px;
+  }
+  .controls label{font-size:13px; color:var(--muted); margin-right:2px;}
+  .controls input[type=text]{
+    background:#0f1116; border:1px solid var(--border); color:var(--text);
+    padding:8px 10px; border-radius:6px; font-size:14px; min-width:220px;
+  }
+  .controls button{
+    background:var(--accent); color:#0b0d12; border:none; padding:8px 16px;
+    border-radius:6px; font-weight:600; font-size:13px; cursor:pointer;
+  }
+  .controls button:hover{filter:brightness(1.08);}
+  .controls button#prevBtn, .controls button#nextBtn{
+    background:#2a2e3a; color:var(--text);
+  }
+  .controls button#prevBtn:disabled, .controls button#nextBtn:disabled{
+    opacity:0.4; cursor:not-allowed; filter:none;
+  }
+  .controls .hint{font-size:12px; color:var(--muted); width:100%; margin-top:4px;}
+
+  #status{font-size:13px; color:var(--muted); margin-bottom:14px;}
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:16px;
+  }
+  .tile{
+    background:var(--panel); border:1px solid var(--border); border-radius:10px;
+    overflow:hidden; display:flex; flex-direction:column;
+  }
+  .tile .thumb{
+    width:100%; aspect-ratio:1/1; background:#0f1116;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .tile img{width:100%; height:100%; object-fit:contain; display:block;}
+  .tile .label{
+    padding:8px 10px; font-size:12px; color:var(--muted);
+    border-top:1px solid var(--border); word-break:break-word;
+  }
+  .tile .label b{color:var(--text); display:block; font-size:12.5px; margin-bottom:2px;}
+  .empty{
+    grid-column:1/-1; text-align:center; color:var(--muted);
+    padding:50px 0; font-size:14px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Image Variation Gallery</h1>
+<p class="sub">Shows every pipeline stage (subfolder) that contains a file matching the base name below. Missing stages are skipped automatically.</p>
+
+<div class="controls">
+  <label for="basename">Base filename</label>
+  <input type="text" id="basename" placeholder="e.g. frame_0001 or xxx1" value="frame_0001">
+  <button id="loadBtn">Show variations</button>
+  <button id="prevBtn" title="Previous frame">&larr; Prev</button>
+  <button id="nextBtn" title="Next frame">Next &rarr;</button>
+  <span class="hint">Tip: enter the base filename without extension — e.g. frame_0001. PNG only. Regular folders look for "frame_0001.png"; mask folders (03_Masks, 03_Masks_lama, and the *_dataset masks subfolders) look for "frame_0001_mask.png". Use Prev/Next to step through frame numbers. Paths are resolved relative to this file's location in /Docs, pointing into ../Images/.</span>
+</div>
+
+<div id="status"></div>
+<div class="grid" id="grid"></div>
+
+<script>
+// All folders under Images that may contain image files, relative to ../Images/
+const FOLDERS = [
+  "01_Origin",
+  "02_Frames",
+  "03_Cleaned",
+  "03_Cleaned_lama",
+  "03_Masks",
+  "03_Masks_lama",
+  "04_Dataset/train/images",
+  "04_Dataset/train/masks",
+  "04_Dataset/val/images",
+  "04_Dataset/val/masks",
+  "04_Transparent",
+  "05_Final_Rounded",
+  "05_Synthetic_Backgrounds/images",
+  "05_Synthetic_Backgrounds/masks",
+  "06_Final_Upscaled",
+  "06_Inference_Output/images",
+  "06_Inference_Output/masks",
+  "06_Smoothed_Gradients"
+];
+
+// Folders whose files are named "<base>_mask.png" instead of "<base>.png"
+const MASK_SUFFIX_FOLDERS = new Set([
+  "03_Masks",
+  "03_Masks_lama",
+  "04_Dataset/train/masks",
+  "04_Dataset/val/masks",
+  "05_Synthetic_Backgrounds/masks",
+  "06_Inference_Output/masks"
+]);
+
+const EXTENSIONS = ["png"];
+const IMAGES_ROOT = "../Images"; // this HTML lives in /Docs
+
+const grid = document.getElementById("grid");
+const status = document.getElementById("status");
+const input = document.getElementById("basename");
+const btn = document.getElementById("loadBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Steps the trailing number in a base name up or down, preserving
+// zero-padding, e.g. "frame_0037" -> "frame_0038" / "frame_0036".
+// If the base name has no trailing number, nav buttons are disabled.
+function stepBasename(base, delta) {
+  const m = base.match(/^(.*?)(\d+)$/);
+  if (!m) return null;
+  const [, prefix, numStr] = m;
+  const width = numStr.length;
+  let next = parseInt(numStr, 10) + delta;
+  if (next < 0) next = 0;
+  const nextStr = String(next).padStart(width, "0");
+  return prefix + nextStr;
+}
+
+function updateNavState() {
+  const hasNumber = /\d+$/.test(input.value.trim());
+  prevBtn.disabled = !hasNumber;
+  nextBtn.disabled = !hasNumber;
+}
+
+function tryLoadTile(folder, base) {
+  return new Promise((resolve) => {
+    let i = 0;
+    const img = new Image();
+    const filename = MASK_SUFFIX_FOLDERS.has(folder) ? `${base}_mask` : base;
+
+    function attemptNext() {
+      if (i >= EXTENSIONS.length) {
+        resolve(null); // no match found in this folder
+        return;
+      }
+      const ext = EXTENSIONS[i++];
+      const path = `${IMAGES_ROOT}/${folder}/${filename}.${ext}`;
+      img.onload = () => resolve({ folder, path });
+      img.onerror = attemptNext;
+      img.src = path;
+    }
+    attemptNext();
+  });
+}
+
+async function loadGallery() {
+  const base = input.value.trim();
+  grid.innerHTML = "";
+  if (!base) {
+    status.textContent = "Enter a base filename above.";
+    return;
+  }
+  status.textContent = "Searching all Images subfolders…";
+
+  const results = await Promise.all(FOLDERS.map(f => tryLoadTile(f, base)));
+  const found = results.filter(Boolean);
+
+  grid.innerHTML = "";
+  if (found.length === 0) {
+    grid.innerHTML = `<div class="empty">No files named "<b>${base}</b>" or "<b>${base}_mask</b>" (.png) found in any Images subfolder.</div>`;
+    status.textContent = "0 variations found.";
+    return;
+  }
+
+  found.forEach(({ folder, path }) => {
+    const tile = document.createElement("div");
+    tile.className = "tile";
+    tile.innerHTML = `
+      <div class="thumb"><img src="${path}" loading="lazy" alt="${folder}"></div>
+      <div class="label"><b>${folder}</b>${path.split("/").pop()}</div>
+    `;
+    grid.appendChild(tile);
+  });
+
+  status.textContent = `${found.length} of ${FOLDERS.length} folders contain "${base}".`;
+}
+
+btn.addEventListener("click", loadGallery);
+input.addEventListener("input", updateNavState);
+input.addEventListener("keydown", e => { if (e.key === "Enter") loadGallery(); });
+
+prevBtn.addEventListener("click", () => {
+  const next = stepBasename(input.value.trim(), -1);
+  if (next !== null) { input.value = next; loadGallery(); }
+});
+nextBtn.addEventListener("click", () => {
+  const next = stepBasename(input.value.trim(), 1);
+  if (next !== null) { input.value = next; loadGallery(); }
+});
+
+// auto-run once on page load
+updateNavState();
+loadGallery();
+</script>
+
+</body>
+</html>
