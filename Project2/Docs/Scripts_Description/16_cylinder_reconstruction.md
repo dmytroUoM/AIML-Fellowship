@@ -45,16 +45,16 @@ The tool serves as the primary front-end visualisation environment for reviewing
 
 ---
 
-## Change Summary (v15 → v16)
+## Change Summary
 
 This revision was produced to correct a slice-ordering discrepancy identified in the previous build and to add institutional branding to the interface.
 
 | Change | Description |
 |--------|-------------|
-| **Slice order correction** | Slices 7 and 8 (the two lowest slices in the stack) have been swapped relative to `15_cylinder_reconstruction.html`, so that the rendered stack now correctly matches the original tomography acquisition/grid layout at the bottom of the tank. The page title and on-screen overlay text explicitly flag this correction (`"...Reconstruction. 7 <-> 8"`). |
+| **Slice order correction** | Slices 7 and 8 (the two lowest slices in the stack) have been swapped relative to `15_cylinder_reconstruction.html`, so that the rendered stack now correctly matches the original tomography tank. |
 | **Overlay text update** | The information overlay now explicitly states that "Slices 7 and 8 have been swapped," so reviewers are aware the ordering was corrected from the prior version. |
 | **Branding graphics added** | Embedded logo/scale graphics (base64-encoded PNG images) have been added to the information overlay, e.g. an institutional logo and a scale-reference image, improving presentation quality for meetings and publications. |
-| **Control panel unchanged in function** | All controls present in v15 (tank shell toggle, slice toggle, opacity slider, auto-rotate, folder loading, frame slider/navigation, play/speed) are retained unchanged in v16. |
+| **Control panel unchanged in function** | All controls present in 15 (tank shell toggle, slice toggle, opacity slider, auto-rotate, folder loading, frame slider/navigation, play/speed) are retained unchanged in 16. |
 
 No other functional or structural changes were made to the reconstruction, rendering, or frame-processing logic.
 
