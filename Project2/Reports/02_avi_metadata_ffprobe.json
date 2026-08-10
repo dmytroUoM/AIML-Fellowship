@@ -19,10 +19,10 @@
             "time_base": "1/5",
             "start_pts": 0,
             "start_time": "0.000000",
-            "duration_ts": 129,
-            "duration": "25.800000",
-            "bit_rate": "6188537",
-            "nb_frames": "129",
+            "duration_ts": 155,
+            "duration": "31.000000",
+            "bit_rate": "6093830",
+            "nb_frames": "155",
             "disposition": {
                 "default": 0,
                 "dub": 0,
@@ -54,9 +54,9 @@
         "format_name": "avi",
         "format_long_name": "AVI (Audio Video Interleaved)",
         "start_time": "0.000000",
-        "duration": "25.800000",
-        "size": "19808768",
-        "bit_rate": "6142253",
+        "duration": "31.000000",
+        "size": "23467520",
+        "bit_rate": "6056134",
         "probe_score": 100
     }
 }
