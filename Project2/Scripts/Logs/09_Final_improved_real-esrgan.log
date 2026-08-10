@@ -1,0 +1,66 @@
+[2026-08-07 10:22:11] [INFO] ============================================
+[2026-08-07 10:22:11] [INFO] Script started.
+[2026-08-07 10:22:11] [INFO] Script name: 09_Final_improved_real-esrgan.py
+[2026-08-07 10:22:11] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-07 10:22:11] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-07 10:22:11] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\06_Smoothed_Gradients
+[2026-08-07 10:22:11] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_Final_Upscaled
+[2026-08-07 10:22:11] [INFO] Device mode: auto
+[2026-08-07 10:22:11] [INFO] Alpha interpolation: lanczos4
+[2026-08-07 10:22:11] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-07 10:22:11] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\09_Final_improved_real-esrgan.log
+[2026-08-07 10:22:11] [INFO] Found 155 PNG file(s) to process.
+[2026-08-07 10:22:14] [INFO] Model file: C:\AI_ML_Fellowship\Project2\Scripts\RealESRGAN_x4plus.pth
+[2026-08-07 10:22:14] [INFO] Device: cpu
+[2026-08-07 10:22:14] [INFO] CUDA available: False
+[2026-08-07 10:22:14] [INFO] Tile size: 128
+[2026-08-07 10:22:14] [INFO] Half precision: False
+[2026-08-07 10:22:14] [INFO] Model scale: 4, output scale: 2
+[2026-08-07 10:22:14] [INFO] Model loaded successfully in 3.4s.
+[2026-08-07 10:24:49] [INFO] [1/155] Processed: frame_0001.png (155.12s)
+[2026-08-07 10:27:50] [INFO] [2/155] Processed: frame_0002.png (180.74s)
+[2026-08-07 10:31:00] [INFO] [3/155] Processed: frame_0003.png (189.62s)
+[2026-08-07 10:34:19] [INFO] [4/155] Processed: frame_0004.png (199.01s)
+[2026-08-07 10:37:24] [INFO] [5/155] Processed: frame_0005.png (184.73s)
+[2026-08-07 10:40:33] [INFO] [6/155] Processed: frame_0006.png (189.28s)
+[2026-08-07 10:44:04] [INFO] [7/155] Processed: frame_0007.png (211.66s)
+[2026-08-07 10:47:16] [INFO] [8/155] Processed: frame_0008.png (191.15s)
+[2026-08-07 10:50:30] [INFO] [9/155] Processed: frame_0009.png (194.33s)
+[2026-08-07 10:54:00] [INFO] [10/155] Processed: frame_0010.png (209.97s)
+[2026-08-07 10:57:25] [INFO] [11/155] Processed: frame_0011.png (204.68s)
+[2026-08-07 11:01:37] [INFO] [12/155] Processed: frame_0012.png (252.09s)
+[2026-08-07 11:04:49] [INFO] [13/155] Processed: frame_0013.png (191.86s)
+[2026-08-07 11:08:04] [INFO] [14/155] Processed: frame_0014.png (195.24s)
+[2026-08-07 11:12:09] [INFO] [15/155] Processed: frame_0015.png (244.80s)
+[2026-08-07 11:15:57] [INFO] [16/155] Processed: frame_0016.png (228.46s)
+[2026-08-07 11:19:26] [INFO] [17/155] Processed: frame_0017.png (208.81s)
+[2026-08-07 11:22:58] [INFO] [18/155] Processed: frame_0018.png (212.10s)
+[2026-08-07 11:26:26] [INFO] [19/155] Processed: frame_0019.png (208.30s)
+[2026-08-07 11:29:51] [INFO] [20/155] Processed: frame_0020.png (204.74s)
+[2026-08-07 11:33:19] [INFO] [21/155] Processed: frame_0021.png (208.06s)
+[2026-08-07 11:37:33] [INFO] [22/155] Processed: frame_0022.png (253.51s)
+[2026-08-07 11:41:12] [INFO] [23/155] Processed: frame_0023.png (219.75s)
+[2026-08-07 11:44:51] [INFO] [24/155] Processed: frame_0024.png (218.84s)
+[2026-08-07 11:48:52] [INFO] [25/155] Processed: frame_0025.png (240.90s)
+[2026-08-07 11:52:53] [INFO] [26/155] Processed: frame_0026.png (240.77s)
+[2026-08-07 11:56:36] [INFO] [27/155] Processed: frame_0027.png (222.71s)
+[2026-08-07 12:00:21] [INFO] [28/155] Processed: frame_0028.png (225.17s)
+[2026-08-07 12:04:10] [INFO] [29/155] Processed: frame_0029.png (229.28s)
+[2026-08-07 12:08:11] [INFO] [30/155] Processed: frame_0030.png (241.42s)
+[2026-08-07 12:12:23] [INFO] [31/155] Processed: frame_0031.png (251.38s)
+[2026-08-07 12:16:21] [INFO] [32/155] Processed: frame_0032.png (238.25s)
+[2026-08-07 12:20:17] [INFO] [33/155] Processed: frame_0033.png (236.04s)
+[2026-08-07 12:25:44] [INFO] [34/155] Processed: frame_0034.png (326.78s)
+[2026-08-07 12:29:57] [INFO] [35/155] Processed: frame_0035.png (253.43s)
+[2026-08-07 12:33:47] [INFO] [36/155] Processed: frame_0036.png (229.36s)
+[2026-08-07 12:37:21] [INFO] [37/155] Processed: frame_0037.png (214.04s)
+[2026-08-07 12:40:53] [INFO] [38/155] Processed: frame_0038.png (212.17s)
+[2026-08-07 12:44:10] [INFO] [39/155] Processed: frame_0039.png (197.09s)
+[2026-08-07 12:47:28] [INFO] [40/155] Processed: frame_0040.png (198.26s)
+[2026-08-07 12:50:47] [INFO] [41/155] Processed: frame_0041.png (198.26s)
+[2026-08-07 12:54:01] [INFO] [42/155] Processed: frame_0042.png (194.42s)
+[2026-08-07 12:57:14] [INFO] [43/155] Processed: frame_0043.png (192.99s)
+[2026-08-07 13:00:34] [INFO] [44/155] Processed: frame_0044.png (199.57s)
+[2026-08-07 13:04:12] [INFO] [45/155] Processed: frame_0045.png (218.95s)
+[2026-08-07 13:07:39] [INFO] [46/155] Processed: frame_0046.png (206.98s)
+[2026-08-07 13:11:11] [INFO] [47/155] Processed: frame_0047.png (211.32s)

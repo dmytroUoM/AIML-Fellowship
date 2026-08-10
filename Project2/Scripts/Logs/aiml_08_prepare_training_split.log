@@ -1,0 +1,19 @@
+[2026-08-10 18:51:31] [INFO] ============================================
+[2026-08-10 18:51:31] [INFO] Script started.
+[2026-08-10 18:51:31] [INFO] Script name: aiml_08_prepare_training_split.py
+[2026-08-10 18:51:31] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-10 18:51:31] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-10 18:51:31] [INFO] Input images folder: C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\images
+[2026-08-10 18:51:31] [INFO] Ground-truth mask mode: per-image folder -> C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\masks
+[2026-08-10 18:51:31] [INFO] Output dataset folder: C:\AI_ML_Fellowship\Project2\Images\04_Dataset
+[2026-08-10 18:51:31] [INFO] Requested train fraction: 0.8
+[2026-08-10 18:51:31] [INFO] Random seed: 42
+[2026-08-10 18:51:31] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-10 18:51:31] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\aiml_08_prepare_training_split.log
+[2026-08-10 18:51:31] [INFO] Found 465 cleaned frame(s) in C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds\images.
+[2026-08-10 18:51:31] [INFO] Using train_fraction=0.8 -> 372/465 frames for training, 93/465 frames for val (rest).
+[2026-08-10 18:51:31] [INFO] Split: 372 frame(s) -> train, 93 frame(s) -> rest (val).
+[2026-08-10 18:51:49] [INFO] Train set written: 372 image/mask pair(s) to C:\AI_ML_Fellowship\Project2\Images\04_Dataset\train\images and C:\AI_ML_Fellowship\Project2\Images\04_Dataset\train\masks
+[2026-08-10 18:51:49] [INFO] Val (rest) set written: 93 image/mask pair(s) to C:\AI_ML_Fellowship\Project2\Images\04_Dataset\val\images and C:\AI_ML_Fellowship\Project2\Images\04_Dataset\val\masks
+[2026-08-10 18:51:49] [INFO] Script completed successfully.
+[2026-08-10 18:51:49] [INFO] ============================================

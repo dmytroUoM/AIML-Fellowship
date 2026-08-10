@@ -22,14 +22,14 @@ rad.json
 #Test results file
 TestResults.xml
 #Exclude files
-*.avi
 *.exe
 *.png
-*.pt
+!*xxx1*.png
+big-lama.pt
 
+!hyperparameter_comparison.png
 # Virtual environments
 .venv-tomo/
-
 
 # Python cache
 __pycache__/
@@ -45,5 +45,3 @@ __pycache__/
 # AI model weights
 *.pth
 
-# log files
-*.log
