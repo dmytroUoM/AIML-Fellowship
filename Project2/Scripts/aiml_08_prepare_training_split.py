@@ -7,8 +7,9 @@
 #     cached protected region mask from Images\03_Masks_lama - the same
 #     mask applies to every frame, since the plot circles sit at fixed
 #     positions across the whole dataset)
-#   - Randomly select a fixed count of frames for TRAINING
-#   - Put everything else into the REST (validation) set
+#   - Randomly select a fraction of all available frames for TRAINING
+#     (default 80%)
+#   - Put everything else into the REST (validation) set (default 20%)
 #   - Copy images + matching masks into new subfolders under Images, ready
 #     to hand straight to a training script (e.g. train_segmentation_demo.py)
 #   - Save log to Logs folder beside script
@@ -43,9 +44,10 @@ parser.add_argument(
     help="Disable saving the log file (equivalent to -NoLog in the .ps1 scripts)."
 )
 parser.add_argument(
-    "--train-count", type=int, default=50,
-    help="Fixed number of frames to randomly select for the training set (default: 50). "
-         "Everything else goes into the 'rest' (val) set."
+    "--train-fraction", type=float, default=0.8,
+    help="Fraction of all available frames to randomly select for the training set "
+         "(default: 0.8, i.e. 80%% train / 20%% val). Everything else goes into the "
+         "'rest' (val) set."
 )
 parser.add_argument(
     "--seed", type=int, default=42,
@@ -140,7 +142,7 @@ def main() -> int:
     try:
         log("============================================")
         log("Script started.")
-        log("Script name: 07_prepare_training_split.py")
+        log("Script name: aiml_08_prepare_training_split.py")
         log("Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks")
         log(f"Script folder: {SCRIPT_DIR}")
         log(f"Input images folder: {INPUT_FOLDER.resolve()}")
@@ -149,7 +151,7 @@ def main() -> int:
         else:
             log(f"Ground-truth mask mode: per-image folder -> {MASKS_FOLDER.resolve()}")
         log(f"Output dataset folder: {OUTPUT_ROOT.resolve()}")
-        log(f"Requested training count: {args.train_count}")
+        log(f"Requested train fraction: {args.train_fraction}")
         log(f"Random seed: {args.seed}")
 
         if ENABLE_LOGGING:
@@ -194,11 +196,13 @@ def main() -> int:
             log("============================================")
             return 0
 
-        train_count = args.train_count
-        if train_count >= total_files:
-            log(f"Requested train count ({train_count}) >= total available frames ({total_files}). "
-                f"All frames will go to TRAIN, and the 'rest' (val) set will be empty.", "WARNING")
-            train_count = total_files
+        if not (0.0 < args.train_fraction <= 1.0):
+            raise ValueError(f"--train-fraction must be between 0 and 1 (got {args.train_fraction}).")
+
+        train_count = round(total_files * args.train_fraction)
+        train_count = max(1, min(train_count, total_files))
+        log(f"Using train_fraction={args.train_fraction} -> {train_count}/{total_files} frames for training, "
+            f"{total_files - train_count}/{total_files} frames for val (rest).")
 
         # Random, reproducible split
         rng = random.Random(args.seed)

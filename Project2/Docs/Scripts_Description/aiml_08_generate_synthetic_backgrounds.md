@@ -54,16 +54,16 @@ The `aiml_08_generate_synthetic_backgrounds.py` script automates synthetic backg
 
 1. **Path Initialization & Setup:**
    * Maps project paths relative to the script location for input images, mask source, output subfolders, and log files.
-   * Initializes logging streams to console and optional log file (`Logsiml_08_generate_synthetic_backgrounds.log`).
+   * Initializes logging streams to console and optional log file (`Logs\aiml_08_generate_synthetic_backgrounds.log`).
 
 2. **Input & Mask Validation:**
-   * Verifies existence of the source image directory (`Images_Cleaned_lama` by default).
-   * Validates and loads the single ground-truth protected region mask (`Images_Masks_lama\_protected_region_mask.png`) generated during artifact removal.
+   * Verifies existence of the source image directory (`Images\03_Cleaned_lama` by default).
+   * Validates and loads the single ground-truth protected region mask (`Images\03_Masks_lama\_protected_region_mask.png`) generated during artifact removal.
 
 3. **Directory Discovery & Randomization:**
    * Enumerates all `.png` files present in the input subfolder.
    * Calculates total target synthetic output images ($N_{	ext{frames}} 	imes 	ext{variants\_per\_image}$).
-   * Initializes target output directories (`Images_Synthetic_Backgrounds\images` and `Images_Synthetic_Backgrounds\masks`).
+   * Initializes target output directories (`Images\03_Synthetic_Backgrounds\images` and `Images\03_Synthetic_Backgrounds\masks`).
    * Configures the pseudo-random number generator seed (`--seed`).
 
 4. **Synthetic Compositing & Mask Export:**

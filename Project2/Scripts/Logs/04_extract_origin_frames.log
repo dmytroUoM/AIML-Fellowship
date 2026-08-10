@@ -1,120 +1,25 @@
-﻿[2026-07-29 21:40:50] [INFO] ============================================
-[2026-07-29 21:40:50] [INFO] Script started.
-[2026-07-29 21:40:50] [INFO] Script name: 04_extract_origin_frames.ps1
-[2026-07-29 21:40:50] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
-[2026-07-29 21:40:50] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
-[2026-07-29 21:40:50] [INFO] Project root: C:\AI_ML_Fellowship\Project2
-[2026-07-29 21:40:50] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
-[2026-07-29 21:40:50] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
-[2026-07-29 21:40:50] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-07-29 21:40:50] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
-[2026-07-29 21:40:50] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
-[2026-07-29 21:40:50] [INFO] Input video file found.
-[2026-07-29 21:40:50] [INFO] Video file size: 19808768 bytes
-[2026-07-29 21:40:50] [INFO] Video last modified: 07/22/2026 09:53:19
-[2026-07-29 21:40:50] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
-[2026-07-29 21:40:50] [INFO] Existing PNG frames before extraction: 129
-[2026-07-29 21:40:50] [INFO] Starting frame extraction using ffmpeg.
-[2026-07-29 21:40:50] [ERROR] Script failed: ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
-[2026-07-29 21:40:50] [INFO] ============================================
-[2026-07-30 20:19:25] [INFO] ============================================
-[2026-07-30 20:19:25] [INFO] Script started.
-[2026-07-30 20:19:25] [INFO] Script name: 04_extract_origin_frames.ps1
-[2026-07-30 20:19:25] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
-[2026-07-30 20:19:25] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
-[2026-07-30 20:19:25] [INFO] Project root: C:\AI_ML_Fellowship\Project2
-[2026-07-30 20:19:25] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
-[2026-07-30 20:19:25] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
-[2026-07-30 20:19:25] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-07-30 20:19:25] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
-[2026-07-30 20:19:25] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
-[2026-07-30 20:19:25] [INFO] Input video file found.
-[2026-07-30 20:19:25] [INFO] Video file size: 19808768 bytes
-[2026-07-30 20:19:25] [INFO] Video last modified: 07/22/2026 09:53:19
-[2026-07-30 20:19:25] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
-[2026-07-30 20:19:25] [INFO] Existing PNG frames before extraction: 129
-[2026-07-30 20:19:25] [INFO] Starting frame extraction using ffmpeg.
-[2026-07-30 20:19:25] [ERROR] Script failed: ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
-[2026-07-30 20:19:25] [INFO] ============================================
-[2026-07-31 10:11:59] [INFO] ============================================
-[2026-07-31 10:11:59] [INFO] Script started.
-[2026-07-31 10:11:59] [INFO] Script name: 04_extract_origin_frames.ps1
-[2026-07-31 10:11:59] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
-[2026-07-31 10:11:59] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
-[2026-07-31 10:11:59] [INFO] Project root: C:\AI_ML_Fellowship\Project2
-[2026-07-31 10:11:59] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
-[2026-07-31 10:11:59] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
-[2026-07-31 10:11:59] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-07-31 10:11:59] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
-[2026-07-31 10:11:59] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
-[2026-07-31 10:11:59] [INFO] Input video file found.
-[2026-07-31 10:11:59] [INFO] Video file size: 19808768 bytes
-[2026-07-31 10:11:59] [INFO] Video last modified: 07/22/2026 09:53:19
-[2026-07-31 10:11:59] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
-[2026-07-31 10:11:59] [INFO] Existing PNG frames before extraction: 129
-[2026-07-31 10:11:59] [INFO] Starting frame extraction using ffmpeg.
-[2026-07-31 10:12:02] [ERROR] Script failed: ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
-[2026-07-31 10:12:02] [INFO] ============================================
-[2026-08-04 09:09:32] [INFO] ============================================
-[2026-08-04 09:09:32] [INFO] Script started.
-[2026-08-04 09:09:32] [INFO] Script name: 04_extract_origin_frames.ps1
-[2026-08-04 09:09:32] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
-[2026-08-04 09:09:32] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
-[2026-08-04 09:09:32] [INFO] Project root: C:\AI_ML_Fellowship\Project2
-[2026-08-04 09:09:32] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
-[2026-08-04 09:09:32] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
-[2026-08-04 09:09:32] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-08-04 09:09:32] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
-[2026-08-04 09:09:32] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
-[2026-08-04 09:09:32] [INFO] Input video file found.
-[2026-08-04 09:09:32] [INFO] Video file size: 19808768 bytes
-[2026-08-04 09:09:32] [INFO] Video last modified: 07/22/2026 09:53:19
-[2026-08-04 09:09:32] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
-[2026-08-04 09:09:32] [INFO] Existing PNG frames before extraction: 0
-[2026-08-04 09:09:32] [INFO] Starting frame extraction using ffmpeg.
-[2026-08-04 09:09:48] [ERROR] Script failed: ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
-[2026-08-04 09:09:48] [INFO] ============================================
-[2026-08-04 09:19:20] [INFO] ============================================
-[2026-08-04 09:19:20] [INFO] Script started.
-[2026-08-04 09:19:20] [INFO] Script name: 04_extract_origin_frames.ps1
-[2026-08-04 09:19:20] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
-[2026-08-04 09:19:20] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
-[2026-08-04 09:19:20] [INFO] Project root: C:\AI_ML_Fellowship\Project2
-[2026-08-04 09:19:20] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
-[2026-08-04 09:19:20] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
-[2026-08-04 09:19:20] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-08-04 09:19:20] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
-[2026-08-04 09:19:20] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
-[2026-08-04 09:19:20] [INFO] Input video file found.
-[2026-08-04 09:19:20] [INFO] Video file size: 19808768 bytes
-[2026-08-04 09:19:20] [INFO] Video last modified: 07/22/2026 09:53:19
-[2026-08-04 09:19:20] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
-[2026-08-04 09:19:20] [INFO] Existing PNG frames before extraction: 0
-[2026-08-04 09:19:20] [INFO] Starting frame extraction using ffmpeg.
-[2026-08-04 09:19:20] [ERROR] Script failed: ffmpeg version 2026-07-16-git-ceabc9b306-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
-[2026-08-04 09:19:20] [INFO] ============================================
-[2026-08-04 09:22:38] [INFO] ============================================
-[2026-08-04 09:22:38] [INFO] Script started.
-[2026-08-04 09:22:38] [INFO] Script name: 04_extract_origin_frames.ps1
-[2026-08-04 09:22:38] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
-[2026-08-04 09:22:38] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
-[2026-08-04 09:22:38] [INFO] Project root: C:\AI_ML_Fellowship\Project2
-[2026-08-04 09:22:38] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
-[2026-08-04 09:22:38] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
-[2026-08-04 09:22:38] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-08-04 09:22:38] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
-[2026-08-04 09:22:38] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
-[2026-08-04 09:22:38] [INFO] Input video file found.
-[2026-08-04 09:22:38] [INFO] Video file size: 19808768 bytes
-[2026-08-04 09:22:38] [INFO] Video last modified: 07/22/2026 09:53:19
-[2026-08-04 09:22:38] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
-[2026-08-04 09:22:38] [INFO] Existing PNG frames before extraction: 0
-[2026-08-04 09:22:38] [INFO] Starting frame extraction using ffmpeg.
-[2026-08-04 09:22:40] [INFO] FFmpeg exit code: 0
-[2026-08-04 09:22:40] [SUCCESS] Frame extraction completed successfully.
-[2026-08-04 09:22:40] [INFO] Total PNG frames currently in output folder: 129
-[2026-08-04 09:22:40] [INFO] Approximate new frames created during this run: 129
-[2026-08-04 09:22:40] [INFO] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\01_Origin
-[2026-08-04 09:22:40] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
-[2026-08-04 09:22:40] [SUCCESS] Script completed successfully.
-[2026-08-04 09:22:40] [INFO] ============================================
+﻿[2026-08-07 10:12:56] [INFO] ============================================
+[2026-08-07 10:12:56] [INFO] Script started.
+[2026-08-07 10:12:56] [INFO] Script name: 04_extract_origin_frames.ps1
+[2026-08-07 10:12:56] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-07 10:12:56] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-07 10:12:56] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-08-07 10:12:56] [INFO] Input video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-08-07 10:12:56] [INFO] FFmpeg path: C:\AI_ML_Fellowship\Project2\Bin\ffmpeg.exe
+[2026-08-07 10:12:56] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-07 10:12:56] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-07 10:12:56] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\04_extract_origin_frames.log
+[2026-08-07 10:12:56] [INFO] Input video file found.
+[2026-08-07 10:12:56] [INFO] Video file size: 23467520 bytes
+[2026-08-07 10:12:56] [INFO] Video last modified: 08/04/2026 13:59:40
+[2026-08-07 10:12:56] [INFO] Frame output pattern: C:\AI_ML_Fellowship\Project2\Images\01_Origin\frame_%04d.png
+[2026-08-07 10:12:56] [INFO] Existing PNG frames before extraction: 0
+[2026-08-07 10:12:56] [INFO] Starting frame extraction using ffmpeg.
+[2026-08-07 10:12:57] [INFO] FFmpeg exit code: 0
+[2026-08-07 10:12:57] [SUCCESS] Frame extraction completed successfully.
+[2026-08-07 10:12:57] [INFO] Total PNG frames currently in output folder: 155
+[2026-08-07 10:12:57] [INFO] Approximate new frames created during this run: 155
+[2026-08-07 10:12:57] [INFO] Frames extracted to: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+[2026-08-07 10:12:57] [INFO] FFmpeg diagnostic output was captured. This is normal and was not treated as an error because exit code was 0.
+[2026-08-07 10:12:57] [SUCCESS] Script completed successfully.
+[2026-08-07 10:12:57] [INFO] ============================================

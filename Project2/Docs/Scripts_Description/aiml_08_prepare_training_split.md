@@ -36,7 +36,7 @@ The `aiml_08_prepare_training_split.py` script automates the creation of trainin
 ### Key Features & Mask Management Modes
 
 * **Dual Mask Ingestion Modes:**
-  * **Single Shared Mask Mode (`--mask-source`):** Reuses a static protected region mask (e.g., `Images_Masks_lama\_protected_region_mask.png`) across all real frames. Useful when plot circles remain geometrically stationary across an experimental sequence.
+  * **Single Shared Mask Mode (`--mask-source`):** Reuses a static protected region mask (e.g., `Images\03_Masks_lama\_protected_region_mask.png`) across all real frames. Useful when plot circles remain geometrically stationary across an experimental sequence.
   * **Per-Image Mask Mode (`--masks-folder`):** Dynamically pairs individual frame masks matched by filename (e.g., outputs generated from `aiml_08_generate_synthetic_backgrounds.py`).
   * **Mutually Exclusive Validation:** Enforces strict command-line argument validation so that only one mask ingestion mode is active during execution.
 * **Deterministic Random Splitting:** Uses a configurable seed (`--seed`) to ensure dataset partitions are completely reproducible across execution environments.
@@ -48,10 +48,10 @@ The `aiml_08_prepare_training_split.py` script automates the creation of trainin
 1. **Path Setup & Argument Parsing:**
    * Maps relative paths to project root folders (`Images`, `Logs`, `Scripts`).
    * Validates target directories and mask argument configurations (`--mask-source` vs. `--masks-folder`).
-   * Initializes stream logging and optional log file output (`Logsiml_08_prepare_training_split.log`).
+   * Initializes stream logging and optional log file output (`Logs\aiml_08_prepare_training_split.log`).
 
 2. **Ground-Truth Mask & Input Validation:**
-   * Verifies the existence of input image directories (`Images_Cleaned_lama` by default).
+   * Verifies the existence of input image directories (`Images\03_Cleaned_lama` by default).
    * Validates single mask readability via OpenCV in single-mask mode, or verifies the existence of the source masks subfolder in per-image mode.
 
 3. **Image Discovery & Reproducible Splitting:**
@@ -60,7 +60,7 @@ The `aiml_08_prepare_training_split.py` script automates the creation of trainin
    * Partitions files into `train` ($N = 	ext{train\_count}$) and `val` (remainder) file lists.
 
 4. **Directory Structure Creation & File Distribution:**
-   * Creates output directories: `Images_Dataset	rain\images`, `Images_Dataset	rain\masks`, `Images_Datasetal\images`, `Images_Datasetal\masks`.
+   * Creates output directories: `Images\04_Dataset\train\images`, `Images\04_Dataset\train\masks`, `Images\04_Dataset\val\images`, `Images\04_Dataset\val\masks`.
    * Copies images and paired masks into respective target folders using `shutil.copy2`.
 
 5. **Execution Diagnostics & Reporting:**
