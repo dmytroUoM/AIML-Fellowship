@@ -1,22 +1,24 @@
 # AIML-Fellowship Project 2
 
-This repository contains the workflow and scripts for Project 2, focused on processing AVI video files from tomographic experiments. The project involves extracting frames, processing images, enhancing them, and reconstructing tomographic data for scientific analysis.
+This repository contains the workflow and scripts for Project 2, focused on processing AVI video files from tomographic (mixing tank) experiments. The project involves extracting frames, cleaning and enhancing images, optionally training a segmentation model, and reconstructing the tomographic experiment visually using an HTML-based 3D tool.
 
 ---
 
 ## Project Overview
 
-The goal of this project is to process tomographic video data exported as AVI files, clean and enhance the frames, and finally reconstruct the tomographic experiment visually using an HTML-based tool. This pipeline ensures high-quality data preparation for further scientific research.
+The goal of this project is to process tomographic video data exported as AVI files, remove overlay artifacts, clean and enhance the frames, and reconstruct the tomographic experiment visually. The pipeline supports two parallel background-removal paths — a classical/AI inpainting path (LaMa) and a trainable segmentation-model path — before converging on the same final visualisation stage.
 
 ---
 
 ## Repository Structure
 
-- `Bin/` - Executable files and binaries.
+- `Bin/` - Executable files and binaries (`ffmpeg.exe`, `ffprobe.exe`, `big-lama.pt`, etc.).
 - `Docs/` - Documentation, folder trees, and helper tools.
 - `Reports/` - Metadata, hashes, and project reports.
-- `Scripts/` - Core PowerShell and Python scripts for processing.
-- `09_cylinder_reconstruction.html` - Visualization and reconstruction tool for tomographic data.
+- `Scripts/` - Core PowerShell and Python scripts for processing (includes `Logs/`).
+- `Images/` - All intermediate and final image outputs, in numbered subfolders.
+- `results/` - Trained model weights (e.g. `run_model.pt`).
+- `16_cylinder_reconstruction.html` - Current visualisation and reconstruction tool for tomographic data (supersedes `15_cylinder_reconstruction.html`).
 
 ---
 
@@ -24,44 +26,60 @@ The goal of this project is to process tomographic video data exported as AVI fi
 
 ### Step 0: Clean and Prepare Folders
 - **Script:** `Scripts/00_CleanFolders.ps1`
-- **Description:** Prepares the directory structure by cleaning and setting up necessary folders for the workflow.
+- **Description:** Safely clears the `Images` and `Reports` output folders (allow-listed by name) before a new pipeline run. Supports `-WhatIfMode` for a dry-run preview.
 
 ### Step 1: Generate AVI File Hash
 - **Script:** `Scripts/01_get_avi_hash.ps1`
-- **Description:** Creates a hash for the AVI file to ensure data integrity and track file versions.
+- **Description:** Computes a SHA256 hash of `Video\active.avi` and saves it to `Reports\01_avi_hash.txt` for integrity/provenance tracking.
 
 ### Step 2: Extract Video Metadata (FFprobe)
-- **Script:** `Scripts/02_get_metadata_ffprob.ps1`
-- **Description:** Uses FFprobe to extract detailed metadata from the AVI video file.
+- **Script:** `Scripts/02_get_metadata_ffprobe.ps1`
+- **Description:** Uses `ffprobe.exe` to extract container/codec/stream metadata to `Reports\02_avi_metadata_ffprobe.json`.
 
-### Step 3: Extract AVI Metadata (PowerShell)
-- **Script:** `Scripts/03_get_avi_metadata_powershell.ps1`
-- **Description:** Extracts additional metadata using PowerShell commands for further analysis.
+### Step 3: Extract AVI Metadata (PowerShell / Shell.Application)
+- **Script:** `Scripts/03_get_metadata_powershell.ps1`
+- **Description:** Extracts Windows Explorer-style metadata via the `Shell.Application` COM object to `Reports\03_active-avi_metadata_powershell.txt`, as a supplement to the ffprobe report.
 
 ### Step 4: Extract Raw Frames from AVI
-- **Script:** `Scripts/04_extract_frames_from_avi.ps1`
-- **Description:** Extracts all raw frames from the AVI video for processing.
+- **Script:** `Scripts/04_extract_origin_frames.ps1`
+- **Description:** Uses `ffmpeg.exe` to decode every frame of `active.avi` into PNGs (`frame_%04d.png`) in `Images\01_Origin`.
 
 ### Step 5: Crop Frames to Region of Interest (ROI)
 - **Script:** `Scripts/05_extract_crop_frames_from_avi.ps1`
-- **Description:** Crops the extracted frames to focus on the region of interest, removing unnecessary parts of the image.
+- **Description:** Crops the extracted frames to the region of interest, producing `Images\02_Frames`.
 
-### Step 6: Remove Numbering and Make Background Transparent
-- **Script:** `Scripts/06_remove_numbering_bulk.py` (or `06_make_transparent_background.py` depending on repo)
-- **Description:** Removes artifacts such as orange numbering from frames and optionally makes the background transparent to improve image quality.
+### Step 6: Remove Overlay Artifacts (LaMa Inpainting)
+- **Script:** `Scripts/aiml_06_artifacts_removal_lama.py`
+- **Description:** Detects text/numbering overlays of any colour outside the protected plot circles and removes them using the LaMa deep-learning inpainting model. Outputs cleaned frames to `Images\03_Cleaned_lama` and debug masks to `Images\03_Masks_lama`.
 
-### Step 7: Round Edges of Frames
-- **Script:** `Scripts/07_round_edges.py`
-- **Description:** Applies edge rounding to the frames to prepare them for tomographic reconstruction.
+### Step 7: Make Background Transparent
+- **Script:** `Scripts/07_make_transparent_background.py`
+- **Description:** Converts white/near-white backgrounds in the cleaned frames to transparency (with edge-fringe erosion), producing `Images\04_Transparent`.
 
-### Step 8: Enhance Frames Using Real-ESRGAN
-- **Script:** `Scripts/08_Final_improved_real-esrgan.py`
-- **Description:** Enhances the resolution and quality of frames using the Real-ESRGAN model for clearer scientific images.
+### Step 8: Round Edges (Cosmetic)
+- **Script:** `Scripts/08_round_edges.py`
+- **Description:** Replaces jagged blob edges with smooth, anti-aliased circles for presentation purposes (nearest-neighbour inpainting of the gap pixels). Output is **not** intended for further analysis. Produces `Images\05_Final_Rounded`.
 
-### Step 9: Reconstruct Tomographic Experiment
-- **File:** `09_cylinder_reconstruction.html`
-- **Description:** Open this HTML file in a web browser to visualize and reconstruct the tomographic experiment using the processed frames.
-- **Usage:** Ensure all processed images are in the expected directory. Open the file in Chrome, Firefox, or Edge for interactive 3D reconstruction.
+### Step 8 (ML branch): Prepare a Segmentation Training Set
+These scripts form an alternative/parallel branch that trains a background-removal segmentation model instead of relying purely on rule-based transparency:
+
+- `Scripts/aiml_08_generate_synthetic_backgrounds.py` — Composites cleaned frames onto 10 procedural synthetic background types to build a robust augmented training set (`Images\05_Synthetic_Backgrounds`).
+- `Scripts/aiml_08_prepare_training_split.py` — Splits cleaned/synthetic frames into reproducible train/val sets with paired masks (`Images\04_Dataset`).
+- `Scripts/aiml_08_submit_gpu_training.sh` — SLURM batch script to train the `TinyUNet` segmentation model (`aiml_08_train_segmentation_demo.py`) on a GPU cluster.
+- `Scripts/aiml_09_run_trained_model_transparent.py` — Runs the trained `TinyUNet` model to predict masks and produce transparent RGBA frames (`Images\06_Inference_Output`), with optional IoU scoring against ground truth.
+
+### Step 9: Enhance Frames Using Real-ESRGAN
+- **Script:** `Scripts/09_Final_improved_real-esrgan.py`
+- **Description:** Applies the pretrained Real-ESRGAN (RRDBNet) model to upscale/sharpen RGB content while handling the alpha channel separately to avoid transparency artifacts. Produces `Images\06_Final_Upscaled`.
+
+### Step 10: Smooth Gradients (Cosmetic)
+- **Script:** `Scripts/10_smooth_gradients.py`
+- **Description:** Applies cubic-spline resampling to reduce blocky colour transitions inside the data region only, without touching background/transparent areas. Produces `Images\06_Smoothed_Gradients`. Visualisation-only; does not improve measurement accuracy.
+
+### Step 11: Reconstruct Tomographic Experiment (3D Viewer)
+- **File:** `16_cylinder_reconstruction.html` (supersedes `15_cylinder_reconstruction.html`)
+- **Description:** Interactive Three.js-based viewer that stacks 8 processed slices into a transparent cylindrical tank shell for 3D review. v16 corrects a slice 7/8 ordering issue present in v15 and adds institutional branding graphics; v15 should be considered deprecated.
+- **Usage:** Open in Chrome, Firefox, or Edge. Frame folders can be loaded dynamically through the interface rather than requiring hardcoded paths.
 
 ---
 
@@ -74,7 +92,7 @@ The goal of this project is to process tomographic video data exported as AVI fi
      python -m venv .venv-tomo
      ```
    - Activate the environment:
-     - Windows: `.venv-tomo\Scripts\activate`
+     - Windows: `.venv-tomo\Scripts\activate.ps1`
      - Linux/macOS: `source .venv-tomo/bin/activate`
    - Install required packages:
      ```
@@ -89,10 +107,14 @@ The goal of this project is to process tomographic video data exported as AVI fi
      ```
 
 3. **Python Scripts:**
-   - Run Python scripts from Step 6 to Step 8 in the activated virtual environment.
+   - Run Python scripts from Step 6 onward in the activated virtual environment (`aiml_06_...`, `07_...`, `08_...`, `aiml_08_...`/`aiml_09_...` for the ML branch, `09_...`, `10_...`).
 
-4. **Visualization:**
-   - Open `09_cylinder_reconstruction.html` in a modern web browser.
+4. **GPU Training (optional ML branch):**
+   - Requires access to a SLURM-managed HPC cluster with CUDA-capable GPUs.
+   - Submit with: `sbatch Scripts/aiml_08_submit_gpu_training.sh`
+
+5. **Visualization:**
+   - Open `16_cylinder_reconstruction.html` in a modern web browser.
 
 ---
 
@@ -104,3 +126,4 @@ The goal of this project is to process tomographic video data exported as AVI fi
 git clone https://github.com/dmytroUoM/AIML-Fellowship.git
 cd AIML-Fellowship
 git checkout active-avi
+```
