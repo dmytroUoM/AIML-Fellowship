@@ -24,7 +24,7 @@ TestResults.xml
 #Exclude files
 *.exe
 *.png
-!*xxx1*.png
+!*0001*.png
 big-lama.pt
 
 !hyperparameter_comparison.png
