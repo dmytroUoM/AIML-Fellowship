@@ -1,12 +1,13 @@
 # Project Charter: AI-Powered 3D EIT Mixing Tank Reconstruction
 
 ## 1. Project Overview
-This project addresses the limitations of legacy Electrical Impedance Tomography (EIT) software by introducing an AI/ML-driven workflow. The application transforms traditional 2D tomogram slices of horizontal plates into interactive, high-resolution 3D volume reconstructions within a browser-based interface.
+This project overcomes the limitations of traditional Electrical Impedance Tomography (EIT) software by implementing an AI/ML-powered workflow. It converts conventional 2D tomographic slices of horizontal plates into interactive, high-resolution 3D volume reconstructions, all accessible through a browser-based interface.
 
 ### 1.1 Problem Statement
-* **Lack of 3D Visualization:** The legacy EIT software only outputs isolated 2D cross-sections, limiting deep spatial analysis of mixing processes.
+* **Lack of 3D Visualization:** The legacy EIT software produces only isolated 2D cross-sectional images, which restricts comprehensive spatial analysis of mixing processes.
 * **Performance & Memory Constraints:** The native high-resolution imaging options cause severe memory overload, leading to frequent application crashes.
 * **Low Engagement:** Processing pixelated 2D images takes significant time and reduces user engagement among researchers and students.
+* **Issue in Slices 7 and 8:** There is a known discrepancy where slice 7 in the legacy tomogram actually corresponds to slice 8, causing potential inaccuracies and complicating data interpretation.
 
 ### 1.2 Core Objective
 To build a lightweight, stable, and browser-based 3D reconstruction application using modern computer vision and machine learning techniques, achieving high-resolution visualizations **without requiring software or hardware infrastructure upgrades**.
