@@ -78,7 +78,7 @@ These scripts form an alternative/parallel branch that trains a background-remov
 
 ### Step 11: Reconstruct Tomographic Experiment (3D Viewer)
 - **File:** `16_cylinder_reconstruction.html` (supersedes `15_cylinder_reconstruction.html`)
-- **Description:** Interactive Three.js-based viewer that stacks 8 processed slices into a transparent cylindrical tank shell for 3D review. v16 corrects a slice 7/8 ordering issue present in v15 and adds institutional branding graphics; v15 should be considered deprecated.
+- **Description:** Interactive Three.js-based viewer that stacks 8 processed slices into a transparent cylindrical tank shell for 3D review. 16_cylinder_reconstruction.html corrects a slice 7/8 ordering issue present in legasy installation. 15_cylinder_reconstruction.html shows the exsact order of slices in lesasy softwatre.
 - **Usage:** Open in Chrome, Firefox, or Edge. Frame folders can be loaded dynamically through the interface rather than requiring hardcoded paths.
 
 ---
