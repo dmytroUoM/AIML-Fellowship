@@ -1,5 +1,5 @@
 # requirements-notes.md
-freeze 
+# freeze 
 py -m pip freeze > requirements.txt
 
 1. py -m pip install -r requirements.txt --no-deps
