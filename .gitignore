@@ -25,6 +25,7 @@ TestResults.xml
 *.exe
 *.png
 !*0001*.png
+!architecture_tradeoff_comparison.png
 big-lama.pt
 
 !hyperparameter_comparison.png
