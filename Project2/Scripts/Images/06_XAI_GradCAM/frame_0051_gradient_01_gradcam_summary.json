@@ -1,0 +1,10 @@
+{
+  "image": "..\\Images\\04_Dataset\\val\\images\\frame_0051_gradient_01.png",
+  "target_layer": "enc3",
+  "predicted_foreground_fraction": 0.3870575428009033,
+  "mean_confidence_in_predicted_region": 0.9809460639953613,
+  "gradcam_centroid_xy_normalised": [
+    0.4981672102969657,
+    0.5040204904979096
+  ]
+}

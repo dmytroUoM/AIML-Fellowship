@@ -1,0 +1,42 @@
+[
+  {
+    "image": "..\\Images\\04_Dataset\\val\\images\\frame_0138_noisy_white_00.png",
+    "target_layer": "enc3",
+    "predicted_foreground_fraction": 0.37007734179496765,
+    "mean_confidence_in_predicted_region": 0.9865736365318298,
+    "gradcam_centroid_xy_normalised": [
+      0.49769353065465133,
+      0.5094926708518448
+    ]
+  },
+  {
+    "image": "..\\Images\\04_Dataset\\val\\images\\frame_0020_noisy_white_02.png",
+    "target_layer": "enc3",
+    "predicted_foreground_fraction": 0.3699178993701935,
+    "mean_confidence_in_predicted_region": 0.9873198866844177,
+    "gradcam_centroid_xy_normalised": [
+      0.4973233939468143,
+      0.509378177816934
+    ]
+  },
+  {
+    "image": "..\\Images\\04_Dataset\\val\\images\\frame_0006_dark_00.png",
+    "target_layer": "enc3",
+    "predicted_foreground_fraction": 1.0,
+    "mean_confidence_in_predicted_region": 0.9639973640441895,
+    "gradcam_centroid_xy_normalised": [
+      0.5014503510009815,
+      0.4931933702486752
+    ]
+  },
+  {
+    "image": "..\\Images\\04_Dataset\\val\\images\\frame_0051_gradient_01.png",
+    "target_layer": "enc3",
+    "predicted_foreground_fraction": 0.3870575428009033,
+    "mean_confidence_in_predicted_region": 0.9809460639953613,
+    "gradcam_centroid_xy_normalised": [
+      0.4981672102969657,
+      0.5040204904979096
+    ]
+  }
+]

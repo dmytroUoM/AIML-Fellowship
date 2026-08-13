@@ -1,0 +1,10 @@
+{
+  "image": "..\\Images\\04_Dataset\\val\\images\\frame_0020_noisy_white_02.png",
+  "target_layer": "enc3",
+  "predicted_foreground_fraction": 0.3699178993701935,
+  "mean_confidence_in_predicted_region": 0.9873198866844177,
+  "gradcam_centroid_xy_normalised": [
+    0.4973233939468143,
+    0.509378177816934
+  ]
+}
