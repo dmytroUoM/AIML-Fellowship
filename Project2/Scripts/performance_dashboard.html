@@ -55,7 +55,7 @@
   .run-meta b{ color:var(--ink); font-weight:500; }
 
   .kpi-row{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:26px;
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:14px; margin-bottom:26px;
   }
   .kpi{
     background:var(--panel); border:1px solid var(--panel-border); border-radius:3px;
@@ -114,6 +114,23 @@
   .footer-note{
     margin-top:20px; font-size:11px; color:var(--ink-dim); font-family:var(--mono);
     border-top:1px solid var(--panel-border); padding-top:12px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+  }
+
+  .file-picker{
+    display:flex; align-items:center; gap:10px;
+  }
+  .file-picker label{
+    font-family:var(--mono); font-size:11.5px; color:var(--accent);
+    border:1px solid var(--accent-dim); border-radius:3px; padding:6px 12px;
+    cursor:pointer; transition:background 0.15s; white-space:nowrap;
+  }
+  .file-picker label:hover{ background:#132420; }
+  .file-picker input[type=file]{ display:none; }
+  .file-picker .fname{ font-family:var(--mono); font-size:11px; color:var(--ink-dim); }
+  .load-error{
+    display:none; font-family:var(--mono); font-size:11px; color:var(--bad);
+    margin-top:8px;
   }
 
   @media (max-width: 900px){
@@ -129,7 +146,16 @@
     <h1>TinyUNet <span>/ performance dashboard</span></h1>
     <div class="subtitle">Mixing-tank background-removal segmentation — validation metrics across training</div>
   </div>
-  <div class="run-meta" id="runMeta"></div>
+  <div style="text-align:right;">
+    <div class="file-picker">
+      <select id="runSelect" style="font-family:var(--mono); font-size:11.5px; color:var(--ink); background:var(--panel); border:1px solid var(--panel-border); border-radius:3px; padding:6px 10px;"></select>
+      <span class="fname" id="fileName">showing: embedded run</span>
+      <label for="historyFile">Load history.json</label>
+      <input type="file" id="historyFile" accept="application/json,.json">
+    </div>
+    <div class="run-meta" id="runMeta"></div>
+    <div class="load-error" id="loadError"></div>
+  </div>
 </header>
 
 <div class="kpi-row" id="kpiRow"></div>
@@ -161,132 +187,361 @@
   </div>
 </div>
 
-<div class="grid">
-  <div class="note">
-    <b>Metric coverage note —</b> This run's <code>results/lr1e-3_bs4_GPU_history.json</code> was produced by
-    <code>aiml_08_train_segmentation_demo.py</code>, which logs <b>IoU</b> and BCE loss only. Precision, recall,
-    and Dice — selected in the metric justification above as necessary complements to IoU for this business
-    problem — are implemented in the extended script <code>aiml_08b_train_with_full_metrics.py</code> but have not
-    yet been run against this checkpoint. Re-running training with the extended script will populate those charts
-    automatically without any dashboard changes, since this page reads directly from <code>history.json</code>'s
-    field names.
+<div class="grid" id="extraMetricsGrid" style="display:none;">
+  <div class="panel">
+    <p class="panel-title">Dice, precision &amp; recall <span class="tag">validation, per epoch</span></p>
+    <canvas id="extraChart"></canvas>
   </div>
+  <div class="panel">
+    <p class="panel-title">Final values <span class="tag">last epoch</span></p>
+    <div id="extraKpis" style="display:flex; flex-direction:column; gap:10px; padding-top:4px;"></div>
+  </div>
+</div>
+
+<div class="grid" id="compareGrid">
+  <div class="panel" style="grid-column:1 / -1;">
+    <p class="panel-title">Cross-run comparison <span class="tag">validation IoU, all loaded runs</span></p>
+    <canvas id="compareChart" style="max-height:280px;"></canvas>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="panel" style="grid-column:1 / -1;">
+    <p class="panel-title">Run summary <span class="tag" id="compareCountTag"></span></p>
+    <table class="metrics-table" id="compareTable">
+      <thead><tr><th>Run</th><th>Device</th><th>LR</th><th>Batch</th><th>Epochs</th><th>Dataset (train/val)</th><th>Final IoU</th><th>Best IoU</th><th>Total time</th><th>Full metrics?</th></tr></thead>
+      <tbody id="compareTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="note" id="coverageNote"></div>
 </div>
 
 <div class="footer-note" id="sourceNote"></div>
 
 <script>
-const HISTORY = {"epoch": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "train_loss": [0.10397718440662851, 0.049514202837549745, 0.03747767533799665, 0.026237116630941016, 0.015425076778253015, 0.01381905914994525, 0.011735466580599303, 0.008003547922438218, 0.008951456536263414, 0.008927872699176422, 0.009425219115969845, 0.008471891032653172, 0.007158353300816693, 0.008074278456746905, 0.014978391731528248], "val_loss": [0.026385096362144908, 0.01290782611257055, 0.00983462223872237, 0.009863066025595934, 0.0018569388567254686, 0.003488112412868301, 0.0026050695193749014, 0.004863304807062012, 0.0012802614810943375, 0.0016034084352598884, 0.0031799144174687244, 0.0029451548786020303, 0.0023473605234401325, 0.0028273848683696883, 0.0017505759080412642], "val_iou": [0.9826551868595133, 0.9951616130548621, 0.9971387686381851, 0.994547744954094, 0.9989297918143739, 0.999228465801491, 0.9994340700549253, 0.9977262952876254, 0.9992668198290067, 0.9993270856915955, 0.9993980416947454, 0.9993877478775511, 0.9991865602060983, 0.9995734602009245, 0.9995607884435285], "epoch_seconds": [860.3034088611603, 780.7893145084381, 713.6616024971008, 732.9895985126495, 804.5362288951874, 1191.7373554706573, 1662.0945343971252, 1255.020273923874, 1205.028683423996, 1494.1229302883148, 2302.5844967365265, 2014.6036512851715, 2550.4673142433167, 1677.6826181411743, 1366.6324305534363], "device": "cpu", "lr": 0.001, "batch_size": 4, "total_seconds": 20612.25844478607, "n_params": 117041};
+const EMBEDDED_RUNS = [{"name": "lr1e-3_bs4_GPU (baseline)", "source": "run_history.json", "data": {"epoch": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "train_loss": [0.10397718440662851, 0.049514202837549745, 0.03747767533799665, 0.026237116630941016, 0.015425076778253015, 0.01381905914994525, 0.011735466580599303, 0.008003547922438218, 0.008951456536263414, 0.008927872699176422, 0.009425219115969845, 0.008471891032653172, 0.007158353300816693, 0.008074278456746905, 0.014978391731528248], "val_loss": [0.026385096362144908, 0.01290782611257055, 0.00983462223872237, 0.009863066025595934, 0.0018569388567254686, 0.003488112412868301, 0.0026050695193749014, 0.004863304807062012, 0.0012802614810943375, 0.0016034084352598884, 0.0031799144174687244, 0.0029451548786020303, 0.0023473605234401325, 0.0028273848683696883, 0.0017505759080412642], "val_iou": [0.9826551868595133, 0.9951616130548621, 0.9971387686381851, 0.994547744954094, 0.9989297918143739, 0.999228465801491, 0.9994340700549253, 0.9977262952876254, 0.9992668198290067, 0.9993270856915955, 0.9993980416947454, 0.9993877478775511, 0.9991865602060983, 0.9995734602009245, 0.9995607884435285], "epoch_seconds": [860.3034088611603, 780.7893145084381, 713.6616024971008, 732.9895985126495, 804.5362288951874, 1191.7373554706573, 1662.0945343971252, 1255.020273923874, 1205.028683423996, 1494.1229302883148, 2302.5844967365265, 2014.6036512851715, 2550.4673142433167, 1677.6826181411743, 1366.6324305534363], "device": "cpu", "lr": 0.001, "batch_size": 4, "total_seconds": 20612.25844478607, "n_params": 117041}}, {"name": "lr1e-3_bs4_full_metrics", "source": "lr1e-3_bs4_full_metrics_history.json", "data": {"epoch": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "train_loss": [0.29450906483118966, 0.13281436249513753, 0.11581159155540818, 0.11776769518752227, 0.10894194882888122, 0.106754781665818, 0.09259872681042491, 0.0936603237618536, 0.0865829313711432, 0.0705526079107451, 0.07993038101184288, 0.08024034774143424, 0.07317367808630802, 0.0779619494690591, 0.07265859489772944], "val_loss": [0.3057908786309732, 0.2658630808865702, 0.1659385938499425, 0.1424084148696951, 0.17170297757193848, 0.18178239021752332, 0.12587888176376755, 0.21533765059870644, 0.111946048768791, 0.27223921667885137, 0.09079560476380426, 0.09127977893159196, 0.13373867885486498, 0.10345104739472673, 0.0926539397521599], "val_iou": [0.7351802925805788, 0.737239570231051, 0.8691337962408323, 0.920547184106466, 0.8616780880335215, 0.8314797040578481, 0.8906495136183661, 0.7815679488955317, 0.9231361376272665, 0.6742355855735572, 0.9416930321100596, 0.9512089635874774, 0.8943315744400024, 0.9193969433372086, 0.9542968305381568], "val_dice": [0.821219073759543, 0.8220719211810344, 0.9201240297910329, 0.9522108322865254, 0.9145909064524883, 0.895232384269302, 0.938148595191337, 0.8604769159007717, 0.9577229860666636, 0.7696549183613545, 0.9681227126637021, 0.9730436076989045, 0.9375666508803496, 0.9562704756453231, 0.9746972338573353], "val_precision": [0.955943408850077, 0.9669365093514726, 0.9716378224862589, 0.9345322750710152, 0.9727932375830572, 0.9861380989487106, 0.9870769043226499, 0.9895474008611731, 0.9859592737378301, 0.9889930438350987, 0.9858418622532407, 0.9819719904177898, 0.9750203603022808, 0.9900388314917281, 0.9819929873621142], "val_recall": [0.7734509948137644, 0.7672286420255094, 0.8958046629622176, 0.9845941550022846, 0.8874432766759718, 0.8444664800489271, 0.9028300820170222, 0.7914621797767846, 0.936655580997467, 0.6843606362471709, 0.9552758223301655, 0.9687110153404442, 0.9174189535347191, 0.9290042793428576, 0.9718529565914257], "epoch_seconds": [25.51249051094055, 30.489046096801758, 31.1576087474823, 29.45232915878296, 29.072078704833984, 29.585264205932617, 30.448715209960938, 33.54482913017273, 30.4006826877594, 31.67649483680725, 28.523260831832886, 37.07647156715393, 32.587708711624146, 30.927610158920288, 30.386227130889893], "device": "cpu", "lr": 0.001, "batch_size": 4, "total_seconds": 460.8478753566742, "n_params": 117041}}, {"name": "run_set3", "source": "run_history_set3.json", "data": {"epoch": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "train_loss": [0.34562183891566806, 0.11555161889667478, 0.10054234975336382, 0.09154417453296232, 0.08421598027316515, 0.08066331767695863, 0.0779751193703421, 0.0815540260116526, 0.08785933086136044, 0.06847507229087336, 0.06244205583461979, 0.0603842169996476, 0.0649268300641303, 0.06073016652074836, 0.05346910645497725], "val_loss": [0.17781651906065038, 0.10521906070612572, 0.11618683084442809, 0.14637930650968808, 0.15610467300221725, 0.08896882509863055, 0.09376540035009384, 0.13406894738609726, 0.09680421650409698, 0.10793458348190463, 0.13635428108879039, 0.09605306507767858, 0.10517751284547754, 0.10571069894610224, 0.11013269927856084], "val_iou": [0.9093288956461726, 0.9335186384819649, 0.9229855730726912, 0.8831637501716614, 0.8601564040055146, 0.9447411105439469, 0.9458085652944204, 0.9119301567206511, 0.9513701490453772, 0.9400260931736714, 0.9248005473935926, 0.9584246455012141, 0.9450331410846194, 0.9469182539630581, 0.9368850556579796], "epoch_seconds": [29.490293264389038, 22.19314932823181, 21.66048002243042, 23.35315752029419, 25.673028707504272, 26.221503496170044, 25.52193856239319, 26.060526371002197, 27.542558670043945, 29.750702142715454, 29.706395387649536, 37.901334047317505, 30.024866104125977, 30.08214807510376, 30.367679834365845], "device": "cpu", "lr": 0.001, "batch_size": 4, "total_seconds": 415.5497615337372, "n_params": 117041}}];
+// EMBEDDED_RUNS: [{ name, source, data }, ...]
 
-// ---------- KPI row ----------
-const lastIdx = HISTORY.epoch.length - 1;
-const finalIoU = HISTORY.val_iou[lastIdx];
-const finalValLoss = HISTORY.val_loss[lastIdx];
-const finalTrainLoss = HISTORY.train_loss[lastIdx];
-const bestEpoch = HISTORY.val_iou.indexOf(Math.max(...HISTORY.val_iou)) + 1;
-const totalHours = (HISTORY.total_seconds / 3600).toFixed(2);
-
-const kpis = [
-  { label: "Final Val IoU", value: finalIoU.toFixed(4), sub: `epoch ${HISTORY.epoch[lastIdx]}`, warn:false },
-  { label: "Final Val Loss", value: finalValLoss.toFixed(4), sub: `train: ${finalTrainLoss.toFixed(4)}`, warn:false },
-  { label: "Best IoU Epoch", value: `#${bestEpoch}`, sub: `IoU ${Math.max(...HISTORY.val_iou).toFixed(4)}`, warn:false },
-  { label: "Model Params", value: HISTORY.n_params.toLocaleString(), sub: "TinyUNet, 2D conv", warn:false },
-  { label: "Total Train Time", value: `${totalHours}h`, sub: `${HISTORY.device.toUpperCase()} · ${HISTORY.epoch.length} epochs`, warn:true },
-];
-
-document.getElementById('kpiRow').innerHTML = kpis.map(k => `
-  <div class="kpi ${k.warn?'warn':''}">
-    <div class="kpi-label">${k.label}</div>
-    <div class="kpi-value">${k.value}</div>
-    <div class="kpi-delta">${k.sub}</div>
-  </div>
-`).join('');
-
-document.getElementById('finalIouTag').textContent = finalIoU.toFixed(4);
-document.getElementById('epochCountTag').textContent = `${HISTORY.epoch.length} epochs logged`;
-
-document.getElementById('runMeta').innerHTML =
-  `run: <b>lr1e-3_bs4_GPU</b> &nbsp;|&nbsp; lr=<b>${HISTORY.lr}</b> &nbsp;|&nbsp; batch=<b>${HISTORY.batch_size}</b><br>` +
-  `device: <b>${HISTORY.device}</b> &nbsp;|&nbsp; source: <b>results/*_history.json</b>`;
-
-document.getElementById('sourceNote').textContent =
-  `Data source: run_history.json (uploaded, real training output) · Rendered ${new Date().toISOString().slice(0,10)}`;
-
-// ---------- Chart defaults ----------
 Chart.defaults.color = '#7c8794';
 Chart.defaults.font.family = "'IBM Plex Mono', monospace";
 Chart.defaults.font.size = 10.5;
 const gridColor = '#1c232c';
+let charts = {};
+const RUN_COLORS = ['#4fd1c5', '#e0a75e', '#c792ea', '#7fb3ff', '#f0788a', '#8fd694'];
 
-// ---------- Loss chart ----------
-new Chart(document.getElementById('lossChart'), {
-  type: 'line',
-  data: {
-    labels: HISTORY.epoch,
-    datasets: [
-      { label: 'Train loss', data: HISTORY.train_loss, borderColor: '#e0a75e', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
-      { label: 'Val loss', data: HISTORY.val_loss, borderColor: '#4fd1c5', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
-    ]
-  },
-  options: {
-    responsive:true, maintainAspectRatio:false,
-    scales: {
-      x: { grid: { color: gridColor }, title: { display:true, text:'epoch', color:'#7c8794' } },
-      y: { grid: { color: gridColor }, title: { display:true, text:'BCE loss', color:'#7c8794' } },
-    },
-    plugins: { legend: { labels: { color: '#d7dde3', boxWidth:12, font:{size:11} } } }
+// live registry of all runs available to the dashboard (embedded + loaded)
+let runs = EMBEDDED_RUNS.map(r => ({ ...r }));
+let activeIndex = 0;
+
+function requiredFieldsPresent(h) {
+  const required = ['epoch', 'train_loss', 'val_loss', 'val_iou', 'epoch_seconds', 'device', 'lr', 'batch_size', 'total_seconds', 'n_params'];
+  return required.every(k => k in h) &&
+         Array.isArray(h.epoch) && h.epoch.length > 0 &&
+         [h.train_loss, h.val_loss, h.val_iou, h.epoch_seconds].every(arr => Array.isArray(arr) && arr.length === h.epoch.length);
+}
+
+function hasExtraMetrics(h) {
+  return ['val_dice', 'val_precision', 'val_recall'].every(
+    k => Array.isArray(h[k]) && h[k].length === h.epoch.length
+  );
+}
+
+function destroyCharts() {
+  Object.values(charts).forEach(c => c && c.destroy());
+  charts = {};
+}
+
+function populateRunSelect() {
+  const sel = document.getElementById('runSelect');
+  sel.innerHTML = runs.map((r, i) => `<option value="${i}">${r.name}</option>`).join('');
+  sel.value = activeIndex;
+}
+
+function renderDetail(HISTORY, runName, sourceLabel) {
+  const hasExtra = hasExtraMetrics(HISTORY);
+
+  const lastIdx = HISTORY.epoch.length - 1;
+  const finalIoU = HISTORY.val_iou[lastIdx];
+  const finalValLoss = HISTORY.val_loss[lastIdx];
+  const finalTrainLoss = HISTORY.train_loss[lastIdx];
+  const bestEpoch = HISTORY.val_iou.indexOf(Math.max(...HISTORY.val_iou)) + 1;
+  const totalHours = (HISTORY.total_seconds / 3600);
+  const totalTimeStr = totalHours >= 1 ? `${totalHours.toFixed(2)}h` : `${(HISTORY.total_seconds/60).toFixed(1)}m`;
+
+  const kpis = [
+    { label: "Final Val IoU", value: finalIoU.toFixed(4), sub: `epoch ${HISTORY.epoch[lastIdx]}`, warn:false },
+    { label: "Final Val Loss", value: finalValLoss.toFixed(4), sub: `train: ${finalTrainLoss.toFixed(4)}`, warn:false },
+    { label: "Best IoU Epoch", value: `#${bestEpoch}`, sub: `IoU ${Math.max(...HISTORY.val_iou).toFixed(4)}`, warn:false },
+    { label: "Model Params", value: HISTORY.n_params.toLocaleString(), sub: "TinyUNet, 2D conv", warn:false },
+    { label: "Total Train Time", value: totalTimeStr, sub: `${String(HISTORY.device).toUpperCase()} · ${HISTORY.epoch.length} epochs`, warn:true },
+  ];
+  if ('n_train_images' in HISTORY && 'n_val_images' in HISTORY) {
+    kpis.push({
+      label: "Dataset Size",
+      value: (HISTORY.n_train_images + HISTORY.n_val_images).toLocaleString(),
+      sub: `${HISTORY.n_train_images} train / ${HISTORY.n_val_images} val`,
+      warn: false,
+    });
   }
+
+  document.getElementById('kpiRow').innerHTML = kpis.map(k => `
+    <div class="kpi ${k.warn?'warn':''}">
+      <div class="kpi-label">${k.label}</div>
+      <div class="kpi-value">${k.value}</div>
+      <div class="kpi-delta">${k.sub}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('finalIouTag').textContent = finalIoU.toFixed(4);
+  document.getElementById('epochCountTag').textContent = `${HISTORY.epoch.length} epochs logged`;
+
+  document.getElementById('runMeta').innerHTML =
+    `run: <b>${runName}</b> &nbsp;|&nbsp; lr=<b>${HISTORY.lr}</b> &nbsp;|&nbsp; batch=<b>${HISTORY.batch_size}</b><br>` +
+    `device: <b>${HISTORY.device}</b> &nbsp;|&nbsp; source: <b>${sourceLabel}</b>`;
+
+  document.getElementById('sourceNote').textContent =
+    `Data source: ${sourceLabel} · Rendered ${new Date().toISOString().slice(0,10)}`;
+
+  charts.loss = new Chart(document.getElementById('lossChart'), {
+    type: 'line',
+    data: {
+      labels: HISTORY.epoch,
+      datasets: [
+        { label: 'Train loss', data: HISTORY.train_loss, borderColor: '#e0a75e', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
+        { label: 'Val loss', data: HISTORY.val_loss, borderColor: '#4fd1c5', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      scales: {
+        x: { grid: { color: gridColor }, title: { display:true, text:'epoch', color:'#7c8794' } },
+        y: { grid: { color: gridColor }, title: { display:true, text:'BCE loss', color:'#7c8794' } },
+      },
+      plugins: { legend: { labels: { color: '#d7dde3', boxWidth:12, font:{size:11} } } }
+    }
+  });
+
+  charts.iou = new Chart(document.getElementById('iouChart'), {
+    type: 'line',
+    data: {
+      labels: HISTORY.epoch,
+      datasets: [
+        { label: 'Val IoU', data: HISTORY.val_iou, borderColor: '#4fd1c5', backgroundColor: 'rgba(79,209,197,0.08)', fill:true, tension: 0.25, pointRadius: 2, borderWidth: 2 },
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      scales: {
+        x: { grid: { color: gridColor }, title: { display:true, text:'epoch', color:'#7c8794' } },
+        y: { grid: { color: gridColor }, title: { display:true, text:'IoU', color:'#7c8794' } },
+      },
+      plugins: { legend: { display:false } }
+    }
+  });
+
+  charts.time = new Chart(document.getElementById('timeChart'), {
+    type: 'bar',
+    data: {
+      labels: HISTORY.epoch,
+      datasets: [
+        { label: 'Epoch seconds', data: HISTORY.epoch_seconds, backgroundColor: '#2a5f5a', borderRadius: 2 },
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      scales: {
+        x: { grid: { display:false }, title: { display:true, text:'epoch', color:'#7c8794' } },
+        y: { grid: { color: gridColor }, title: { display:true, text:'seconds', color:'#7c8794' } },
+      },
+      plugins: { legend: { display:false } }
+    }
+  });
+
+  const extraGrid = document.getElementById('extraMetricsGrid');
+  if (hasExtra) {
+    extraGrid.style.display = '';
+    charts.extra = new Chart(document.getElementById('extraChart'), {
+      type: 'line',
+      data: {
+        labels: HISTORY.epoch,
+        datasets: [
+          { label: 'Dice', data: HISTORY.val_dice, borderColor: '#c792ea', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
+          { label: 'Precision', data: HISTORY.val_precision, borderColor: '#e0a75e', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
+          { label: 'Recall', data: HISTORY.val_recall, borderColor: '#4fd1c5', backgroundColor: 'transparent', tension: 0.25, pointRadius: 2, borderWidth: 2 },
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales: {
+          x: { grid: { color: gridColor }, title: { display:true, text:'epoch', color:'#7c8794' } },
+          y: { grid: { color: gridColor }, title: { display:true, text:'score', color:'#7c8794' } },
+        },
+        plugins: { legend: { labels: { color: '#d7dde3', boxWidth:12, font:{size:11} } } }
+      }
+    });
+
+    document.getElementById('extraKpis').innerHTML = [
+      { label: 'Dice', val: HISTORY.val_dice[lastIdx], color: '#c792ea' },
+      { label: 'Precision', val: HISTORY.val_precision[lastIdx], color: '#e0a75e' },
+      { label: 'Recall', val: HISTORY.val_recall[lastIdx], color: '#4fd1c5' },
+    ].map(m => `
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--grid); padding-bottom:8px;">
+        <span style="font-family:var(--mono); font-size:12px; color:var(--ink-dim);">${m.label}</span>
+        <span style="font-family:var(--mono); font-size:18px; font-weight:600; color:${m.color};">${m.val.toFixed(4)}</span>
+      </div>
+    `).join('');
+  } else {
+    extraGrid.style.display = 'none';
+  }
+
+  const noteEl = document.getElementById('coverageNote');
+  if (hasExtra) {
+    noteEl.innerHTML = `<b>Metric coverage —</b> this run's history includes the full metric suite
+      (IoU, Dice, Precision, Recall), produced by <code>aiml_08b_train_with_full_metrics.py</code>.`;
+  } else {
+    noteEl.innerHTML = `<b>Metric coverage note —</b> This run's history logs <b>IoU</b> and BCE loss only.
+      Precision, recall, and Dice are implemented in <code>aiml_08b_train_with_full_metrics.py</code> but were
+      not run for this checkpoint. Select or load a run produced by that script to see those charts populate
+      automatically — this page reads directly off the field names, no code changes needed.`;
+  }
+
+  const tbody = document.getElementById('epochTableBody');
+  const theadRow = document.querySelector('#epochTable thead tr');
+  theadRow.innerHTML = hasExtra
+    ? `<th>Epoch</th><th>Train loss</th><th>Val loss</th><th>Val IoU</th><th>Dice</th><th>Prec.</th><th>Recall</th><th>Time (s)</th>`
+    : `<th>Epoch</th><th>Train loss</th><th>Val loss</th><th>Val IoU</th><th>Time (s)</th>`;
+
+  const maxIoU = Math.max(...HISTORY.val_iou);
+  tbody.innerHTML = HISTORY.epoch.map((e,i) => `
+    <tr>
+      <td>${e}</td>
+      <td class="num">${HISTORY.train_loss[i].toFixed(4)}</td>
+      <td class="num">${HISTORY.val_loss[i].toFixed(4)}</td>
+      <td class="num ${HISTORY.val_iou[i]===maxIoU?'hi':''}">${HISTORY.val_iou[i].toFixed(4)}</td>
+      ${hasExtra ? `
+        <td class="num">${HISTORY.val_dice[i].toFixed(4)}</td>
+        <td class="num">${HISTORY.val_precision[i].toFixed(4)}</td>
+        <td class="num">${HISTORY.val_recall[i].toFixed(4)}</td>
+      ` : ''}
+      <td class="num">${HISTORY.epoch_seconds[i].toFixed(1)}</td>
+    </tr>
+  `).join('');
+}
+
+function renderComparison() {
+  if (charts.compare) charts.compare.destroy();
+
+  const compareGrid = document.getElementById('compareGrid');
+  compareGrid.style.display = runs.length > 1 ? '' : 'none';
+
+  charts.compare = new Chart(document.getElementById('compareChart'), {
+    type: 'line',
+    data: {
+      datasets: runs.map((r, i) => ({
+        label: r.name,
+        data: r.data.epoch.map((e, j) => ({ x: e, y: r.data.val_iou[j] })),
+        borderColor: RUN_COLORS[i % RUN_COLORS.length],
+        backgroundColor: 'transparent',
+        tension: 0.25, pointRadius: 2, borderWidth: i === activeIndex ? 3 : 1.5,
+        borderDash: i === activeIndex ? [] : [4,3],
+      }))
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      scales: {
+        x: { type:'linear', grid: { color: gridColor }, title: { display:true, text:'epoch', color:'#7c8794' } },
+        y: { grid: { color: gridColor }, title: { display:true, text:'Val IoU', color:'#7c8794' } },
+      },
+      plugins: { legend: { labels: { color: '#d7dde3', boxWidth:12, font:{size:11} } } }
+    }
+  });
+
+  document.getElementById('compareCountTag').textContent = `${runs.length} run${runs.length===1?'':'s'} loaded`;
+  const tbody = document.getElementById('compareTableBody');
+  tbody.innerHTML = runs.map((r, i) => {
+    const h = r.data;
+    const last = h.epoch.length - 1;
+    const best = Math.max(...h.val_iou);
+    const totalH = h.total_seconds / 3600;
+    const timeStr = totalH >= 1 ? `${totalH.toFixed(2)}h` : `${(h.total_seconds/60).toFixed(1)}m`;
+    const datasetStr = ('n_train_images' in h && 'n_val_images' in h)
+      ? `${h.n_train_images} / ${h.n_val_images}`
+      : '—';
+    return `
+      <tr style="${i===activeIndex ? 'background:#161d26;' : ''}">
+        <td style="color:${RUN_COLORS[i % RUN_COLORS.length]};">${r.name}</td>
+        <td>${h.device}</td>
+        <td class="num">${h.lr}</td>
+        <td class="num">${h.batch_size}</td>
+        <td class="num">${h.epoch.length}</td>
+        <td class="num">${datasetStr}</td>
+        <td class="num">${h.val_iou[last].toFixed(4)}</td>
+        <td class="num">${best.toFixed(4)}</td>
+        <td class="num">${timeStr}</td>
+        <td class="num">${hasExtraMetrics(h) ? 'yes' : 'no'}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function renderAll() {
+  destroyCharts();
+  const active = runs[activeIndex];
+  renderDetail(active.data, active.name, active.source);
+  renderComparison();
+  populateRunSelect();
+}
+
+// ---------- Run selector wiring ----------
+document.getElementById('runSelect').addEventListener('change', (evt) => {
+  activeIndex = parseInt(evt.target.value, 10);
+  document.getElementById('fileName').textContent = `showing: ${runs[activeIndex].name}`;
+  renderAll();
 });
 
-// ---------- IoU chart ----------
-new Chart(document.getElementById('iouChart'), {
-  type: 'line',
-  data: {
-    labels: HISTORY.epoch,
-    datasets: [
-      { label: 'Val IoU', data: HISTORY.val_iou, borderColor: '#4fd1c5', backgroundColor: 'rgba(79,209,197,0.08)', fill:true, tension: 0.25, pointRadius: 2, borderWidth: 2 },
-    ]
-  },
-  options: {
-    responsive:true, maintainAspectRatio:false,
-    scales: {
-      x: { grid: { color: gridColor }, title: { display:true, text:'epoch', color:'#7c8794' } },
-      y: { grid: { color: gridColor }, min:0.9, max:1.0, title: { display:true, text:'IoU', color:'#7c8794' } },
-    },
-    plugins: { legend: { display:false } }
-  }
+// ---------- File picker wiring ----------
+const fileInput = document.getElementById('historyFile');
+const fileNameLabel = document.getElementById('fileName');
+const loadError = document.getElementById('loadError');
+
+fileInput.addEventListener('change', (evt) => {
+  const file = evt.target.files[0];
+  if (!file) return;
+
+  loadError.style.display = 'none';
+  const reader = new FileReader();
+  reader.onload = () => {
+    let parsed;
+    try {
+      parsed = JSON.parse(reader.result);
+    } catch (e) {
+      loadError.textContent = `Could not parse "${file.name}" as JSON: ${e.message}`;
+      loadError.style.display = '';
+      return;
+    }
+    if (!requiredFieldsPresent(parsed)) {
+      loadError.textContent = `"${file.name}" is missing required fields (expected: epoch, train_loss, val_loss, val_iou, epoch_seconds, device, lr, batch_size, total_seconds, n_params — same shape as history.json produced by aiml_08_train_segmentation_demo.py).`;
+      loadError.style.display = '';
+      return;
+    }
+    const runName = file.name.replace(/_history\.json$/i, '').replace(/\.json$/i, '');
+    runs.push({ name: runName, source: file.name, data: parsed });
+    activeIndex = runs.length - 1;
+    fileNameLabel.textContent = `showing: ${runName}`;
+    renderAll();
+  };
+  reader.onerror = () => {
+    loadError.textContent = `Could not read "${file.name}".`;
+    loadError.style.display = '';
+  };
+  reader.readAsText(file);
 });
 
-// ---------- Epoch time chart ----------
-new Chart(document.getElementById('timeChart'), {
-  type: 'bar',
-  data: {
-    labels: HISTORY.epoch,
-    datasets: [
-      { label: 'Epoch seconds', data: HISTORY.epoch_seconds, backgroundColor: '#2a5f5a', borderRadius: 2 },
-    ]
-  },
-  options: {
-    responsive:true, maintainAspectRatio:false,
-    scales: {
-      x: { grid: { display:false }, title: { display:true, text:'epoch', color:'#7c8794' } },
-      y: { grid: { color: gridColor }, title: { display:true, text:'seconds', color:'#7c8794' } },
-    },
-    plugins: { legend: { display:false } }
-  }
-});
-
-// ---------- Epoch table ----------
-const tbody = document.getElementById('epochTableBody');
-tbody.innerHTML = HISTORY.epoch.map((e,i) => `
-  <tr>
-    <td>${e}</td>
-    <td class="num">${HISTORY.train_loss[i].toFixed(4)}</td>
-    <td class="num">${HISTORY.val_loss[i].toFixed(4)}</td>
-    <td class="num ${HISTORY.val_iou[i]===Math.max(...HISTORY.val_iou)?'hi':''}">${HISTORY.val_iou[i].toFixed(4)}</td>
-    <td class="num">${HISTORY.epoch_seconds[i].toFixed(1)}</td>
-  </tr>
-`).join('');
+// ---------- Initial render ----------
+renderAll();
 </script>
 
 </body>

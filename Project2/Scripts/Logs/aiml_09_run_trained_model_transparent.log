@@ -523,3 +523,17 @@
 [2026-08-13 09:12:18] [INFO] Total inference time: 5.9s (0.038s/frame average)
 [2026-08-13 09:12:18] [INFO] Script completed successfully.
 [2026-08-13 09:12:18] [INFO] ============================================
+[2026-08-13 09:43:02] [INFO] ============================================
+[2026-08-13 09:43:02] [INFO] Script started.
+[2026-08-13 09:43:02] [INFO] Script name: 09_run_trained_model.py
+[2026-08-13 09:43:02] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-08-13 09:43:02] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-08-13 09:43:02] [INFO] Model path: C:\AI_ML_Fellowship\Project2\Scripts\results\lr1e-3_bs4_full_metrics_1_model.pt
+[2026-08-13 09:43:02] [INFO] Input folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-08-13 09:43:02] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\06_full_metrics_1
+[2026-08-13 09:43:02] [INFO] Threshold: 0.5
+[2026-08-13 09:43:02] [INFO] No ground-truth masks folder provided - pure inference only, no accuracy scoring.
+[2026-08-13 09:43:02] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-08-13 09:43:02] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\aiml_09_run_trained_model_transparent.log
+[2026-08-13 09:43:02] [ERROR] Script failed: Model file not found: C:\AI_ML_Fellowship\Project2\Scripts\results\lr1e-3_bs4_full_metrics_1_model.pt. Run 08_train_segmentation_demo.py first, or check --model-path.
+[2026-08-13 09:43:02] [INFO] ============================================

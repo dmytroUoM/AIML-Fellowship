@@ -37,12 +37,11 @@ untouched and this can be run side-by-side to regenerate a fuller
 history.json from the same data.
 
 Usage (identical CLI to the original):
-    py aiml_08b_train_with_full_metrics.py --epochs 15 --lr 1e-3 \
+    python aiml_08b_train_with_full_metrics.py --epochs 15 --lr 1e-3 \
         --batch-size 4 --device cpu \
         --images-dir Images\\04_Dataset\\train\\images \
         --masks-dir Images\\04_Dataset\\train\\masks \
         --run-name lr1e-3_bs4_full_metrics
-  py aiml_08b_train_with_full_metrics.py --epochs 15 --lr 1e-3 --batch-size 4 --device cpu --images-dir ..\Images\04_Dataset\train\images --masks-dir ..\Images\04_Dataset\train\masks --run-name lr1e-3_bs4_full_metrics --seed 43      
 """
 
 import argparse
@@ -68,7 +67,7 @@ parser.add_argument("--device", type=str, default="cpu", choices=["cpu", "cuda"]
 parser.add_argument("--images-dir", type=str, default="images")
 parser.add_argument("--masks-dir", type=str, default="masks")
 parser.add_argument("--run-name", type=str, default="run")
-parser.add_argument("--seed", type=int, default=43)
+parser.add_argument("--seed", type=int, default=0)
 args = parser.parse_args()
 
 torch.manual_seed(args.seed)
@@ -251,6 +250,8 @@ def main():
     history["batch_size"] = args.batch_size
     history["total_seconds"] = total_seconds
     history["n_params"] = n_params
+    history["n_train_images"] = len(train_ds)
+    history["n_val_images"] = len(val_ds)
     with open(f"results/{args.run_name}_history.json", "w") as f:
         json.dump(history, f, indent=2)
 
