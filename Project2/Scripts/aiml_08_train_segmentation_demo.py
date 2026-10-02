@@ -12,9 +12,22 @@ A production model for this task would use a much larger, more diverse
 dataset (thousands of real images, not augmented synthetic ones) and a
 larger model, trained for longer.
 
+Regularisation:
+    Two standard regularisation techniques are included and exposed as
+    CLI arguments, so their effect on the train/val curves can be
+    demonstrated directly:
+      - Dropout: nn.Dropout2d is applied inside each encoder/decoder
+        block. Controlled by --dropout (probability, default 0.0 = off).
+      - Early stopping: training monitors validation loss and stops once
+        it fails to improve by at least --min-delta for --patience
+        consecutive epochs. The best-performing model (by val_loss) is
+        checkpointed separately and used for the final saved model.
+        Set --patience 0 to disable early stopping (train the full
+        number of --epochs, as before).
+
 Usage:
-    py aiml_08_train_segmentation_demo --epochs 15 --lr 1e-3 --batch-size 4 --device cpu --images-dir ..\Images\04_Dataset\train\images --masks-dir ..\Images\04_Dataset\train\masks
-    python aiml_08_train_segmentation_demo --epochs 15 --lr 1e-3 --batch-size 4 --device cuda
+    py aiml_08_train_segmentation_demo --epochs 15 --lr 1e-3 --batch-size 4 --dropout 0.2 --patience 5 --device cpu --images-dir ..\Images\04_Dataset\train\images --masks-dir ..\Images\04_Dataset\train\masks
+    python aiml_08_train_segmentation_demo --epochs 15 --lr 1e-3 --batch-size 4 --dropout 0.2 --patience 5 --device cuda
 """
 
 import argparse
@@ -42,7 +55,17 @@ parser.add_argument("--device", type=str, default="cpu", choices=["cpu", "cuda"]
 parser.add_argument("--images-dir", type=str, default="images")
 parser.add_argument("--masks-dir", type=str, default="masks")
 parser.add_argument("--run-name", type=str, default="run")
-parser.add_argument("--seed", type=int, default=0)
+parser.add_argument("--seed", type=int, default=43)
+parser.add_argument("--dropout", type=float, default=0.0,
+                     help="Dropout probability applied inside each encoder/decoder "
+                          "block (0.0 disables dropout).")
+parser.add_argument("--patience", type=int, default=5,
+                     help="Early stopping patience: number of consecutive epochs "
+                          "without a val_loss improvement of at least --min-delta "
+                          "before training stops. Set to 0 to disable early stopping.")
+parser.add_argument("--min-delta", type=float, default=1e-4,
+                     help="Minimum decrease in val_loss counted as an improvement "
+                          "for early stopping purposes.")
 args = parser.parse_args()
 
 torch.manual_seed(args.seed)
@@ -78,13 +101,19 @@ class SegmentationDataset(Dataset):
 # not a production architecture)
 # ----------------------------------------------------
 class TinyUNet(nn.Module):
-    def __init__(self):
+    def __init__(self, dropout=0.0):
         super().__init__()
         def block(cin, cout):
-            return nn.Sequential(
+            layers = [
                 nn.Conv2d(cin, cout, 3, padding=1), nn.ReLU(inplace=True),
                 nn.Conv2d(cout, cout, 3, padding=1), nn.ReLU(inplace=True),
-            )
+            ]
+            # Dropout2d zeroes whole feature-map channels (rather than individual
+            # pixels), which is the standard way to regularise convolutional
+            # layers. Placed at the end of each block, after the activations.
+            if dropout > 0:
+                layers.append(nn.Dropout2d(p=dropout))
+            return nn.Sequential(*layers)
         self.enc1 = block(3, 16)
         self.enc2 = block(16, 32)
         self.enc3 = block(32, 64)
@@ -132,9 +161,10 @@ def main():
     val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False)
 
     print(f"Device: {device} | Train images: {len(train_ds)} | Val images: {len(val_ds)}")
-    print(f"Hyperparameters: epochs={args.epochs}, lr={args.lr}, batch_size={args.batch_size}")
+    print(f"Hyperparameters: epochs={args.epochs}, lr={args.lr}, batch_size={args.batch_size}, "
+          f"dropout={args.dropout}, patience={args.patience}, min_delta={args.min_delta}")
 
-    model = TinyUNet().to(device)
+    model = TinyUNet(dropout=args.dropout).to(device)
     n_params = sum(p.numel() for p in model.parameters())
     print(f"Model parameters: {n_params:,}")
 
@@ -142,6 +172,15 @@ def main():
     criterion = nn.BCEWithLogitsLoss()
 
     history = {"epoch": [], "train_loss": [], "val_loss": [], "val_iou": [], "epoch_seconds": []}
+
+    # ----------------------------------------------------
+    # Early stopping state
+    # ----------------------------------------------------
+    best_val_loss = float("inf")
+    best_epoch = 0
+    epochs_no_improve = 0
+    best_state_dict = None
+    stopped_early = False
 
     total_t0 = time.time()
     for epoch in range(1, args.epochs + 1):
@@ -178,19 +217,83 @@ def main():
         history["val_iou"].append(val_iou)
         history["epoch_seconds"].append(epoch_seconds)
 
+        # ------------------------------------------------
+        # Early stopping: track the best val_loss seen so far and count
+        # how many epochs have passed without a meaningful improvement.
+        # ------------------------------------------------
+        improved = val_loss < (best_val_loss - args.min_delta)
+        if improved:
+            best_val_loss = val_loss
+            best_epoch = epoch
+            epochs_no_improve = 0
+            best_state_dict = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+        else:
+            epochs_no_improve += 1
+
+        flag = " *" if improved else ""
         print(f"Epoch {epoch:3d}/{args.epochs} | train_loss={train_loss:.4f} "
-              f"val_loss={val_loss:.4f} val_iou={val_iou:.4f} ({epoch_seconds:.2f}s)")
+              f"val_loss={val_loss:.4f} val_iou={val_iou:.4f} ({epoch_seconds:.2f}s){flag}")
+
+        if args.patience > 0 and epochs_no_improve >= args.patience:
+            print(f"Early stopping: no val_loss improvement > {args.min_delta} for "
+                  f"{args.patience} consecutive epochs. Stopping after epoch {epoch} "
+                  f"(best epoch: {best_epoch}, best val_loss: {best_val_loss:.4f}).")
+            stopped_early = True
+            break
 
     total_seconds = time.time() - total_t0
     print(f"Total training time: {total_seconds:.2f}s "
-          f"({total_seconds/args.epochs:.2f}s/epoch average)")
+          f"({total_seconds/len(history['epoch']):.2f}s/epoch average)")
+
+    # If early stopping triggered (or even if it didn't), restore the best
+    # checkpoint by val_loss so the saved model isn't an overfit final epoch.
+    if best_state_dict is not None:
+        model.load_state_dict(best_state_dict)
+        print(f"Restored best model weights from epoch {best_epoch} "
+              f"(val_loss={best_val_loss:.4f}).")
 
     Path("results").mkdir(exist_ok=True)
+
+    # ----------------------------------------------------
+    # Persist the full parameter set used for this run, not just a subset,
+    # so every history.json is a complete, self-contained record of exactly
+    # how the run was invoked (useful for comparing runs later without
+    # needing to keep the original command line around separately).
+    # ----------------------------------------------------
+    history["params"] = {
+        "epochs": args.epochs,
+        "lr": args.lr,
+        "batch_size": args.batch_size,
+        "val_fraction": args.val_fraction,
+        "device": args.device,
+        "images_dir": args.images_dir,
+        "masks_dir": args.masks_dir,
+        "run_name": args.run_name,
+        "seed": args.seed,
+        "dropout": args.dropout,
+        "patience": args.patience,
+        "min_delta": args.min_delta,
+    }
+    # Keep the previously-used top-level keys too, for backward compatibility
+    # with any tooling/notebooks that already read history["lr"] etc. directly.
     history["device"] = str(device)
     history["lr"] = args.lr
     history["batch_size"] = args.batch_size
+    history["dropout"] = args.dropout
+    history["patience"] = args.patience
+    history["min_delta"] = args.min_delta
+    history["seed"] = args.seed
+    history["val_fraction"] = args.val_fraction
+    history["images_dir"] = args.images_dir
+    history["masks_dir"] = args.masks_dir
+    history["run_name"] = args.run_name
     history["total_seconds"] = total_seconds
     history["n_params"] = n_params
+    history["n_train_images"] = len(train_ds)
+    history["n_val_images"] = len(val_ds)
+    history["stopped_early"] = stopped_early
+    history["best_epoch"] = best_epoch
+    history["best_val_loss"] = best_val_loss
     with open(f"results/{args.run_name}_history.json", "w") as f:
         json.dump(history, f, indent=2)
 

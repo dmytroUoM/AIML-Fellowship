@@ -41,11 +41,16 @@ source ~/envs/seg-demo/bin/activate
 nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
 
 # Run the identical script used for the CPU benchmark, only --device differs,
-# so timing comparisons are apples-to-apples.
+# so timing comparisons are apples-to-apples. --dropout and --patience are
+# also kept identical to the CPU run so any difference in the resulting
+# loss curves is attributable to hardware/timing, not regularisation settings.
 python aiml_08_train_segmentation_demo.py \
     --epochs 15 \
     --lr 1e-3 \
     --batch-size 4 \
+    --dropout 0.2 \
+    --patience 5 \
+    --min-delta 1e-4 \
     --device cuda \
     --run-name lr1e-3_bs4_GPU
 

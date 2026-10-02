@@ -21,3 +21,26 @@
 [2026-08-07 10:12:56] [INFO] Metadata report saved to: C:\AI_ML_Fellowship\Project2\Reports\03_active-avi_metadata_powershell.txt
 [2026-08-07 10:12:56] [SUCCESS] Script completed successfully.
 [2026-08-07 10:12:56] [INFO] ============================================
+[2026-10-02 13:23:24] [INFO] ============================================
+[2026-10-02 13:23:24] [INFO] Script started.
+[2026-10-02 13:23:24] [INFO] Script name: 03_get_metadata_powershell.ps1
+[2026-10-02 13:23:24] [INFO] Project: AIML-Driven Super-Resolution and Volumetric Reconstruction for Mixing Tanks
+[2026-10-02 13:23:24] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-10-02 13:23:24] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-10-02 13:23:24] [INFO] Video file: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-10-02 13:23:24] [INFO] Reports folder: C:\AI_ML_Fellowship\Project2\Reports
+[2026-10-02 13:23:24] [INFO] Logs folder: C:\AI_ML_Fellowship\Project2\Scripts\Logs
+[2026-10-02 13:23:24] [INFO] Log file: C:\AI_ML_Fellowship\Project2\Scripts\Logs\03_get_metadata_powershell.log
+[2026-10-02 13:23:24] [INFO] Resolved video path: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-10-02 13:23:24] [INFO] Video folder path: C:\AI_ML_Fellowship\Project2\Video
+[2026-10-02 13:23:24] [INFO] Video file name: active.avi
+[2026-10-02 13:23:24] [INFO] Video file found.
+[2026-10-02 13:23:24] [INFO] Video file size: 23467520 bytes
+[2026-10-02 13:23:24] [INFO] Video last modified: 08/04/2026 13:59:40
+[2026-10-02 13:23:24] [INFO] Creating Shell.Application COM object.
+[2026-10-02 13:23:24] [INFO] Extracting selected Windows metadata fields.
+[2026-10-02 13:23:24] [SUCCESS] Metadata extraction completed successfully.
+[2026-10-02 13:23:24] [INFO] Metadata entries saved: 1
+[2026-10-02 13:23:24] [INFO] Metadata report saved to: C:\AI_ML_Fellowship\Project2\Reports\03_active-avi_metadata_powershell.txt
+[2026-10-02 13:23:24] [SUCCESS] Script completed successfully.
+[2026-10-02 13:23:24] [INFO] ============================================

@@ -48,7 +48,7 @@ import argparse
 import time
 import json
 from pathlib import Path
-
+from datetime import datetime
 import cv2
 import numpy as np
 import torch
@@ -66,7 +66,7 @@ parser.add_argument("--val-fraction", type=float, default=0.2)
 parser.add_argument("--device", type=str, default="cpu", choices=["cpu", "cuda"])
 parser.add_argument("--images-dir", type=str, default="images")
 parser.add_argument("--masks-dir", type=str, default="masks")
-parser.add_argument("--run-name", type=str, default="run")
+parser.add_argument("--run-name", type=str, default=datetime.now().strftime("%y%m%d-%H-%M"))
 parser.add_argument("--seed", type=int, default=0)
 args = parser.parse_args()
 

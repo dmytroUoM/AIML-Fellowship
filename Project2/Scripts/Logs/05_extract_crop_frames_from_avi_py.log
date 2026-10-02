@@ -1,0 +1,20 @@
+[2026-10-02 09:32:26] [INFO] ========================================
+[2026-10-02 09:32:26] [INFO] Script started
+[2026-10-02 09:32:26] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-10-02 09:32:26] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-10-02 09:32:26] [INFO] Input video: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-10-02 09:32:26] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-10-02 09:32:26] [INFO] Input video found
+[2026-10-02 09:32:26] [INFO] Video size: 23,467,520 bytes
+[2026-10-02 09:32:27] [INFO] Starting cropped frame extraction
+[2026-10-02 09:32:27] [ERROR] [WinError 2] The system cannot find the file specified
+[2026-10-02 09:34:55] [INFO] ========================================
+[2026-10-02 09:34:55] [INFO] Script started
+[2026-10-02 09:34:55] [INFO] Script folder: C:\AI_ML_Fellowship\Project2\Scripts
+[2026-10-02 09:34:55] [INFO] Project root: C:\AI_ML_Fellowship\Project2
+[2026-10-02 09:34:55] [INFO] Input video: C:\AI_ML_Fellowship\Project2\Video\active.avi
+[2026-10-02 09:34:55] [INFO] Output folder: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+[2026-10-02 09:34:55] [INFO] Input video found
+[2026-10-02 09:34:55] [INFO] Video size: 23,467,520 bytes
+[2026-10-02 09:34:55] [INFO] Starting cropped frame extraction
+[2026-10-02 09:34:55] [ERROR] [WinError 2] The system cannot find the file specified

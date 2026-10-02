@@ -24,6 +24,9 @@
 3. **Environment & Hardware Inspection**  
    Automates module loading (`cuda`, `python`), virtual environment activation, and target GPU diagnostic logging using `nvidia-smi`.
 
+4. **Model Regularisation**  
+   Applies dropout and early stopping to the segmentation model during training, controlling overfitting on the small demo dataset and ensuring the checkpoint saved to disk corresponds to the best validation performance rather than the final epoch.
+
 ---
 
 ## Script Purpose
@@ -43,6 +46,10 @@ The `aiml_08_submit_gpu_training.sh` shell script orchestrates automated GPU tra
   * Queries and records allocated GPU device details (GPU name, VRAM capacity, driver version) via `nvidia-smi` before training starts[cite: 8].
 * **Controlled Training Execution:**
   * Invokes `aiml_08_train_segmentation_demo.py` with identical hyperparameters as CPU benchmark runs (15 epochs, learning rate $1\times 10^{-3}$, batch size 4), explicitly directing compute to PyTorch's `cuda` backend[cite: 8].
+* **Regularisation (Dropout & Early Stopping):**
+  * Passes `--dropout 0.2` so `Dropout2d` layers inside the `TinyUNet` encoder/decoder blocks are active during training, reducing the risk of overfitting on the small demo dataset.
+  * Passes `--patience 5` and `--min-delta 1e-4` so the script monitors validation loss and stops training automatically once it fails to improve by at least `min-delta` for `patience` consecutive epochs, restoring the best-performing checkpoint before saving.
+  * These regularisation settings are kept identical to the CPU benchmark run, so any difference between the CPU and GPU loss curves reflects hardware/timing only, not a change in regularisation.
 
 ---
 
@@ -80,6 +87,9 @@ Executing deep learning training on CPU hardware often introduces severe perform
 | `--lr` | `1e-3` | Learning rate for the Adam optimizer[cite: 8]. |
 | `--batch-size` | `4` | Batch size per GPU compute step[cite: 8]. |
 | `--device` | `cuda` | Hardware target for PyTorch tensor operations[cite: 8]. |
+| `--dropout` | `0.2` | Dropout probability applied inside each `TinyUNet` encoder/decoder block (regularisation; 0.0 disables it). |
+| `--patience` | `5` | Early stopping patience — number of consecutive epochs without a val_loss improvement (beyond `--min-delta`) before training halts. `0` disables early stopping. |
+| `--min-delta` | `1e-4` | Minimum val_loss decrease counted as an improvement for early stopping purposes. |
 | `--run-name` | `lr1e-3_bs4_GPU` | Experiment identifier string used for export filenames[cite: 8]. |
 
 ---

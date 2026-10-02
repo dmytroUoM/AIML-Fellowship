@@ -22,3 +22,35 @@
 2026-08-07 10:12:27 [INFO] Successfully cleaned folder: C:\AI_ML_Fellowship\Project2\Reports
 2026-08-07 10:12:27 [INFO] Folder cleanup script completed.
 2026-08-07 10:12:27 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log
+2026-10-02 13:23:15 [INFO] --------------------------------------------------
+2026-10-02 13:23:15 [INFO] Starting folder cleanup script.
+2026-10-02 13:23:15 [INFO] Script location: C:\AI_ML_Fellowship\Project2\Scripts
+2026-10-02 13:23:15 [INFO] Processing folder reference: ..\Images
+2026-10-02 13:23:15 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Images
+2026-10-02 13:23:15 [INFO] Items found for deletion in C:\AI_ML_Fellowship\Project2\Images : 16
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\01_Origin
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\02_Frames
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\02_Frames_old
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\03_Cleaned_lama
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\03_Masks
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\03_Masks_lama
+2026-10-02 13:23:15 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\04_Dataset
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\04_Transparent
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\05_Final_Rounded
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\05_Synthetic_Backgrounds
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\06_Final_Upscaled
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\06_full_metrics
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\06_Inference_Output
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\06_Smoothed_Gradients
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Images\listoffiles.txt
+2026-10-02 13:23:16 [INFO] Successfully cleaned folder: C:\AI_ML_Fellowship\Project2\Images
+2026-10-02 13:23:16 [INFO] Processing folder reference: ..\Reports
+2026-10-02 13:23:16 [INFO] Resolved path: C:\AI_ML_Fellowship\Project2\Reports
+2026-10-02 13:23:16 [INFO] Items found for deletion in C:\AI_ML_Fellowship\Project2\Reports : 3
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Reports\01_avi_hash.txt
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Reports\02_avi_metadata_ffprobe.json
+2026-10-02 13:23:16 [INFO] Deleting: C:\AI_ML_Fellowship\Project2\Reports\03_active-avi_metadata_powershell.txt
+2026-10-02 13:23:16 [INFO] Successfully cleaned folder: C:\AI_ML_Fellowship\Project2\Reports
+2026-10-02 13:23:16 [INFO] Folder cleanup script completed.
+2026-10-02 13:23:16 [INFO] Log file location: C:\AI_ML_Fellowship\Project2\Scripts\Logs\CleanFolders.log
