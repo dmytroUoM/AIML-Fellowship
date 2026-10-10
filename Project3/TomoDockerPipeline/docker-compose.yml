@@ -1,0 +1,20 @@
+services:
+  tomo-docker-pipeline:
+    image: tomo-docker-pipeline:latest
+    container_name: tomo-docker-pipeline
+
+    build:
+      context: ..
+      dockerfile: TomoDockerPipeline/Dockerfile
+
+    ports:
+      - "127.0.0.1:18080:8080"
+
+    environment:
+      PROJECT_ROOT: /workspace
+
+    volumes:
+      - ../Experiments:/workspace/Experiments
+      - ../Logs:/workspace/Logs
+
+    restart: unless-stopped

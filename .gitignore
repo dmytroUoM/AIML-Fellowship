@@ -1,48 +1,90 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-files
-*.bclicense
-*.flf
-#Test results file
-TestResults.xml
-#Exclude files
-*.exe
-*.png
-!*0001*.png
-!architecture_tradeoff_comparison.png
-big-lama.pt
+# =========================================================
+# AI_ML_Fellowship
+# Global Git Ignore
+# =========================================================
 
-!hyperparameter_comparison.png
-# Virtual environments
-.venv-tomo/
+# =========================================================
+# Python
+# =========================================================
 
-# Python cache
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
 
-# Jupyter
-.ipynb_checkpoints/
+# Virtual e*vironments
+.venv-tomo/
+*venv-project3/
 
-# VS Code
+# Python build artefacts
+build/
+dist/
+*.egg-info/
+
+# =========================================================
+# IDE
+# =========================================================
+
 .vscode/
+.idea/
 
-# AI model weights
-*.pth
+# =========================================================
+# Operating system
+# =========================================================
 
+.DS_Store
+Thumbs.db
+
+# =========================================================
+# Logs
+# =========================================================
+
+Project2/Logs/*
+Project3/Logs/*
+
+!Project2/Logs/.gitkeep
+!Project3/Logs/.gitkeep
+
+# =========================================================
+# Models
+# =========================================================
+
+**/big-lama.pt
+**/RealESRGAN_x4plus.pth
+
+# Keep folder structure
+!Project2/Models/.gitkeep
+!Project3/Models/.gitkeep
+
+# =========================================================
+# MLFlow
+# =========================================================
+
+Project2/mlruns/
+
+# =========================================================
+# Videos
+# =========================================================
+
+Project2/Video/*.avi
+Project3/Video/*.avi
+
+!Project2/Video/.gitkeep
+!Project3/Video/.gitkeep
+
+# =========================================================
+# Ignore ALL PNG files everywhere
+# =========================================================
+
+**/*.png
+
+# =========================================================
+# Keep sample images
+# =========================================================
+
+!**/sample.png
+
+# =========================================================
+# Keep folder structure markers
+# =========================================================
+
+!**/.gitkeep
